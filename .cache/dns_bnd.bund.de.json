@@ -1,0 +1,1 @@
+{"_expiry": 1763072554.529902, "value": {"a": ["80.245.145.69"], "aaaa": [], "txt": ["v=spf1 include:_spf1.bund.de ~all"], "mx": ["mx2.bund.de.", "mx1.bund.de."]}}

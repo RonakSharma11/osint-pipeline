@@ -1,0 +1,1 @@
+{"_expiry": 1763072564.417739, "value": {"a": ["104.26.5.132", "104.26.4.132", "172.67.69.3"], "aaaa": ["2606:4700:20::681a:584", "2606:4700:20::681a:484", "2606:4700:20::ac43:4503"], "txt": ["v=spf1 include:zohomail.eu include:cnri.net ~all", "zoho-verification=zb37490279.zmverify.zoho.eu"], "mx": ["mx.zoho.eu.", "mx2.zoho.eu.", "mx3.zoho.eu."]}}

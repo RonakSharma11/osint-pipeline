@@ -1,0 +1,1 @@
+{"_expiry": 1763072552.0096982, "value": {"a": ["81.95.110.57"], "aaaa": ["2a02:4a8:ac24:111::110:57"], "txt": ["MS=ms75815422", "v=spf1 ip4:185.48.22.241 ip4:185.48.22.242 ip4:89.185.233.183 include:spf.protection.outlook.com -all"], "mx": ["ag1.cesnet.cz.", "ag2.cesnet.cz."]}}

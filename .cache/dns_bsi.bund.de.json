@@ -1,0 +1,1 @@
+{"_expiry": 1763072556.050473, "value": {"a": ["80.245.144.218"], "aaaa": [], "txt": ["apple-domain-verification=e47sn9INA83Ar3UT", "v=spf1 include:_spf1.bund.de -all", "apple-domain-verification=mc8uJaIgueM41k9h"], "mx": ["mx2.bund.de.", "mx1.bund.de."]}}

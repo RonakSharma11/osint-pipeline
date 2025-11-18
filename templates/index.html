@@ -1,0 +1,82 @@
+<!-- templates/index.html -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>OSINT Pipeline — Simple Dashboard</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+  <header>
+    <h1>OSINT Pipeline — Dashboard</h1>
+    <div class="controls">
+      <input id="search" placeholder="Search domain/ip/hash..." />
+      <select id="risk">
+        <option value="">All risks</option>
+        <option value="high">High</option>
+        <option value="medium">Medium</option>
+        <option value="low">Low</option>
+      </select>
+      <select id="sort">
+        <option value="score">Score</option>
+        <option value="first_seen">First seen</option>
+      </select>
+      <select id="order">
+        <option value="desc">Desc</option>
+        <option value="asc">Asc</option>
+      </select>
+      <button id="apply">Apply</button>
+      <button id="refresh">Refresh</button>
+    </div>
+  </header>
+
+  <main>
+    <section id="metrics" class="card">
+      <h2>Metrics</h2>
+      <div id="metrics-body">Loading metrics...</div>
+    </section>
+
+    <section id="results" class="card">
+      <h2>Results</h2>
+      <div id="results-controls">
+        <label>Per page:
+          <select id="per_page">
+            <option>10</option><option selected>25</option><option>50</option><option>100</option>
+          </select>
+        </label>
+        <div id="pager">
+          <button id="prev">Prev</button>
+          <span id="page-info">Page 1</span>
+          <button id="next">Next</button>
+        </div>
+      </div>
+
+      <table id="table">
+        <thead>
+          <tr>
+            <th>Score</th>
+            <th>Risk</th>
+            <th>Type</th>
+            <th>Value</th>
+            <th>Source</th>
+            <th>Details</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </section>
+
+    <section id="details" class="card">
+      <h2>IOC Details</h2>
+      <pre id="detail-json">Select an IOC to see details</pre>
+    </section>
+  </main>
+
+  <footer>
+    <small>Dashboard reads from <code>./store/iocs_indexed.json</code>. Refresh to pick up new data.</small>
+  </footer>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>

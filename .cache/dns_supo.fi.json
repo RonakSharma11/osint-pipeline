@@ -1,0 +1,1 @@
+{"_expiry": 1763072553.447841, "value": {"a": ["185.192.15.161"], "aaaa": [], "txt": ["v=spf1 include:_spf.tuve.fi include:amazonses.com ip4:185.74.174.128/25 -all", "p5lpcyjlghpktvntlm7g3y3s1hp9pjf6", "n8tc6k7ynpzs6gxfg2jyl0yz7ns9vy37"], "mx": ["mail-in.tuve.fi."]}}

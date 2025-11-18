@@ -1,0 +1,501 @@
+{
+  "summary_count": 27,
+  "clusters": [
+    {
+      "asn": "AS136180",
+      "org_name": "Beijing Tiantexin Tech. Co., Ltd.",
+      "count": 18,
+      "members_sample": [
+        {
+          "ip": "103.203.57.19",
+          "score": 76,
+          "ptr": "scan-57-19.security.ipip.net",
+          "reports": 467,
+          "org_name": "Beijing Tiantexin Tech. Co., Ltd."
+        },
+        {
+          "ip": "103.203.59.15",
+          "score": 77,
+          "ptr": "scan-59-15.security.ipip.net",
+          "reports": 723,
+          "org_name": "Beijing Tiantexin Tech. Co., Ltd."
+        },
+        {
+          "ip": "103.203.59.8",
+          "score": 81,
+          "ptr": "scan-59-8.security.ipip.net",
+          "reports": 3700,
+          "org_name": "Beijing Tiantexin Tech. Co., Ltd."
+        },
+        {
+          "ip": "103.203.59.16",
+          "score": 80,
+          "ptr": "scan-59-16.security.ipip.net",
+          "reports": 1783,
+          "org_name": "Beijing Tiantexin Tech. Co., Ltd."
+        },
+        {
+          "ip": "103.203.57.10",
+          "score": 76,
+          "ptr": "scan-57-10.security.ipip.net",
+          "reports": 740,
+          "org_name": "Beijing Tiantexin Tech. Co., Ltd."
+        },
+        {
+          "ip": "103.203.57.15",
+          "score": 81,
+          "ptr": "scan-57-15.security.ipip.net",
+          "reports": 2878,
+          "org_name": "Beijing Tiantexin Tech. Co., Ltd."
+        }
+      ],
+      "total_reports": 33378
+    },
+    {
+      "asn": "AS61173",
+      "org_name": "Green Web Samaneh Novin PJSC",
+      "count": 5,
+      "members_sample": [
+        {
+          "ip": "185.50.38.171",
+          "score": 72,
+          "ptr": "static.171.38.50.185.clients.irandns.com",
+          "reports": 3804,
+          "org_name": "Green Web Samaneh Novin PJSC"
+        },
+        {
+          "ip": "185.213.165.150",
+          "score": 74,
+          "ptr": "static.150.165.213.185.clients.irandns.com",
+          "reports": 6594,
+          "org_name": "Green Web Samaneh Novin PJSC"
+        },
+        {
+          "ip": "85.208.253.156",
+          "score": 75,
+          "ptr": "static.156.253.208.85.clients.irandns.com",
+          "reports": 8041,
+          "org_name": "Green Web Samaneh Novin PJSC"
+        },
+        {
+          "ip": "185.116.161.213",
+          "score": 70,
+          "ptr": "static.213.161.116.185.clients.irandns.com",
+          "reports": 3194,
+          "org_name": "Green Web Samaneh Novin PJSC"
+        },
+        {
+          "ip": "185.116.160.35",
+          "score": 75,
+          "ptr": "static.35.160.116.185.clients.irandns.com",
+          "reports": 7849,
+          "org_name": "Green Web Samaneh Novin PJSC"
+        }
+      ],
+      "total_reports": 29482
+    },
+    {
+      "asn": "AS34665",
+      "org_name": "Petersburg Internet Network ltd.",
+      "count": 3,
+      "members_sample": [
+        {
+          "ip": "46.161.50.108",
+          "score": 85,
+          "ptr": "scan.f6.security",
+          "reports": 8965,
+          "org_name": "Petersburg Internet Network ltd."
+        },
+        {
+          "ip": "5.101.64.6",
+          "score": 84,
+          "ptr": "scan.f6.security",
+          "reports": 5004,
+          "org_name": "Petersburg Internet Network ltd."
+        },
+        {
+          "ip": "95.215.0.144",
+          "score": 85,
+          "ptr": "scan.f6.security",
+          "reports": 11553,
+          "org_name": "Petersburg Internet Network ltd."
+        }
+      ],
+      "total_reports": 25522
+    },
+    {
+      "asn": "AS31200",
+      "org_name": "Novotelecom Ltd",
+      "count": 2,
+      "members_sample": [
+        {
+          "ip": "37.193.112.180",
+          "score": 74,
+          "ptr": "l37-193-112-180.novotelecom.ru",
+          "reports": 6247,
+          "org_name": "Novotelecom Ltd"
+        },
+        {
+          "ip": "178.49.109.109",
+          "score": 72,
+          "ptr": "l49-109-109.novotelecom.ru",
+          "reports": 3264,
+          "org_name": "Novotelecom Ltd"
+        }
+      ],
+      "total_reports": 9511
+    },
+    {
+      "asn": "AS4837",
+      "org_name": "CHINA UNICOM China169 Backbone",
+      "count": 2,
+      "members_sample": [
+        {
+          "ip": "222.161.223.54",
+          "score": 71,
+          "ptr": "54.223.161.222.adsl-pool.jlccptt.net.cn",
+          "reports": 2459,
+          "org_name": "CHINA UNICOM China169 Backbone"
+        },
+        {
+          "ip": "61.182.2.26",
+          "score": 73,
+          "ptr": "hebei.182.61.in-addr.arpa",
+          "reports": 4238,
+          "org_name": "CHINA UNICOM China169 Backbone"
+        }
+      ],
+      "total_reports": 6697
+    },
+    {
+      "asn": "AS56046",
+      "org_name": "China Mobile communications corporation",
+      "count": 1,
+      "members_sample": [
+        {
+          "ip": "112.4.79.138",
+          "score": 71,
+          "ptr": "138.79.4.112.static.sz.js.chinamobile.com",
+          "reports": 2227,
+          "org_name": "China Mobile communications corporation"
+        }
+      ],
+      "total_reports": 2227
+    },
+    {
+      "asn": "AS25184",
+      "org_name": "Afranet",
+      "count": 1,
+      "members_sample": [
+        {
+          "ip": "31.47.55.132",
+          "score": 84,
+          "ptr": "mail.pcdcor.ir",
+          "reports": 4687,
+          "org_name": "Afranet"
+        }
+      ],
+      "total_reports": 4687
+    },
+    {
+      "asn": "AS8492",
+      "org_name": "\"OBIT\" Ltd.",
+      "count": 1,
+      "members_sample": [
+        {
+          "ip": "85.114.14.90",
+          "score": 73,
+          "ptr": "mail.clatispb.ru",
+          "reports": 196,
+          "org_name": "\"OBIT\" Ltd."
+        }
+      ],
+      "total_reports": 196
+    },
+    {
+      "asn": "AS8369",
+      "org_name": "Intersvyaz-2 JSC",
+      "count": 1,
+      "members_sample": [
+        {
+          "ip": "77.222.100.142",
+          "score": 71,
+          "ptr": "pool-77-222-100-142.is74.ru",
+          "reports": 1945,
+          "org_name": "Intersvyaz-2 JSC"
+        }
+      ],
+      "total_reports": 1945
+    },
+    {
+      "asn": "AS51645",
+      "org_name": "JSC \"ER-Telecom Holding\"",
+      "count": 1,
+      "members_sample": [
+        {
+          "ip": "176.215.234.212",
+          "score": 72,
+          "ptr": "dynamicip-176-215-234-212.pppoe.irkutsk.ertelecom.ru",
+          "reports": 3877,
+          "org_name": "JSC \"ER-Telecom Holding\""
+        }
+      ],
+      "total_reports": 3877
+    },
+    {
+      "asn": "AS42610",
+      "org_name": "PJSC Rostelecom",
+      "count": 1,
+      "members_sample": [
+        {
+          "ip": "188.32.210.218",
+          "score": 71,
+          "ptr": "broadband-188-32-210-218.ip.moscow.rt.ru",
+          "reports": 1546,
+          "org_name": "PJSC Rostelecom"
+        }
+      ],
+      "total_reports": 1546
+    },
+    {
+      "asn": "AS62442",
+      "org_name": "Dade Samane Fanava Company (PJS)",
+      "count": 1,
+      "members_sample": [
+        {
+          "ip": "78.157.49.100",
+          "score": 80,
+          "ptr": "mail.katringroup.com",
+          "reports": 1935,
+          "org_name": "Dade Samane Fanava Company (PJS)"
+        }
+      ],
+      "total_reports": 1935
+    },
+    {
+      "asn": "AS137687",
+      "org_name": "Luoyang, Henan Province, P.R.China.",
+      "count": 1,
+      "members_sample": [
+        {
+          "ip": "1.194.239.240",
+          "score": 71,
+          "ptr": "194.1.broad.ha.dynamic.163data.com.cn",
+          "reports": 1885,
+          "org_name": "Luoyang, Henan Province, P.R.China."
+        }
+      ],
+      "total_reports": 1885
+    },
+    {
+      "asn": "AS197235",
+      "org_name": "AVANTEL SAMARA",
+      "count": 1,
+      "members_sample": [
+        {
+          "ip": "185.33.203.190",
+          "score": 75,
+          "ptr": "mail.mfc-samara.ru",
+          "reports": 326,
+          "org_name": "AVANTEL SAMARA"
+        }
+      ],
+      "total_reports": 326
+    },
+    {
+      "asn": "AS31363",
+      "org_name": "JSC \"ER-Telecom Holding\"",
+      "count": 1,
+      "members_sample": [
+        {
+          "ip": "178.251.140.3",
+          "score": 72,
+          "ptr": "b32-mgmt-gw.dssv.ru",
+          "reports": 3726,
+          "org_name": "JSC \"ER-Telecom Holding\""
+        }
+      ],
+      "total_reports": 3726
+    },
+    {
+      "asn": "AS8402",
+      "org_name": "PJSC \"Vimpelcom\"",
+      "count": 1,
+      "members_sample": [
+        {
+          "ip": "95.24.31.174",
+          "score": 71,
+          "ptr": "95-24-31-174.broadband.corbina.ru",
+          "reports": 2065,
+          "org_name": "PJSC \"Vimpelcom\""
+        }
+      ],
+      "total_reports": 2065
+    },
+    {
+      "asn": "AS47236",
+      "org_name": "CityLink Ltd",
+      "count": 1,
+      "members_sample": [
+        {
+          "ip": "185.90.101.64",
+          "score": 74,
+          "ptr": "mail.lmnmed.ru",
+          "reports": 352,
+          "org_name": "CityLink Ltd"
+        }
+      ],
+      "total_reports": 352
+    },
+    {
+      "asn": "AS12768",
+      "org_name": "JSC \"ER-Telecom Holding\"",
+      "count": 1,
+      "members_sample": [
+        {
+          "ip": "212.33.235.243",
+          "score": 74,
+          "ptr": "mxr.fort.tel",
+          "reports": 7424,
+          "org_name": "JSC \"ER-Telecom Holding\""
+        }
+      ],
+      "total_reports": 7424
+    },
+    {
+      "asn": "AS48969",
+      "org_name": "Parus-Telecom Ltd.",
+      "count": 1,
+      "members_sample": [
+        {
+          "ip": "195.88.120.62",
+          "score": 72,
+          "ptr": "195-88-120-62.parustelecom.ru",
+          "reports": 3876,
+          "org_name": "Parus-Telecom Ltd."
+        }
+      ],
+      "total_reports": 3876
+    },
+    {
+      "asn": "AS133774",
+      "org_name": "Fuzhou",
+      "count": 1,
+      "members_sample": [
+        {
+          "ip": "121.204.179.231",
+          "score": 72,
+          "ptr": "231.179.204.121.broad.xm.fj.dynamic.163data.com.cn",
+          "reports": 2800,
+          "org_name": "Fuzhou"
+        }
+      ],
+      "total_reports": 2800
+    },
+    {
+      "asn": "AS196695",
+      "org_name": "NetOne Rus JSC",
+      "count": 1,
+      "members_sample": [
+        {
+          "ip": "188.65.133.110",
+          "score": 72,
+          "ptr": "188-65-133-110.in-addr.netone.ru",
+          "reports": 3399,
+          "org_name": "NetOne Rus JSC"
+        }
+      ],
+      "total_reports": 3399
+    },
+    {
+      "asn": "AS60077",
+      "org_name": "Asre Dadeha Asiatech",
+      "count": 1,
+      "members_sample": [
+        {
+          "ip": "85.198.17.88",
+          "score": 72,
+          "ptr": "85.198.17.88.asiatech.cloud",
+          "reports": 2519,
+          "org_name": "Asre Dadeha Asiatech"
+        }
+      ],
+      "total_reports": 2519
+    },
+    {
+      "asn": "AS21453",
+      "org_name": "Flex Ltd.",
+      "count": 1,
+      "members_sample": [
+        {
+          "ip": "94.253.63.103",
+          "score": 70,
+          "ptr": "94-253-63-103.dynvpn.flex.ru",
+          "reports": 50,
+          "org_name": "Flex Ltd."
+        }
+      ],
+      "total_reports": 50
+    },
+    {
+      "asn": "AS34533",
+      "org_name": "JSC \"ER-Telecom Holding\"",
+      "count": 1,
+      "members_sample": [
+        {
+          "ip": "46.0.19.251",
+          "score": 70,
+          "ptr": "dynamicip-46-0-19-251.pppoe.samara.ertelecom.ru",
+          "reports": 1623,
+          "org_name": "JSC \"ER-Telecom Holding\""
+        }
+      ],
+      "total_reports": 1623
+    },
+    {
+      "asn": "AS24955",
+      "org_name": "JSC \"Ufanet\"",
+      "count": 1,
+      "members_sample": [
+        {
+          "ip": "145.255.15.187",
+          "score": 70,
+          "ptr": "145.255.15.187.dynamic.ufanet.ru",
+          "reports": 1463,
+          "org_name": "JSC \"Ufanet\""
+        }
+      ],
+      "total_reports": 1463
+    },
+    {
+      "asn": "AS3216",
+      "org_name": "PJSC \"Vimpelcom\"",
+      "count": 1,
+      "members_sample": [
+        {
+          "ip": "195.190.104.66",
+          "score": 74,
+          "ptr": "spb-195-190-104-66.sovintel.ru",
+          "reports": 6889,
+          "org_name": "PJSC \"Vimpelcom\""
+        }
+      ],
+      "total_reports": 6889
+    },
+    {
+      "asn": "AS211056",
+      "org_name": "Amir Hosein Maaref",
+      "count": 1,
+      "members_sample": [
+        {
+          "ip": "85.133.193.72",
+          "score": 74,
+          "ptr": "static.72.193.133.85.manaserver.net",
+          "reports": 5442,
+          "org_name": "Amir Hosein Maaref"
+        }
+      ],
+      "total_reports": 5442
+    }
+  ]
+}
