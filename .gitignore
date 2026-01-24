@@ -1,1 +1,23 @@
+
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.swp
 .env
+.env.*         # any env variants
+.venv/
+venv/
+env/
+.idea/
+.vscode/
+.DS_Store
+*.sqlite3
+*.db
+data/
+store/*.db
+store/*.sqlite
+store/*.pem
+store/whois_cache.json
+store/enrich_cache.json
+store/*.mmdb
