@@ -1,6 +1,6 @@
 # Technical Executive Summary
 
-**Project:** OSINT Pipeline — geospatial attribution & prioritized IOC scoring
+**Project:** OSINT Pipeline, geospatial attribution & prioritized IOC scoring
 **Repo:** [https://github.com/RonakSharma11/osint-pipeline.git](https://github.com/RonakSharma11/osint-pipeline.git)
 **Interactive map (example output):** `store/iocs_map_improved.html`
 
@@ -42,8 +42,8 @@ All scripts, scoring code, and notebooks are in the repo. See `run_index.py`, `g
 * Average score (seed run): **11.6**
 * Risk distribution: **High=127 | Medium=58 | Low=9827**
 
-**Top-100 overlap with public lists (recommended metric):** *compute exact overlap locally* — instructions below (automated command & small Python script included).
-*(We provide reproducible commands so you can compute the exact overlap against any public list you want — Shadowserver, Spamhaus DROP/EDROP, Perplexity-derived lists, VirusTotal, etc.)*
+**Top-100 overlap with public lists (recommended metric):** *compute exact overlap locally* instructions below (automated command & small Python script included).
+*(We provide reproducible commands so you can compute the exact overlap against any public list you want. Shadowserver, Spamhaus DROP/EDROP, Perplexity-derived lists, VirusTotal, etc.)*
 
 ## Operational impact (example estimate + reproducible bootstrap CI)
 
