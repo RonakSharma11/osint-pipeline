@@ -312,5 +312,5 @@ Please follow coding style, add unit tests for scoring logic changes, and docume
 
 Licensed under MIT. See `LICENSE` for details.
 
-Thanks to the open-source projects that make this possible (Folium, GeoPandas, pycountry, AbuseIPDB/OTX APIs, MaxMind, etc.). Add credits in your paper and README where required.
+Thanks to the open-source projects that make this possible (Folium, GeoPandas, pycountry, AbuseIPDB/OTX APIs, MaxMind, etc.).
 
