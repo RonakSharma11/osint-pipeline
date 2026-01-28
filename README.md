@@ -138,7 +138,7 @@ git filter-repo --invert-paths --paths .env
 git push --force
 ```
 
-> **Important:** Force-pushing rewrites history — coordinate with collaborators and understand consequences.
+> **Important:** Force-pushing rewrites history, coordinate with collaborators and understand consequences.
 
 ### Use GitHub Secrets & Actions (example)
 
@@ -201,8 +201,8 @@ python app.py --port 5001
 
 * The Flask UI (`app.py`) exposes:
 
-  * `GET /api/iocs` — with query params `?risk=high|medium|low|all`
-  * `/` — dashboard (serves `templates/your_dashboard.html`)
+  * `GET /api/iocs`, with query params `?risk=high|medium|low|all`
+  * `/`, dashboard (serves `templates/your_dashboard.html`)
 
 **To view generated map**:
 
