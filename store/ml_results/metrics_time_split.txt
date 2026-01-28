@@ -1,0 +1,21 @@
+Classification report (Stratified Time-Forward Split):
+              precision    recall  f1-score   support
+
+           0     1.0000    0.9392    0.9686      1990
+           1     0.0970    1.0000    0.1769        13
+
+    accuracy                         0.9396      2003
+   macro avg     0.5485    0.9696    0.5728      2003
+weighted avg     0.9941    0.9396    0.9635      2003
+
+PR-AUC: 0.3089
+F1-Score: 0.1769
+
+
+Confusion matrix:
+[[1869  121]
+ [   0   13]]
+
+ROC AUC: 0.9818902203324313
+PR-AUC: 0.3088813966282267
+F1-Score: 0.17687074829931973

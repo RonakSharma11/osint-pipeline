@@ -1,0 +1,227 @@
+<!-- templates/geo_dashboard.html -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>IOC Geo Dashboard</title>
+
+  <!-- Bootstrap for layout/modern look -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css" />
+
+  <style>
+    :root{ --sidebar-w: 340px; }
+    body, html { height: 100%; margin: 0; font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; background: #f7f9fc; color:#111; }
+    .wrap { display:flex; height:100vh; gap:16px; padding:16px; box-sizing:border-box; }
+    .sidebar { width: var(--sidebar-w); background: #fff; border-radius:12px; padding:16px; box-shadow: 0 6px 18px rgba(13,30,50,0.06); overflow:auto; }
+    .map-container { flex:1; border-radius:12px; overflow:hidden; box-shadow: 0 6px 18px rgba(13,30,50,0.06); }
+    #map { width:100%; height:100%; min-height: 600px; }
+    .stat { padding:12px; border-radius:8px; background: linear-gradient(180deg,#fff,#fbfdff); margin-bottom:10px; }
+    .muted { color:#666; font-size:0.9rem; }
+    .small { font-size:0.85rem; }
+    .control-row { display:flex; gap:8px; align-items:center; margin-bottom:10px; }
+    .badge-risk-low { background:#6cc070; color:#052; }
+    .badge-risk-med { background:#ffb020; color:#371900; }
+    .badge-risk-high { background:#ff5252; color:#400; }
+    .leaflet-popup-content pre { white-space:pre-wrap; word-break:break-word; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <aside class="sidebar">
+      <h4 class="mb-1">IOC Geo Dashboard</h4>
+      <p class="muted small">Interactive map of geo-located IOCs. Data source: your pipeline (indexed file).</p>
+
+      <div id="stats" class="mb-3">
+        <div class="stat">
+          <div class="d-flex justify-content-between align-items-center">
+            <div>
+              <div class="h5 mb-0" id="total-indexed">—</div>
+              <div class="muted small">Total indexed IOCs</div>
+            </div>
+            <div style="text-align:right">
+              <div class="h5 mb-0" id="geo-points">—</div>
+              <div class="muted small">Geo-located</div>
+            </div>
+          </div>
+          <hr/>
+          <div id="top-countries" class="small muted">Loading top countries…</div>
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label small">Risk</label>
+        <select id="risk-filter" class="form-select form-select-sm">
+          <option value="all">All</option>
+          <option value="high">High</option>
+          <option value="medium">Medium</option>
+          <option value="low">Low</option>
+        </select>
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label small">Min score</label>
+        <input id="score-min" type="range" min="0" max="100" step="1" value="0" class="form-range">
+        <div class="d-flex justify-content-between small muted"><span>0</span><span id="score-min-val">0</span><span>100</span></div>
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label small">Max points (client-side)</label>
+        <input id="max-points" type="number" min="100" max="50000" value="5000" class="form-control form-control-sm">
+      </div>
+
+      <div class="d-grid gap-2 mb-3">
+        <button id="apply-btn" class="btn btn-primary btn-sm">Apply filters & refresh</button>
+        <button id="regen-btn" class="btn btn-outline-secondary btn-sm">Regenerate caches & map (server)</button>
+      </div>
+
+      <div>
+        <h6 class="small mb-1">Legend</h6>
+        <div class="small">
+          <span class="badge badge-risk-high px-2">High</span> High risk<br>
+          <span class="badge badge-risk-med px-2">Medium</span> Medium risk<br>
+          <span class="badge badge-risk-low px-2">Low</span> Low risk
+        </div>
+      </div>
+
+      <hr/>
+      <div class="small muted">
+        <div>Map options: marker clustering enabled. Click marker for details.</div>
+        <div class="mt-2">If the interactive map is slow, reduce Max points to 1000 or use server-side Folium `/api/geo/regenerate`.</div>
+      </div>
+    </aside>
+
+    <section class="map-container">
+      <div id="map"></div>
+    </section>
+  </div>
+
+  <!-- Libraries -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
+  <script>
+    // helpers
+    const riskColor = (risk) => {
+      if (!risk) return '#888';
+      const r = (risk || '').toLowerCase();
+      if (r === 'high') return '#ff5252';
+      if (r === 'medium') return '#ffb020';
+      if (r === 'low') return '#6cc070';
+      return '#4da6ff';
+    };
+
+    const el = id => document.getElementById(id);
+
+    // Map init
+    const map = L.map('map', { worldCopyJump: true }).setView([20, 0], 2);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; OpenStreetMap contributors'
+    }).addTo(map);
+
+    let markerLayer = L.markerClusterGroup({ chunkedLoading: true, maxClusterRadius: 45 });
+    map.addLayer(markerLayer);
+
+    // load stats
+    async function loadStats(){
+      try {
+        const r = await fetch('/api/geo/stats');
+        if(!r.ok) throw r.statusText;
+        const stats = await r.json();
+        // fix mixing ?? and || by grouping with parentheses:
+        el('total-indexed').textContent = (stats.total_indexed ?? stats.total) || '—';
+        el('geo-points').textContent = (stats.geo_points ?? stats.geoPoints) || '—';
+        const top = stats.top_countries || [];
+        if(Array.isArray(top) && top.length){
+          el('top-countries').innerHTML = top.slice(0,8).map(([iso,c]) => `<b>${iso}</b>: ${c}`).join(' • ');
+        } else {
+          el('top-countries').textContent = 'No top countries data';
+        }
+      } catch(err){
+        el('top-countries').textContent = 'Stats API unavailable';
+        console.warn('stats load failed', err);
+      }
+    }
+
+    async function loadPointsAndRender(){
+      const maxPoints = parseInt(el('max-points').value || 5000, 10);
+      const riskFilter = el('risk-filter').value;
+      const minScore = parseInt(el('score-min').value || 0, 10);
+
+      try {
+        const r = await fetch(`/api/geo/points?max_points=${maxPoints}`);
+        if(!r.ok) throw r.statusText;
+        const geo = await r.json();
+        const feats = geo.features || [];
+        markerLayer.clearLayers();
+
+        let shown = 0;
+        for (const f of feats){
+          const p = f.properties || {};
+          const score = p.score || 0;
+          const risk = (p.risk_bucket || '').toLowerCase();
+          if (riskFilter !== 'all' && risk !== riskFilter) continue;
+          if (score < minScore) continue;
+
+          const lon = f.geometry.coordinates[0], lat = f.geometry.coordinates[1];
+          const color = riskColor(p.risk_bucket);
+          const popup = `
+            <div style="min-width:180px">
+              <strong>${p.value}</strong><br/>
+              <span class="muted small">type:</span> ${p.type || '—'}<br/>
+              <span class="muted small">score:</span> ${score}<br/>
+              <span class="muted small">risk:</span> ${p.risk_bucket || '—'}<br/>
+              <span class="muted small">source:</span> ${p.source || '—'}<br/>
+              <span class="muted small">isp:</span> ${p.isp || '—'}<br/>
+              <span class="muted small">ptr:</span> ${p.ptr || '—'}<br/>
+            </div>`;
+
+          const marker = L.marker([lat, lon], { icon: L.divIcon({ className: 'tiny-marker', html: `<svg width="18" height="18" viewBox="0 0 20 20"><circle cx="10" cy="10" r="8" fill="${color}" stroke="#222" stroke-width="0.6"/></svg>` }) });
+          marker.bindPopup(popup);
+          markerLayer.addLayer(marker);
+          shown++;
+        }
+
+        if (markerLayer.getLayers().length){
+          try { map.fitBounds(markerLayer.getBounds(), { maxZoom: 6, padding: [40,40] }); } catch(e){/*ignore*/ }
+        }
+        console.log(`Rendered ${shown} markers (source ${feats.length})`);
+      } catch(err){
+        console.error('loadPoints failed', err);
+        markerLayer.clearLayers();
+      }
+    }
+
+    // UI wiring
+    el('apply-btn').addEventListener('click', async () => {
+      el('apply-btn').textContent = 'Refreshing…';
+      await loadPointsAndRender();
+      await loadStats();
+      el('apply-btn').textContent = 'Apply filters & refresh';
+    });
+
+    el('score-min').addEventListener('input', (e) => el('score-min-val').textContent = e.target.value);
+
+    el('regen-btn').addEventListener('click', async () => {
+      el('regen-btn').textContent = 'Regenerating…';
+      try {
+        const r = await fetch('/api/geo/regenerate', { method: 'POST', headers: {'Content-Type':'application/json'}, body: JSON.stringify({ max_points: parseInt(el('max-points').value || 5000, 10), build_map: true }) });
+        const j = await r.json();
+        alert('Server regenerate response: ' + (j.map_html || j.map_error || JSON.stringify(j)));
+      } catch(e){
+        alert('Regenerate request failed: ' + e);
+      } finally { el('regen-btn').textContent = 'Regenerate caches & map (server)'; }
+    });
+
+    // init
+    (async () => {
+      await loadStats();
+      await loadPointsAndRender();
+    })();
+  </script>
+</body>
+</html>

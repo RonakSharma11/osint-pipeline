@@ -1,0 +1,21 @@
+Classification report (Optimized Threshold):
+              precision    recall  f1-score   support
+
+           0     1.0000    0.9965    0.9982      1990
+           1     0.6500    1.0000    0.7879        13
+
+    accuracy                         0.9965      2003
+   macro avg     0.8250    0.9982    0.8931      2003
+weighted avg     0.9977    0.9965    0.9969      2003
+
+PR-AUC: 0.9073
+F1-Score: 0.7879
+
+
+Confusion matrix:
+[[1983    7]
+ [   0   13]]
+
+ROC AUC: 0.9993042133745651
+PR-AUC: 0.90729055020553
+F1-Score: 0.7878787878787878

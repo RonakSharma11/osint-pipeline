@@ -1,0 +1,7303 @@
+[
+  {
+    "id": "ip::95.215.0.144",
+    "type": "ip",
+    "value": "95.215.0.144",
+    "source": "AbuseIPDB",
+    "sources_count": 1,
+    "enrichment": {
+      "dns": {
+        "a": [],
+        "aaaa": [],
+        "mx": [],
+        "txt": []
+      },
+      "reverse": {
+        "ptr": "scan.f6.security"
+      },
+      "geoip": {
+        "city": null,
+        "country": "Russia",
+        "country_iso": "RU",
+        "location": {
+          "lat": 55.7386,
+          "lon": 37.6068
+        }
+      },
+      "passive_dns": [],
+      "whois": {},
+      "abuseipdb": {
+        "ipAddress": "95.215.0.144",
+        "isPublic": true,
+        "ipVersion": 4,
+        "isWhitelisted": false,
+        "abuseConfidenceScore": 100,
+        "countryCode": "RU",
+        "usageType": "Data Center/Web Hosting/Transit",
+        "isp": "Petersburg Internet Network ltd.",
+        "domain": "pindc.ru",
+        "hostnames": [
+          "scan.f6.security"
+        ],
+        "isTor": false,
+        "totalReports": 11553,
+        "numDistinctUsers": 591,
+        "lastReportedAt": "2025-11-18T19:19:09+00:00"
+      },
+      "abuseipdb_score": 100
+    },
+    "score": 99,
+    "score_breakdown": {
+      "base": 10,
+      "source_weight": 20,
+      "abuse_confidence": 100,
+      "abuse_contrib": 25,
+      "total_reports": 11553,
+      "total_reports_contrib": 18,
+      "distinct_users": 591,
+      "distinct_users_contrib": 9,
+      "passive_dns_count": 0,
+      "passive_dns_contrib": 0,
+      "otx_count": 0,
+      "otx_contrib": 0,
+      "ptr": "scan.f6.security",
+      "ptr_contrib": 12,
+      "whois_present": 0,
+      "whois_contrib": 0,
+      "country": "RU",
+      "country_contrib": 5,
+      "no_signals_penalty": 0,
+      "final_score_raw": 99,
+      "final_score": 99
+    },
+    "risk_bucket": "high"
+  },
+  {
+    "id": "ip::46.161.50.108",
+    "type": "ip",
+    "value": "46.161.50.108",
+    "source": "AbuseIPDB",
+    "sources_count": 1,
+    "enrichment": {
+      "dns": {
+        "a": [],
+        "aaaa": [],
+        "mx": [],
+        "txt": []
+      },
+      "reverse": {
+        "ptr": "scan.f6.security"
+      },
+      "geoip": {
+        "city": null,
+        "country": "Russia",
+        "country_iso": "RU",
+        "location": {
+          "lat": 55.7386,
+          "lon": 37.6068
+        }
+      },
+      "passive_dns": [],
+      "whois": {},
+      "abuseipdb": {
+        "ipAddress": "46.161.50.108",
+        "isPublic": true,
+        "ipVersion": 4,
+        "isWhitelisted": false,
+        "abuseConfidenceScore": 100,
+        "countryCode": "RU",
+        "usageType": "Data Center/Web Hosting/Transit",
+        "isp": "public vlans of DC",
+        "domain": "pindc.ru",
+        "hostnames": [
+          "scan.f6.security"
+        ],
+        "isTor": false,
+        "totalReports": 8965,
+        "numDistinctUsers": 552,
+        "lastReportedAt": "2025-11-18T19:25:37+00:00"
+      },
+      "abuseipdb_score": 100
+    },
+    "score": 97,
+    "score_breakdown": {
+      "base": 10,
+      "source_weight": 20,
+      "abuse_confidence": 100,
+      "abuse_contrib": 25,
+      "total_reports": 8965,
+      "total_reports_contrib": 16,
+      "distinct_users": 552,
+      "distinct_users_contrib": 9,
+      "passive_dns_count": 0,
+      "passive_dns_contrib": 0,
+      "otx_count": 0,
+      "otx_contrib": 0,
+      "ptr": "scan.f6.security",
+      "ptr_contrib": 12,
+      "whois_present": 0,
+      "whois_contrib": 0,
+      "country": "RU",
+      "country_contrib": 5,
+      "no_signals_penalty": 0,
+      "final_score_raw": 97,
+      "final_score": 97
+    },
+    "risk_bucket": "high"
+  },
+  {
+    "id": "ip::5.101.64.6",
+    "type": "ip",
+    "value": "5.101.64.6",
+    "source": "AbuseIPDB",
+    "sources_count": 1,
+    "enrichment": {
+      "dns": {
+        "a": [],
+        "aaaa": [],
+        "mx": [],
+        "txt": []
+      },
+      "reverse": {
+        "ptr": "scan.f6.security"
+      },
+      "geoip": {
+        "city": null,
+        "country": "Russia",
+        "country_iso": "RU",
+        "location": {
+          "lat": 55.7386,
+          "lon": 37.6068
+        }
+      },
+      "passive_dns": [],
+      "whois": {},
+      "abuseipdb": {
+        "ipAddress": "5.101.64.6",
+        "isPublic": true,
+        "ipVersion": 4,
+        "isWhitelisted": false,
+        "abuseConfidenceScore": 100,
+        "countryCode": "RU",
+        "usageType": "Data Center/Web Hosting/Transit",
+        "isp": "public vlans of DC",
+        "domain": "pindc.ru",
+        "hostnames": [
+          "scan.f6.security"
+        ],
+        "isTor": false,
+        "totalReports": 5004,
+        "numDistinctUsers": 512,
+        "lastReportedAt": "2025-11-18T19:19:06+00:00"
+      },
+      "abuseipdb_score": 100
+    },
+    "score": 97,
+    "score_breakdown": {
+      "base": 10,
+      "source_weight": 20,
+      "abuse_confidence": 100,
+      "abuse_contrib": 25,
+      "total_reports": 5004,
+      "total_reports_contrib": 16,
+      "distinct_users": 512,
+      "distinct_users_contrib": 9,
+      "passive_dns_count": 0,
+      "passive_dns_contrib": 0,
+      "otx_count": 0,
+      "otx_contrib": 0,
+      "ptr": "scan.f6.security",
+      "ptr_contrib": 12,
+      "whois_present": 0,
+      "whois_contrib": 0,
+      "country": "RU",
+      "country_contrib": 5,
+      "no_signals_penalty": 0,
+      "final_score_raw": 97,
+      "final_score": 97
+    },
+    "risk_bucket": "high"
+  },
+  {
+    "id": "ip::103.203.57.3",
+    "type": "ip",
+    "value": "103.203.57.3",
+    "source": "AbuseIPDB",
+    "sources_count": 1,
+    "enrichment": {
+      "dns": {
+        "a": [],
+        "aaaa": [],
+        "mx": [],
+        "txt": []
+      },
+      "reverse": {
+        "ptr": "scan-57-3.security.ipip.net"
+      },
+      "geoip": {
+        "city": null,
+        "country": "China",
+        "country_iso": "CN",
+        "location": {
+          "lat": 34.7732,
+          "lon": 113.722
+        }
+      },
+      "passive_dns": [],
+      "whois": {},
+      "abuseipdb": {
+        "ipAddress": "103.203.57.3",
+        "isPublic": true,
+        "ipVersion": 4,
+        "isWhitelisted": false,
+        "abuseConfidenceScore": 100,
+        "countryCode": "US",
+        "usageType": "Data Center/Web Hosting/Transit",
+        "isp": "Beijing Tiantexin Tech. Co., Ltd.",
+        "domain": "ipip.com",
+        "hostnames": [
+          "scan-57-3.security.ipip.net"
+        ],
+        "isTor": false,
+        "totalReports": 2751,
+        "numDistinctUsers": 136,
+        "lastReportedAt": "2025-11-18T19:05:44+00:00"
+      },
+      "abuseipdb_score": 100
+    },
+    "score": 91,
+    "score_breakdown": {
+      "base": 10,
+      "source_weight": 20,
+      "abuse_confidence": 100,
+      "abuse_contrib": 25,
+      "total_reports": 2751,
+      "total_reports_contrib": 14,
+      "distinct_users": 136,
+      "distinct_users_contrib": 5,
+      "passive_dns_count": 0,
+      "passive_dns_contrib": 0,
+      "otx_count": 0,
+      "otx_contrib": 0,
+      "ptr": "scan-57-3.security.ipip.net",
+      "ptr_contrib": 12,
+      "whois_present": 0,
+      "whois_contrib": 0,
+      "country": "CN",
+      "country_contrib": 5,
+      "no_signals_penalty": 0,
+      "final_score_raw": 91,
+      "final_score": 91
+    },
+    "risk_bucket": "high"
+  },
+  {
+    "id": "ip::103.203.59.8",
+    "type": "ip",
+    "value": "103.203.59.8",
+    "source": "AbuseIPDB",
+    "sources_count": 1,
+    "enrichment": {
+      "dns": {
+        "a": [],
+        "aaaa": [],
+        "mx": [],
+        "txt": []
+      },
+      "reverse": {
+        "ptr": "scan-59-8.security.ipip.net"
+      },
+      "geoip": {
+        "city": null,
+        "country": "China",
+        "country_iso": "CN",
+        "location": {
+          "lat": 34.7732,
+          "lon": 113.722
+        }
+      },
+      "passive_dns": [],
+      "whois": {},
+      "abuseipdb": {
+        "ipAddress": "103.203.59.8",
+        "isPublic": true,
+        "ipVersion": 4,
+        "isWhitelisted": false,
+        "abuseConfidenceScore": 100,
+        "countryCode": "JP",
+        "usageType": "Data Center/Web Hosting/Transit",
+        "isp": "Beijing Tiantexin Tech. Co., Ltd.",
+        "domain": "ipip.com",
+        "hostnames": [
+          "scan-59-8.security.ipip.net"
+        ],
+        "isTor": false,
+        "totalReports": 3700,
+        "numDistinctUsers": 78,
+        "lastReportedAt": "2025-11-18T19:05:27+00:00"
+      },
+      "abuseipdb_score": 100
+    },
+    "score": 89,
+    "score_breakdown": {
+      "base": 10,
+      "source_weight": 20,
+      "abuse_confidence": 100,
+      "abuse_contrib": 25,
+      "total_reports": 3700,
+      "total_reports_contrib": 14,
+      "distinct_users": 78,
+      "distinct_users_contrib": 3,
+      "passive_dns_count": 0,
+      "passive_dns_contrib": 0,
+      "otx_count": 0,
+      "otx_contrib": 0,
+      "ptr": "scan-59-8.security.ipip.net",
+      "ptr_contrib": 12,
+      "whois_present": 0,
+      "whois_contrib": 0,
+      "country": "CN",
+      "country_contrib": 5,
+      "no_signals_penalty": 0,
+      "final_score_raw": 89,
+      "final_score": 89
+    },
+    "risk_bucket": "high"
+  },
+  {
+    "id": "ip::103.203.57.15",
+    "type": "ip",
+    "value": "103.203.57.15",
+    "source": "AbuseIPDB",
+    "sources_count": 1,
+    "enrichment": {
+      "dns": {
+        "a": [],
+        "aaaa": [],
+        "mx": [],
+        "txt": []
+      },
+      "reverse": {
+        "ptr": "scan-57-15.security.ipip.net"
+      },
+      "geoip": {
+        "city": null,
+        "country": "China",
+        "country_iso": "CN",
+        "location": {
+          "lat": 34.7732,
+          "lon": 113.722
+        }
+      },
+      "passive_dns": [],
+      "whois": {},
+      "abuseipdb": {
+        "ipAddress": "103.203.57.15",
+        "isPublic": true,
+        "ipVersion": 4,
+        "isWhitelisted": false,
+        "abuseConfidenceScore": 100,
+        "countryCode": "US",
+        "usageType": "Data Center/Web Hosting/Transit",
+        "isp": "Beijing Tiantexin Tech. Co., Ltd.",
+        "domain": "ipip.com",
+        "hostnames": [
+          "scan-57-15.security.ipip.net"
+        ],
+        "isTor": false,
+        "totalReports": 2878,
+        "numDistinctUsers": 89,
+        "lastReportedAt": "2025-11-18T19:04:55+00:00"
+      },
+      "abuseipdb_score": 100
+    },
+    "score": 89,
+    "score_breakdown": {
+      "base": 10,
+      "source_weight": 20,
+      "abuse_confidence": 100,
+      "abuse_contrib": 25,
+      "total_reports": 2878,
+      "total_reports_contrib": 14,
+      "distinct_users": 89,
+      "distinct_users_contrib": 3,
+      "passive_dns_count": 0,
+      "passive_dns_contrib": 0,
+      "otx_count": 0,
+      "otx_contrib": 0,
+      "ptr": "scan-57-15.security.ipip.net",
+      "ptr_contrib": 12,
+      "whois_present": 0,
+      "whois_contrib": 0,
+      "country": "CN",
+      "country_contrib": 5,
+      "no_signals_penalty": 0,
+      "final_score_raw": 89,
+      "final_score": 89
+    },
+    "risk_bucket": "high"
+  },
+  {
+    "id": "ip::103.203.57.4",
+    "type": "ip",
+    "value": "103.203.57.4",
+    "source": "AbuseIPDB",
+    "sources_count": 1,
+    "enrichment": {
+      "dns": {
+        "a": [],
+        "aaaa": [],
+        "mx": [],
+        "txt": []
+      },
+      "reverse": {
+        "ptr": "scan-57-4.security.ipip.net"
+      },
+      "geoip": {
+        "city": null,
+        "country": "China",
+        "country_iso": "CN",
+        "location": {
+          "lat": 34.7732,
+          "lon": 113.722
+        }
+      },
+      "passive_dns": [],
+      "whois": {},
+      "abuseipdb": {
+        "ipAddress": "103.203.57.4",
+        "isPublic": true,
+        "ipVersion": 4,
+        "isWhitelisted": false,
+        "abuseConfidenceScore": 100,
+        "countryCode": "US",
+        "usageType": "Data Center/Web Hosting/Transit",
+        "isp": "Beijing Tiantexin Tech. Co., Ltd.",
+        "domain": "ipip.com",
+        "hostnames": [
+          "scan-57-4.security.ipip.net"
+        ],
+        "isTor": false,
+        "totalReports": 3514,
+        "numDistinctUsers": 70,
+        "lastReportedAt": "2025-11-18T19:05:43+00:00"
+      },
+      "abuseipdb_score": 100
+    },
+    "score": 89,
+    "score_breakdown": {
+      "base": 10,
+      "source_weight": 20,
+      "abuse_confidence": 100,
+      "abuse_contrib": 25,
+      "total_reports": 3514,
+      "total_reports_contrib": 14,
+      "distinct_users": 70,
+      "distinct_users_contrib": 3,
+      "passive_dns_count": 0,
+      "passive_dns_contrib": 0,
+      "otx_count": 0,
+      "otx_contrib": 0,
+      "ptr": "scan-57-4.security.ipip.net",
+      "ptr_contrib": 12,
+      "whois_present": 0,
+      "whois_contrib": 0,
+      "country": "CN",
+      "country_contrib": 5,
+      "no_signals_penalty": 0,
+      "final_score_raw": 89,
+      "final_score": 89
+    },
+    "risk_bucket": "high"
+  },
+  {
+    "id": "ip::103.203.59.6",
+    "type": "ip",
+    "value": "103.203.59.6",
+    "source": "AbuseIPDB",
+    "sources_count": 1,
+    "enrichment": {
+      "dns": {
+        "a": [],
+        "aaaa": [],
+        "mx": [],
+        "txt": []
+      },
+      "reverse": {
+        "ptr": "scan-59-6.security.ipip.net"
+      },
+      "geoip": {
+        "city": null,
+        "country": "China",
+        "country_iso": "CN",
+        "location": {
+          "lat": 34.7732,
+          "lon": 113.722
+        }
+      },
+      "passive_dns": [],
+      "whois": {},
+      "abuseipdb": {
+        "ipAddress": "103.203.59.6",
+        "isPublic": true,
+        "ipVersion": 4,
+        "isWhitelisted": false,
+        "abuseConfidenceScore": 100,
+        "countryCode": "JP",
+        "usageType": "Data Center/Web Hosting/Transit",
+        "isp": "Beijing Tiantexin Tech. Co., Ltd.",
+        "domain": "ipip.com",
+        "hostnames": [
+          "scan-59-6.security.ipip.net"
+        ],
+        "isTor": false,
+        "totalReports": 3388,
+        "numDistinctUsers": 65,
+        "lastReportedAt": "2025-11-18T19:04:17+00:00"
+      },
+      "abuseipdb_score": 100
+    },
+    "score": 89,
+    "score_breakdown": {
+      "base": 10,
+      "source_weight": 20,
+      "abuse_confidence": 100,
+      "abuse_contrib": 25,
+      "total_reports": 3388,
+      "total_reports_contrib": 14,
+      "distinct_users": 65,
+      "distinct_users_contrib": 3,
+      "passive_dns_count": 0,
+      "passive_dns_contrib": 0,
+      "otx_count": 0,
+      "otx_contrib": 0,
+      "ptr": "scan-59-6.security.ipip.net",
+      "ptr_contrib": 12,
+      "whois_present": 0,
+      "whois_contrib": 0,
+      "country": "CN",
+      "country_contrib": 5,
+      "no_signals_penalty": 0,
+      "final_score_raw": 89,
+      "final_score": 89
+    },
+    "risk_bucket": "high"
+  },
+  {
+    "id": "ip::103.203.57.13",
+    "type": "ip",
+    "value": "103.203.57.13",
+    "source": "AbuseIPDB",
+    "sources_count": 1,
+    "enrichment": {
+      "dns": {
+        "a": [],
+        "aaaa": [],
+        "mx": [],
+        "txt": []
+      },
+      "reverse": {
+        "ptr": "scan-57-13.security.ipip.net"
+      },
+      "geoip": {
+        "city": null,
+        "country": "China",
+        "country_iso": "CN",
+        "location": {
+          "lat": 34.7732,
+          "lon": 113.722
+        }
+      },
+      "passive_dns": [],
+      "whois": {},
+      "abuseipdb": {
+        "ipAddress": "103.203.57.13",
+        "isPublic": true,
+        "ipVersion": 4,
+        "isWhitelisted": false,
+        "abuseConfidenceScore": 100,
+        "countryCode": "US",
+        "usageType": "Data Center/Web Hosting/Transit",
+        "isp": "Beijing Tiantexin Tech. Co., Ltd.",
+        "domain": "ipip.com",
+        "hostnames": [
+          "scan-57-13.security.ipip.net"
+        ],
+        "isTor": false,
+        "totalReports": 2593,
+        "numDistinctUsers": 82,
+        "lastReportedAt": "2025-11-18T19:04:47+00:00"
+      },
+      "abuseipdb_score": 100
+    },
+    "score": 89,
+    "score_breakdown": {
+      "base": 10,
+      "source_weight": 20,
+      "abuse_confidence": 100,
+      "abuse_contrib": 25,
+      "total_reports": 2593,
+      "total_reports_contrib": 14,
+      "distinct_users": 82,
+      "distinct_users_contrib": 3,
+      "passive_dns_count": 0,
+      "passive_dns_contrib": 0,
+      "otx_count": 0,
+      "otx_contrib": 0,
+      "ptr": "scan-57-13.security.ipip.net",
+      "ptr_contrib": 12,
+      "whois_present": 0,
+      "whois_contrib": 0,
+      "country": "CN",
+      "country_contrib": 5,
+      "no_signals_penalty": 0,
+      "final_score_raw": 89,
+      "final_score": 89
+    },
+    "risk_bucket": "high"
+  },
+  {
+    "id": "ip::103.203.59.16",
+    "type": "ip",
+    "value": "103.203.59.16",
+    "source": "AbuseIPDB",
+    "sources_count": 1,
+    "enrichment": {
+      "dns": {
+        "a": [],
+        "aaaa": [],
+        "mx": [],
+        "txt": []
+      },
+      "reverse": {
+        "ptr": "scan-59-16.security.ipip.net"
+      },
+      "geoip": {
+        "city": null,
+        "country": "China",
+        "country_iso": "CN",
+        "location": {
+          "lat": 34.7732,
+          "lon": 113.722
+        }
+      },
+      "passive_dns": [],
+      "whois": {},
+      "abuseipdb": {
+        "ipAddress": "103.203.59.16",
+        "isPublic": true,
+        "ipVersion": 4,
+        "isWhitelisted": false,
+        "abuseConfidenceScore": 100,
+        "countryCode": "JP",
+        "usageType": "Data Center/Web Hosting/Transit",
+        "isp": "Beijing Tiantexin Tech. Co., Ltd.",
+        "domain": "ipip.com",
+        "hostnames": [
+          "scan-59-16.security.ipip.net"
+        ],
+        "isTor": false,
+        "totalReports": 1783,
+        "numDistinctUsers": 62,
+        "lastReportedAt": "2025-11-18T19:16:10+00:00"
+      },
+      "abuseipdb_score": 100
+    },
+    "score": 87,
+    "score_breakdown": {
+      "base": 10,
+      "source_weight": 20,
+      "abuse_confidence": 100,
+      "abuse_contrib": 25,
+      "total_reports": 1783,
+      "total_reports_contrib": 12,
+      "distinct_users": 62,
+      "distinct_users_contrib": 3,
+      "passive_dns_count": 0,
+      "passive_dns_contrib": 0,
+      "otx_count": 0,
+      "otx_contrib": 0,
+      "ptr": "scan-59-16.security.ipip.net",
+      "ptr_contrib": 12,
+      "whois_present": 0,
+      "whois_contrib": 0,
+      "country": "CN",
+      "country_contrib": 5,
+      "no_signals_penalty": 0,
+      "final_score_raw": 87,
+      "final_score": 87
+    },
+    "risk_bucket": "high"
+  },
+  {
+    "id": "ip::103.203.57.17",
+    "type": "ip",
+    "value": "103.203.57.17",
+    "source": "AbuseIPDB",
+    "sources_count": 1,
+    "enrichment": {
+      "dns": {
+        "a": [],
+        "aaaa": [],
+        "mx": [],
+        "txt": []
+      },
+      "reverse": {
+        "ptr": "scan-57-17.security.ipip.net"
+      },
+      "geoip": {
+        "city": null,
+        "country": "China",
+        "country_iso": "CN",
+        "location": {
+          "lat": 34.7732,
+          "lon": 113.722
+        }
+      },
+      "passive_dns": [],
+      "whois": {},
+      "abuseipdb": {
+        "ipAddress": "103.203.57.17",
+        "isPublic": true,
+        "ipVersion": 4,
+        "isWhitelisted": false,
+        "abuseConfidenceScore": 100,
+        "countryCode": "US",
+        "usageType": "Data Center/Web Hosting/Transit",
+        "isp": "Beijing Tiantexin Tech. Co., Ltd.",
+        "domain": "ipip.com",
+        "hostnames": [
+          "scan-57-17.security.ipip.net"
+        ],
+        "isTor": false,
+        "totalReports": 1765,
+        "numDistinctUsers": 66,
+        "lastReportedAt": "2025-11-18T18:04:47+00:00"
+      },
+      "abuseipdb_score": 100
+    },
+    "score": 87,
+    "score_breakdown": {
+      "base": 10,
+      "source_weight": 20,
+      "abuse_confidence": 100,
+      "abuse_contrib": 25,
+      "total_reports": 1765,
+      "total_reports_contrib": 12,
+      "distinct_users": 66,
+      "distinct_users_contrib": 3,
+      "passive_dns_count": 0,
+      "passive_dns_contrib": 0,
+      "otx_count": 0,
+      "otx_contrib": 0,
+      "ptr": "scan-57-17.security.ipip.net",
+      "ptr_contrib": 12,
+      "whois_present": 0,
+      "whois_contrib": 0,
+      "country": "CN",
+      "country_contrib": 5,
+      "no_signals_penalty": 0,
+      "final_score_raw": 87,
+      "final_score": 87
+    },
+    "risk_bucket": "high"
+  },
+  {
+    "id": "ip::103.203.57.16",
+    "type": "ip",
+    "value": "103.203.57.16",
+    "source": "AbuseIPDB",
+    "sources_count": 1,
+    "enrichment": {
+      "dns": {
+        "a": [],
+        "aaaa": [],
+        "mx": [],
+        "txt": []
+      },
+      "reverse": {
+        "ptr": "scan-57-16.security.ipip.net"
+      },
+      "geoip": {
+        "city": null,
+        "country": "China",
+        "country_iso": "CN",
+        "location": {
+          "lat": 34.7732,
+          "lon": 113.722
+        }
+      },
+      "passive_dns": [],
+      "whois": {},
+      "abuseipdb": {
+        "ipAddress": "103.203.57.16",
+        "isPublic": true,
+        "ipVersion": 4,
+        "isWhitelisted": false,
+        "abuseConfidenceScore": 100,
+        "countryCode": "US",
+        "usageType": "Data Center/Web Hosting/Transit",
+        "isp": "Beijing Tiantexin Tech. Co., Ltd.",
+        "domain": "ipip.com",
+        "hostnames": [
+          "scan-57-16.security.ipip.net"
+        ],
+        "isTor": false,
+        "totalReports": 1832,
+        "numDistinctUsers": 65,
+        "lastReportedAt": "2025-11-18T19:04:26+00:00"
+      },
+      "abuseipdb_score": 100
+    },
+    "score": 87,
+    "score_breakdown": {
+      "base": 10,
+      "source_weight": 20,
+      "abuse_confidence": 100,
+      "abuse_contrib": 25,
+      "total_reports": 1832,
+      "total_reports_contrib": 12,
+      "distinct_users": 65,
+      "distinct_users_contrib": 3,
+      "passive_dns_count": 0,
+      "passive_dns_contrib": 0,
+      "otx_count": 0,
+      "otx_contrib": 0,
+      "ptr": "scan-57-16.security.ipip.net",
+      "ptr_contrib": 12,
+      "whois_present": 0,
+      "whois_contrib": 0,
+      "country": "CN",
+      "country_contrib": 5,
+      "no_signals_penalty": 0,
+      "final_score_raw": 87,
+      "final_score": 87
+    },
+    "risk_bucket": "high"
+  },
+  {
+    "id": "ip::103.203.59.4",
+    "type": "ip",
+    "value": "103.203.59.4",
+    "source": "AbuseIPDB",
+    "sources_count": 1,
+    "enrichment": {
+      "dns": {
+        "a": [],
+        "aaaa": [],
+        "mx": [],
+        "txt": []
+      },
+      "reverse": {
+        "ptr": "scan-59-4.security.ipip.net"
+      },
+      "geoip": {
+        "city": null,
+        "country": "China",
+        "country_iso": "CN",
+        "location": {
+          "lat": 34.7732,
+          "lon": 113.722
+        }
+      },
+      "passive_dns": [],
+      "whois": {},
+      "abuseipdb": {
+        "ipAddress": "103.203.59.4",
+        "isPublic": true,
+        "ipVersion": 4,
+        "isWhitelisted": false,
+        "abuseConfidenceScore": 100,
+        "countryCode": "JP",
+        "usageType": "Data Center/Web Hosting/Transit",
+        "isp": "Beijing Tiantexin Tech. Co., Ltd.",
+        "domain": "ipip.com",
+        "hostnames": [
+          "scan-59-4.security.ipip.net"
+        ],
+        "isTor": false,
+        "totalReports": 1959,
+        "numDistinctUsers": 77,
+        "lastReportedAt": "2025-11-18T19:20:03+00:00"
+      },
+      "abuseipdb_score": 100
+    },
+    "score": 87,
+    "score_breakdown": {
+      "base": 10,
+      "source_weight": 20,
+      "abuse_confidence": 100,
+      "abuse_contrib": 25,
+      "total_reports": 1959,
+      "total_reports_contrib": 12,
+      "distinct_users": 77,
+      "distinct_users_contrib": 3,
+      "passive_dns_count": 0,
+      "passive_dns_contrib": 0,
+      "otx_count": 0,
+      "otx_contrib": 0,
+      "ptr": "scan-59-4.security.ipip.net",
+      "ptr_contrib": 12,
+      "whois_present": 0,
+      "whois_contrib": 0,
+      "country": "CN",
+      "country_contrib": 5,
+      "no_signals_penalty": 0,
+      "final_score_raw": 87,
+      "final_score": 87
+    },
+    "risk_bucket": "high"
+  },
+  {
+    "id": "ip::103.203.59.2",
+    "type": "ip",
+    "value": "103.203.59.2",
+    "source": "AbuseIPDB",
+    "sources_count": 1,
+    "enrichment": {
+      "dns": {
+        "a": [],
+        "aaaa": [],
+        "mx": [],
+        "txt": []
+      },
+      "reverse": {
+        "ptr": "scan-59-2.security.ipip.net"
+      },
+      "geoip": {
+        "city": null,
+        "country": "China",
+        "country_iso": "CN",
+        "location": {
+          "lat": 34.7732,
+          "lon": 113.722
+        }
+      },
+      "passive_dns": [],
+      "whois": {},
+      "abuseipdb": {
+        "ipAddress": "103.203.59.2",
+        "isPublic": true,
+        "ipVersion": 4,
+        "isWhitelisted": false,
+        "abuseConfidenceScore": 100,
+        "countryCode": "JP",
+        "usageType": "Data Center/Web Hosting/Transit",
+        "isp": "Beijing Tiantexin Tech. Co., Ltd.",
+        "domain": "ipip.com",
+        "hostnames": [
+          "scan-59-2.security.ipip.net"
+        ],
+        "isTor": false,
+        "totalReports": 1825,
+        "numDistinctUsers": 57,
+        "lastReportedAt": "2025-11-18T19:22:38+00:00"
+      },
+      "abuseipdb_score": 100
+    },
+    "score": 87,
+    "score_breakdown": {
+      "base": 10,
+      "source_weight": 20,
+      "abuse_confidence": 100,
+      "abuse_contrib": 25,
+      "total_reports": 1825,
+      "total_reports_contrib": 12,
+      "distinct_users": 57,
+      "distinct_users_contrib": 3,
+      "passive_dns_count": 0,
+      "passive_dns_contrib": 0,
+      "otx_count": 0,
+      "otx_contrib": 0,
+      "ptr": "scan-59-2.security.ipip.net",
+      "ptr_contrib": 12,
+      "whois_present": 0,
+      "whois_contrib": 0,
+      "country": "CN",
+      "country_contrib": 5,
+      "no_signals_penalty": 0,
+      "final_score_raw": 87,
+      "final_score": 87
+    },
+    "risk_bucket": "high"
+  },
+  {
+    "id": "ip::103.203.58.1",
+    "type": "ip",
+    "value": "103.203.58.1",
+    "source": "AbuseIPDB",
+    "sources_count": 1,
+    "enrichment": {
+      "dns": {
+        "a": [],
+        "aaaa": [],
+        "mx": [],
+        "txt": []
+      },
+      "reverse": {
+        "ptr": "scan-58-1.security.ipip.net"
+      },
+      "geoip": {
+        "city": null,
+        "country": "China",
+        "country_iso": "CN",
+        "location": {
+          "lat": 34.7732,
+          "lon": 113.722
+        }
+      },
+      "passive_dns": [],
+      "whois": {},
+      "abuseipdb": {
+        "ipAddress": "103.203.58.1",
+        "isPublic": true,
+        "ipVersion": 4,
+        "isWhitelisted": false,
+        "abuseConfidenceScore": 100,
+        "countryCode": "US",
+        "usageType": "Data Center/Web Hosting/Transit",
+        "isp": "Beijing Tiantexin Tech. Co., Ltd.",
+        "domain": "ipip.com",
+        "hostnames": [
+          "scan-58-1.security.ipip.net"
+        ],
+        "isTor": false,
+        "totalReports": 1604,
+        "numDistinctUsers": 62,
+        "lastReportedAt": "2025-11-18T19:04:34+00:00"
+      },
+      "abuseipdb_score": 100
+    },
+    "score": 87,
+    "score_breakdown": {
+      "base": 10,
+      "source_weight": 20,
+      "abuse_confidence": 100,
+      "abuse_contrib": 25,
+      "total_reports": 1604,
+      "total_reports_contrib": 12,
+      "distinct_users": 62,
+      "distinct_users_contrib": 3,
+      "passive_dns_count": 0,
+      "passive_dns_contrib": 0,
+      "otx_count": 0,
+      "otx_contrib": 0,
+      "ptr": "scan-58-1.security.ipip.net",
+      "ptr_contrib": 12,
+      "whois_present": 0,
+      "whois_contrib": 0,
+      "country": "CN",
+      "country_contrib": 5,
+      "no_signals_penalty": 0,
+      "final_score_raw": 87,
+      "final_score": 87
+    },
+    "risk_bucket": "high"
+  },
+  {
+    "id": "ip::85.208.253.156",
+    "type": "ip",
+    "value": "85.208.253.156",
+    "source": "AbuseIPDB",
+    "sources_count": 1,
+    "enrichment": {
+      "dns": {
+        "a": [],
+        "aaaa": [],
+        "mx": [],
+        "txt": []
+      },
+      "reverse": {
+        "ptr": "static.156.253.208.85.clients.irandns.com"
+      },
+      "geoip": {
+        "city": null,
+        "country": "Iran",
+        "country_iso": "IR",
+        "location": {
+          "lat": 35.698,
+          "lon": 51.4115
+        }
+      },
+      "passive_dns": [],
+      "whois": {},
+      "abuseipdb": {
+        "ipAddress": "85.208.253.156",
+        "isPublic": true,
+        "ipVersion": 4,
+        "isWhitelisted": false,
+        "abuseConfidenceScore": 100,
+        "countryCode": "IR",
+        "usageType": "Data Center/Web Hosting/Transit",
+        "isp": "Green Web Samaneh Novin PJSC",
+        "domain": "greenweb.ir",
+        "hostnames": [
+          "static.156.253.208.85.clients.irandns.com"
+        ],
+        "isTor": false,
+        "totalReports": 8041,
+        "numDistinctUsers": 1065,
+        "lastReportedAt": "2025-11-18T18:58:10+00:00"
+      },
+      "abuseipdb_score": 100
+    },
+    "score": 86,
+    "score_breakdown": {
+      "base": 10,
+      "source_weight": 20,
+      "abuse_confidence": 100,
+      "abuse_contrib": 25,
+      "total_reports": 8041,
+      "total_reports_contrib": 16,
+      "distinct_users": 1065,
+      "distinct_users_contrib": 10,
+      "passive_dns_count": 0,
+      "passive_dns_contrib": 0,
+      "otx_count": 0,
+      "otx_contrib": 0,
+      "ptr": "static.156.253.208.85.clients.irandns.com",
+      "ptr_contrib": 0,
+      "whois_present": 0,
+      "whois_contrib": 0,
+      "country": "IR",
+      "country_contrib": 5,
+      "no_signals_penalty": 0,
+      "final_score_raw": 86,
+      "final_score": 86
+    },
+    "risk_bucket": "high"
+  },
+  {
+    "id": "ip::212.33.235.243",
+    "type": "ip",
+    "value": "212.33.235.243",
+    "source": "AbuseIPDB",
+    "sources_count": 1,
+    "enrichment": {
+      "dns": {
+        "a": [],
+        "aaaa": [],
+        "mx": [],
+        "txt": []
+      },
+      "reverse": {
+        "ptr": "mxr.fort.tel"
+      },
+      "geoip": {
+        "city": "Perm",
+        "country": "Russia",
+        "country_iso": "RU",
+        "location": {
+          "lat": 58.0047,
+          "lon": 56.2514
+        }
+      },
+      "passive_dns": [],
+      "whois": {},
+      "abuseipdb": {
+        "ipAddress": "212.33.235.243",
+        "isPublic": true,
+        "ipVersion": 4,
+        "isWhitelisted": false,
+        "abuseConfidenceScore": 100,
+        "countryCode": "RU",
+        "usageType": "Fixed Line ISP",
+        "isp": "Corporate customers PPPoE network",
+        "domain": "dom.ru",
+        "hostnames": [
+          "mxr.fort.tel"
+        ],
+        "isTor": false,
+        "totalReports": 7424,
+        "numDistinctUsers": 1016,
+        "lastReportedAt": "2025-11-18T19:25:55+00:00"
+      },
+      "abuseipdb_score": 100
+    },
+    "score": 86,
+    "score_breakdown": {
+      "base": 10,
+      "source_weight": 20,
+      "abuse_confidence": 100,
+      "abuse_contrib": 25,
+      "total_reports": 7424,
+      "total_reports_contrib": 16,
+      "distinct_users": 1016,
+      "distinct_users_contrib": 10,
+      "passive_dns_count": 0,
+      "passive_dns_contrib": 0,
+      "otx_count": 0,
+      "otx_contrib": 0,
+      "ptr": "mxr.fort.tel",
+      "ptr_contrib": 0,
+      "whois_present": 0,
+      "whois_contrib": 0,
+      "country": "RU",
+      "country_contrib": 5,
+      "no_signals_penalty": 0,
+      "final_score_raw": 86,
+      "final_score": 86
+    },
+    "risk_bucket": "high"
+  },
+  {
+    "id": "ip::195.190.104.66",
+    "type": "ip",
+    "value": "195.190.104.66",
+    "source": "AbuseIPDB",
+    "sources_count": 1,
+    "enrichment": {
+      "dns": {
+        "a": [],
+        "aaaa": [],
+        "mx": [],
+        "txt": []
+      },
+      "reverse": {
+        "ptr": "spb-195-190-104-66.sovintel.ru"
+      },
+      "geoip": {
+        "city": null,
+        "country": "Russia",
+        "country_iso": "RU",
+        "location": {
+          "lat": 55.7386,
+          "lon": 37.6068
+        }
+      },
+      "passive_dns": [],
+      "whois": {},
+      "abuseipdb": {
+        "ipAddress": "195.190.104.66",
+        "isPublic": true,
+        "ipVersion": 4,
+        "isWhitelisted": false,
+        "abuseConfidenceScore": 100,
+        "countryCode": "RU",
+        "usageType": "Fixed Line ISP",
+        "isp": "111250 Russia",
+        "domain": "russianpost.ru",
+        "hostnames": [
+          "spb-195-190-104-66.sovintel.ru"
+        ],
+        "isTor": false,
+        "totalReports": 6889,
+        "numDistinctUsers": 1000,
+        "lastReportedAt": "2025-11-18T18:51:50+00:00"
+      },
+      "abuseipdb_score": 100
+    },
+    "score": 86,
+    "score_breakdown": {
+      "base": 10,
+      "source_weight": 20,
+      "abuse_confidence": 100,
+      "abuse_contrib": 25,
+      "total_reports": 6889,
+      "total_reports_contrib": 16,
+      "distinct_users": 1000,
+      "distinct_users_contrib": 10,
+      "passive_dns_count": 0,
+      "passive_dns_contrib": 0,
+      "otx_count": 0,
+      "otx_contrib": 0,
+      "ptr": "spb-195-190-104-66.sovintel.ru",
+      "ptr_contrib": 0,
+      "whois_present": 0,
+      "whois_contrib": 0,
+      "country": "RU",
+      "country_contrib": 5,
+      "no_signals_penalty": 0,
+      "final_score_raw": 86,
+      "final_score": 86
+    },
+    "risk_bucket": "high"
+  },
+  {
+    "id": "ip::85.133.193.72",
+    "type": "ip",
+    "value": "85.133.193.72",
+    "source": "AbuseIPDB",
+    "sources_count": 1,
+    "enrichment": {
+      "dns": {
+        "a": [],
+        "aaaa": [],
+        "mx": [],
+        "txt": []
+      },
+      "reverse": {
+        "ptr": "static.72.193.133.85.manaserver.net"
+      },
+      "geoip": {
+        "city": null,
+        "country": "Iran",
+        "country_iso": "IR",
+        "location": {
+          "lat": 35.698,
+          "lon": 51.4115
+        }
+      },
+      "passive_dns": [],
+      "whois": {},
+      "abuseipdb": {
+        "ipAddress": "85.133.193.72",
+        "isPublic": true,
+        "ipVersion": 4,
+        "isWhitelisted": false,
+        "abuseConfidenceScore": 100,
+        "countryCode": "IR",
+        "usageType": "Data Center/Web Hosting/Transit",
+        "isp": "Sepanta Communication Development Co. Ltd",
+        "domain": "sepanta.com",
+        "hostnames": [
+          "static.72.193.133.85.manaserver.net"
+        ],
+        "isTor": false,
+        "totalReports": 5442,
+        "numDistinctUsers": 1010,
+        "lastReportedAt": "2025-11-18T19:27:12+00:00"
+      },
+      "abuseipdb_score": 100
+    },
+    "score": 86,
+    "score_breakdown": {
+      "base": 10,
+      "source_weight": 20,
+      "abuse_confidence": 100,
+      "abuse_contrib": 25,
+      "total_reports": 5442,
+      "total_reports_contrib": 16,
+      "distinct_users": 1010,
+      "distinct_users_contrib": 10,
+      "passive_dns_count": 0,
+      "passive_dns_contrib": 0,
+      "otx_count": 0,
+      "otx_contrib": 0,
+      "ptr": "static.72.193.133.85.manaserver.net",
+      "ptr_contrib": 0,
+      "whois_present": 0,
+      "whois_contrib": 0,
+      "country": "IR",
+      "country_contrib": 5,
+      "no_signals_penalty": 0,
+      "final_score_raw": 86,
+      "final_score": 86
+    },
+    "risk_bucket": "high"
+  },
+  {
+    "id": "ip::185.116.160.35",
+    "type": "ip",
+    "value": "185.116.160.35",
+    "source": "AbuseIPDB",
+    "sources_count": 1,
+    "enrichment": {
+      "dns": {
+        "a": [],
+        "aaaa": [],
+        "mx": [],
+        "txt": []
+      },
+      "reverse": {
+        "ptr": "static.35.160.116.185.clients.irandns.com"
+      },
+      "geoip": {
+        "city": "Tehran",
+        "country": "Iran",
+        "country_iso": "IR",
+        "location": {
+          "lat": 35.6824,
+          "lon": 51.4158
+        }
+      },
+      "passive_dns": [],
+      "whois": {},
+      "abuseipdb": {
+        "ipAddress": "185.116.160.35",
+        "isPublic": true,
+        "ipVersion": 4,
+        "isWhitelisted": false,
+        "abuseConfidenceScore": 100,
+        "countryCode": "IR",
+        "usageType": "Data Center/Web Hosting/Transit",
+        "isp": "Green Web Samaneh Novin Network",
+        "domain": "greenweb.ir",
+        "hostnames": [
+          "static.35.160.116.185.clients.irandns.com"
+        ],
+        "isTor": false,
+        "totalReports": 7849,
+        "numDistinctUsers": 1036,
+        "lastReportedAt": "2025-11-18T19:01:57+00:00"
+      },
+      "abuseipdb_score": 100
+    },
+    "score": 86,
+    "score_breakdown": {
+      "base": 10,
+      "source_weight": 20,
+      "abuse_confidence": 100,
+      "abuse_contrib": 25,
+      "total_reports": 7849,
+      "total_reports_contrib": 16,
+      "distinct_users": 1036,
+      "distinct_users_contrib": 10,
+      "passive_dns_count": 0,
+      "passive_dns_contrib": 0,
+      "otx_count": 0,
+      "otx_contrib": 0,
+      "ptr": "static.35.160.116.185.clients.irandns.com",
+      "ptr_contrib": 0,
+      "whois_present": 0,
+      "whois_contrib": 0,
+      "country": "IR",
+      "country_contrib": 5,
+      "no_signals_penalty": 0,
+      "final_score_raw": 86,
+      "final_score": 86
+    },
+    "risk_bucket": "high"
+  },
+  {
+    "id": "ip::37.193.112.180",
+    "type": "ip",
+    "value": "37.193.112.180",
+    "source": "AbuseIPDB",
+    "sources_count": 1,
+    "enrichment": {
+      "dns": {
+        "a": [],
+        "aaaa": [],
+        "mx": [],
+        "txt": []
+      },
+      "reverse": {
+        "ptr": "l37-193-112-180.novotelecom.ru"
+      },
+      "geoip": {
+        "city": "Novosibirsk",
+        "country": "Russia",
+        "country_iso": "RU",
+        "location": {
+          "lat": 55.0226,
+          "lon": 82.9317
+        }
+      },
+      "passive_dns": [],
+      "whois": {},
+      "abuseipdb": {
+        "ipAddress": "37.193.112.180",
+        "isPublic": true,
+        "ipVersion": 4,
+        "isWhitelisted": false,
+        "abuseConfidenceScore": 100,
+        "countryCode": "RU",
+        "usageType": "Fixed Line ISP",
+        "isp": "Novotelecom Ltd",
+        "domain": "novotelecom.ru",
+        "hostnames": [
+          "l37-193-112-180.novotelecom.ru"
+        ],
+        "isTor": false,
+        "totalReports": 6247,
+        "numDistinctUsers": 972,
+        "lastReportedAt": "2025-11-18T19:22:58+00:00"
+      },
+      "abuseipdb_score": 100
+    },
+    "score": 85,
+    "score_breakdown": {
+      "base": 10,
+      "source_weight": 20,
+      "abuse_confidence": 100,
+      "abuse_contrib": 25,
+      "total_reports": 6247,
+      "total_reports_contrib": 16,
+      "distinct_users": 972,
+      "distinct_users_contrib": 9,
+      "passive_dns_count": 0,
+      "passive_dns_contrib": 0,
+      "otx_count": 0,
+      "otx_contrib": 0,
+      "ptr": "l37-193-112-180.novotelecom.ru",
+      "ptr_contrib": 0,
+      "whois_present": 0,
+      "whois_contrib": 0,
+      "country": "RU",
+      "country_contrib": 5,
+      "no_signals_penalty": 0,
+      "final_score_raw": 85,
+      "final_score": 85
+    },
+    "risk_bucket": "high"
+  },
+  {
+    "id": "ip::185.213.165.150",
+    "type": "ip",
+    "value": "185.213.165.150",
+    "source": "AbuseIPDB",
+    "sources_count": 1,
+    "enrichment": {
+      "dns": {
+        "a": [],
+        "aaaa": [],
+        "mx": [],
+        "txt": []
+      },
+      "reverse": {
+        "ptr": "static.150.165.213.185.clients.irandns.com"
+      },
+      "geoip": {
+        "city": "Tehran",
+        "country": "Iran",
+        "country_iso": "IR",
+        "location": {
+          "lat": 35.6824,
+          "lon": 51.4158
+        }
+      },
+      "passive_dns": [],
+      "whois": {},
+      "abuseipdb": {
+        "ipAddress": "185.213.165.150",
+        "isPublic": true,
+        "ipVersion": 4,
+        "isWhitelisted": false,
+        "abuseConfidenceScore": 100,
+        "countryCode": "IR",
+        "usageType": "Data Center/Web Hosting/Transit",
+        "isp": "Green Web Samaneh Novin PJSC",
+        "domain": "greenweb.ir",
+        "hostnames": [
+          "static.150.165.213.185.clients.irandns.com"
+        ],
+        "isTor": false,
+        "totalReports": 6594,
+        "numDistinctUsers": 981,
+        "lastReportedAt": "2025-11-18T12:34:10+00:00"
+      },
+      "abuseipdb_score": 100
+    },
+    "score": 85,
+    "score_breakdown": {
+      "base": 10,
+      "source_weight": 20,
+      "abuse_confidence": 100,
+      "abuse_contrib": 25,
+      "total_reports": 6594,
+      "total_reports_contrib": 16,
+      "distinct_users": 981,
+      "distinct_users_contrib": 9,
+      "passive_dns_count": 0,
+      "passive_dns_contrib": 0,
+      "otx_count": 0,
+      "otx_contrib": 0,
+      "ptr": "static.150.165.213.185.clients.irandns.com",
+      "ptr_contrib": 0,
+      "whois_present": 0,
+      "whois_contrib": 0,
+      "country": "IR",
+      "country_contrib": 5,
+      "no_signals_penalty": 0,
+      "final_score_raw": 85,
+      "final_score": 85
+    },
+    "risk_bucket": "high"
+  },
+  {
+    "id": "ip::103.203.59.15",
+    "type": "ip",
+    "value": "103.203.59.15",
+    "source": "AbuseIPDB",
+    "sources_count": 1,
+    "enrichment": {
+      "dns": {
+        "a": [],
+        "aaaa": [],
+        "mx": [],
+        "txt": []
+      },
+      "reverse": {
+        "ptr": "scan-59-15.security.ipip.net"
+      },
+      "geoip": {
+        "city": null,
+        "country": "China",
+        "country_iso": "CN",
+        "location": {
+          "lat": 34.7732,
+          "lon": 113.722
+        }
+      },
+      "passive_dns": [],
+      "whois": {},
+      "abuseipdb": {
+        "ipAddress": "103.203.59.15",
+        "isPublic": true,
+        "ipVersion": 4,
+        "isWhitelisted": false,
+        "abuseConfidenceScore": 100,
+        "countryCode": "JP",
+        "usageType": "Data Center/Web Hosting/Transit",
+        "isp": "Beijing Tiantexin Tech. Co., Ltd.",
+        "domain": "ipip.com",
+        "hostnames": [
+          "scan-59-15.security.ipip.net"
+        ],
+        "isTor": false,
+        "totalReports": 723,
+        "numDistinctUsers": 28,
+        "lastReportedAt": "2025-11-18T16:10:09+00:00"
+      },
+      "abuseipdb_score": 100
+    },
+    "score": 85,
+    "score_breakdown": {
+      "base": 10,
+      "source_weight": 20,
+      "abuse_confidence": 100,
+      "abuse_contrib": 25,
+      "total_reports": 723,
+      "total_reports_contrib": 10,
+      "distinct_users": 28,
+      "distinct_users_contrib": 3,
+      "passive_dns_count": 0,
+      "passive_dns_contrib": 0,
+      "otx_count": 0,
+      "otx_contrib": 0,
+      "ptr": "scan-59-15.security.ipip.net",
+      "ptr_contrib": 12,
+      "whois_present": 0,
+      "whois_contrib": 0,
+      "country": "CN",
+      "country_contrib": 5,
+      "no_signals_penalty": 0,
+      "final_score_raw": 85,
+      "final_score": 85
+    },
+    "risk_bucket": "high"
+  },
+  {
+    "id": "ip::103.203.57.27",
+    "type": "ip",
+    "value": "103.203.57.27",
+    "source": "AbuseIPDB",
+    "sources_count": 1,
+    "enrichment": {
+      "dns": {
+        "a": [],
+        "aaaa": [],
+        "mx": [],
+        "txt": []
+      },
+      "reverse": {
+        "ptr": "scan-57-27.security.ipip.net"
+      },
+      "geoip": {
+        "city": null,
+        "country": "China",
+        "country_iso": "CN",
+        "location": {
+          "lat": 34.7732,
+          "lon": 113.722
+        }
+      },
+      "passive_dns": [],
+      "whois": {},
+      "abuseipdb": {
+        "ipAddress": "103.203.57.27",
+        "isPublic": true,
+        "ipVersion": 4,
+        "isWhitelisted": false,
+        "abuseConfidenceScore": 100,
+        "countryCode": "US",
+        "usageType": "Data Center/Web Hosting/Transit",
+        "isp": "Beijing Tiantexin Tech. Co., Ltd.",
+        "domain": "ipip.com",
+        "hostnames": [
+          "scan-57-27.security.ipip.net"
+        ],
+        "isTor": false,
+        "totalReports": 878,
+        "numDistinctUsers": 29,
+        "lastReportedAt": "2025-11-18T16:10:03+00:00"
+      },
+      "abuseipdb_score": 100
+    },
+    "score": 85,
+    "score_breakdown": {
+      "base": 10,
+      "source_weight": 20,
+      "abuse_confidence": 100,
+      "abuse_contrib": 25,
+      "total_reports": 878,
+      "total_reports_contrib": 10,
+      "distinct_users": 29,
+      "distinct_users_contrib": 3,
+      "passive_dns_count": 0,
+      "passive_dns_contrib": 0,
+      "otx_count": 0,
+      "otx_contrib": 0,
+      "ptr": "scan-57-27.security.ipip.net",
+      "ptr_contrib": 12,
+      "whois_present": 0,
+      "whois_contrib": 0,
+      "country": "CN",
+      "country_contrib": 5,
+      "no_signals_penalty": 0,
+      "final_score_raw": 85,
+      "final_score": 85
+    },
+    "risk_bucket": "high"
+  },
+  {
+    "id": "ip::103.203.59.1",
+    "type": "ip",
+    "value": "103.203.59.1",
+    "source": "AbuseIPDB",
+    "sources_count": 1,
+    "enrichment": {
+      "dns": {
+        "a": [],
+        "aaaa": [],
+        "mx": [],
+        "txt": []
+      },
+      "reverse": {
+        "ptr": "scan-59-1.security.ipip.net"
+      },
+      "geoip": {
+        "city": null,
+        "country": "China",
+        "country_iso": "CN",
+        "location": {
+          "lat": 34.7732,
+          "lon": 113.722
+        }
+      },
+      "passive_dns": [],
+      "whois": {},
+      "abuseipdb": {
+        "ipAddress": "103.203.59.1",
+        "isPublic": true,
+        "ipVersion": 4,
+        "isWhitelisted": false,
+        "abuseConfidenceScore": 100,
+        "countryCode": "JP",
+        "usageType": "Data Center/Web Hosting/Transit",
+        "isp": "Beijing Tiantexin Tech. Co., Ltd.",
+        "domain": "ipip.com",
+        "hostnames": [
+          "scan-59-1.security.ipip.net"
+        ],
+        "isTor": false,
+        "totalReports": 621,
+        "numDistinctUsers": 53,
+        "lastReportedAt": "2025-11-18T06:33:50+00:00"
+      },
+      "abuseipdb_score": 100
+    },
+    "score": 85,
+    "score_breakdown": {
+      "base": 10,
+      "source_weight": 20,
+      "abuse_confidence": 100,
+      "abuse_contrib": 25,
+      "total_reports": 621,
+      "total_reports_contrib": 10,
+      "distinct_users": 53,
+      "distinct_users_contrib": 3,
+      "passive_dns_count": 0,
+      "passive_dns_contrib": 0,
+      "otx_count": 0,
+      "otx_contrib": 0,
+      "ptr": "scan-59-1.security.ipip.net",
+      "ptr_contrib": 12,
+      "whois_present": 0,
+      "whois_contrib": 0,
+      "country": "CN",
+      "country_contrib": 5,
+      "no_signals_penalty": 0,
+      "final_score_raw": 85,
+      "final_score": 85
+    },
+    "risk_bucket": "high"
+  },
+  {
+    "id": "ip::185.50.38.171",
+    "type": "ip",
+    "value": "185.50.38.171",
+    "source": "AbuseIPDB",
+    "sources_count": 1,
+    "enrichment": {
+      "dns": {
+        "a": [],
+        "aaaa": [],
+        "mx": [],
+        "txt": []
+      },
+      "reverse": {
+        "ptr": "static.171.38.50.185.clients.irandns.com"
+      },
+      "geoip": {
+        "city": "Mashhad",
+        "country": "Iran",
+        "country_iso": "IR",
+        "location": {
+          "lat": 36.3006,
+          "lon": 59.5904
+        }
+      },
+      "passive_dns": [],
+      "whois": {},
+      "abuseipdb": {
+        "ipAddress": "185.50.38.171",
+        "isPublic": true,
+        "ipVersion": 4,
+        "isWhitelisted": false,
+        "abuseConfidenceScore": 100,
+        "countryCode": "IR",
+        "usageType": "Data Center/Web Hosting/Transit",
+        "isp": "Green Web Samaneh Novin Network",
+        "domain": "greenweb.ir",
+        "hostnames": [
+          "static.171.38.50.185.clients.irandns.com"
+        ],
+        "isTor": false,
+        "totalReports": 3804,
+        "numDistinctUsers": 845,
+        "lastReportedAt": "2025-11-18T12:38:42+00:00"
+      },
+      "abuseipdb_score": 100
+    },
+    "score": 83,
+    "score_breakdown": {
+      "base": 10,
+      "source_weight": 20,
+      "abuse_confidence": 100,
+      "abuse_contrib": 25,
+      "total_reports": 3804,
+      "total_reports_contrib": 14,
+      "distinct_users": 845,
+      "distinct_users_contrib": 9,
+      "passive_dns_count": 0,
+      "passive_dns_contrib": 0,
+      "otx_count": 0,
+      "otx_contrib": 0,
+      "ptr": "static.171.38.50.185.clients.irandns.com",
+      "ptr_contrib": 0,
+      "whois_present": 0,
+      "whois_contrib": 0,
+      "country": "IR",
+      "country_contrib": 5,
+      "no_signals_penalty": 0,
+      "final_score_raw": 83,
+      "final_score": 83
+    },
+    "risk_bucket": "high"
+  },
+  {
+    "id": "ip::112.4.79.138",
+    "type": "ip",
+    "value": "112.4.79.138",
+    "source": "AbuseIPDB",
+    "sources_count": 1,
+    "enrichment": {
+      "dns": {
+        "a": [],
+        "aaaa": [],
+        "mx": [],
+        "txt": []
+      },
+      "reverse": {
+        "ptr": "138.79.4.112.static.sz.js.chinamobile.com"
+      },
+      "geoip": {
+        "city": "Nanjing",
+        "country": "China",
+        "country_iso": "CN",
+        "location": {
+          "lat": 32.0589,
+          "lon": 118.7738
+        }
+      },
+      "passive_dns": [],
+      "whois": {},
+      "abuseipdb": {
+        "ipAddress": "112.4.79.138",
+        "isPublic": true,
+        "ipVersion": 4,
+        "isWhitelisted": false,
+        "abuseConfidenceScore": 100,
+        "countryCode": "CN",
+        "usageType": "Fixed Line ISP",
+        "isp": "China Mobile Communications Corporation",
+        "domain": "chinamobile.com",
+        "hostnames": [
+          "138.79.4.112.static.sz.js.chinamobile.com"
+        ],
+        "isTor": false,
+        "totalReports": 2227,
+        "numDistinctUsers": 601,
+        "lastReportedAt": "2025-11-18T19:22:00+00:00"
+      },
+      "abuseipdb_score": 100
+    },
+    "score": 83,
+    "score_breakdown": {
+      "base": 10,
+      "source_weight": 20,
+      "abuse_confidence": 100,
+      "abuse_contrib": 25,
+      "total_reports": 2227,
+      "total_reports_contrib": 14,
+      "distinct_users": 601,
+      "distinct_users_contrib": 9,
+      "passive_dns_count": 0,
+      "passive_dns_contrib": 0,
+      "otx_count": 0,
+      "otx_contrib": 0,
+      "ptr": "138.79.4.112.static.sz.js.chinamobile.com",
+      "ptr_contrib": 0,
+      "whois_present": 0,
+      "whois_contrib": 0,
+      "country": "CN",
+      "country_contrib": 5,
+      "no_signals_penalty": 0,
+      "final_score_raw": 83,
+      "final_score": 83
+    },
+    "risk_bucket": "high"
+  },
+  {
+    "id": "ip::31.47.55.132",
+    "type": "ip",
+    "value": "31.47.55.132",
+    "source": "AbuseIPDB",
+    "sources_count": 1,
+    "enrichment": {
+      "dns": {
+        "a": [],
+        "aaaa": [],
+        "mx": [],
+        "txt": []
+      },
+      "reverse": {
+        "ptr": "mail.pcdcor.ir"
+      },
+      "geoip": {
+        "city": null,
+        "country": "Iran",
+        "country_iso": "IR",
+        "location": {
+          "lat": 35.698,
+          "lon": 51.4115
+        }
+      },
+      "passive_dns": [],
+      "whois": {},
+      "abuseipdb": {
+        "ipAddress": "31.47.55.132",
+        "isPublic": true,
+        "ipVersion": 4,
+        "isWhitelisted": false,
+        "abuseConfidenceScore": 100,
+        "countryCode": "IR",
+        "usageType": "Data Center/Web Hosting/Transit",
+        "isp": "Afranet",
+        "domain": "afranet.com",
+        "hostnames": [
+          "mail.pcdcor.ir"
+        ],
+        "isTor": false,
+        "totalReports": 4687,
+        "numDistinctUsers": 940,
+        "lastReportedAt": "2025-11-18T18:38:06+00:00"
+      },
+      "abuseipdb_score": 100
+    },
+    "score": 83,
+    "score_breakdown": {
+      "base": 10,
+      "source_weight": 20,
+      "abuse_confidence": 100,
+      "abuse_contrib": 25,
+      "total_reports": 4687,
+      "total_reports_contrib": 14,
+      "distinct_users": 940,
+      "distinct_users_contrib": 9,
+      "passive_dns_count": 0,
+      "passive_dns_contrib": 0,
+      "otx_count": 0,
+      "otx_contrib": 0,
+      "ptr": "mail.pcdcor.ir",
+      "ptr_contrib": 0,
+      "whois_present": 0,
+      "whois_contrib": 0,
+      "country": "IR",
+      "country_contrib": 5,
+      "no_signals_penalty": 0,
+      "final_score_raw": 83,
+      "final_score": 83
+    },
+    "risk_bucket": "high"
+  },
+  {
+    "id": "ip::103.203.57.19",
+    "type": "ip",
+    "value": "103.203.57.19",
+    "source": "AbuseIPDB",
+    "sources_count": 1,
+    "enrichment": {
+      "dns": {
+        "a": [],
+        "aaaa": [],
+        "mx": [],
+        "txt": []
+      },
+      "reverse": {
+        "ptr": "scan-57-19.security.ipip.net"
+      },
+      "geoip": {
+        "city": null,
+        "country": "China",
+        "country_iso": "CN",
+        "location": {
+          "lat": 34.7732,
+          "lon": 113.722
+        }
+      },
+      "passive_dns": [],
+      "whois": {},
+      "abuseipdb": {
+        "ipAddress": "103.203.57.19",
+        "isPublic": true,
+        "ipVersion": 4,
+        "isWhitelisted": false,
+        "abuseConfidenceScore": 100,
+        "countryCode": "US",
+        "usageType": "Data Center/Web Hosting/Transit",
+        "isp": "Beijing Tiantexin Tech. Co., Ltd.",
+        "domain": "ipip.com",
+        "hostnames": [
+          "scan-57-19.security.ipip.net"
+        ],
+        "isTor": false,
+        "totalReports": 467,
+        "numDistinctUsers": 40,
+        "lastReportedAt": "2025-11-18T18:01:50+00:00"
+      },
+      "abuseipdb_score": 100
+    },
+    "score": 83,
+    "score_breakdown": {
+      "base": 10,
+      "source_weight": 20,
+      "abuse_confidence": 100,
+      "abuse_contrib": 25,
+      "total_reports": 467,
+      "total_reports_contrib": 8,
+      "distinct_users": 40,
+      "distinct_users_contrib": 3,
+      "passive_dns_count": 0,
+      "passive_dns_contrib": 0,
+      "otx_count": 0,
+      "otx_contrib": 0,
+      "ptr": "scan-57-19.security.ipip.net",
+      "ptr_contrib": 12,
+      "whois_present": 0,
+      "whois_contrib": 0,
+      "country": "CN",
+      "country_contrib": 5,
+      "no_signals_penalty": 0,
+      "final_score_raw": 83,
+      "final_score": 83
+    },
+    "risk_bucket": "high"
+  },
+  {
+    "id": "ip::176.215.234.212",
+    "type": "ip",
+    "value": "176.215.234.212",
+    "source": "AbuseIPDB",
+    "sources_count": 1,
+    "enrichment": {
+      "dns": {
+        "a": [],
+        "aaaa": [],
+        "mx": [],
+        "txt": []
+      },
+      "reverse": {
+        "ptr": "dynamicip-176-215-234-212.pppoe.irkutsk.ertelecom.ru"
+      },
+      "geoip": {
+        "city": "Irkutsk",
+        "country": "Russia",
+        "country_iso": "RU",
+        "location": {
+          "lat": 52.2984,
+          "lon": 104.2903
+        }
+      },
+      "passive_dns": [],
+      "whois": {},
+      "abuseipdb": {
+        "ipAddress": "176.215.234.212",
+        "isPublic": true,
+        "ipVersion": 4,
+        "isWhitelisted": false,
+        "abuseConfidenceScore": 100,
+        "countryCode": "RU",
+        "usageType": "Fixed Line ISP",
+        "isp": "JSC ER-Telecom Holding Irkutsk branch",
+        "domain": "ertelecom.ru",
+        "hostnames": [
+          "dynamicip-176-215-234-212.pppoe.irkutsk.ertelecom.ru"
+        ],
+        "isTor": false,
+        "totalReports": 3877,
+        "numDistinctUsers": 878,
+        "lastReportedAt": "2025-11-18T19:05:29+00:00"
+      },
+      "abuseipdb_score": 100
+    },
+    "score": 83,
+    "score_breakdown": {
+      "base": 10,
+      "source_weight": 20,
+      "abuse_confidence": 100,
+      "abuse_contrib": 25,
+      "total_reports": 3877,
+      "total_reports_contrib": 14,
+      "distinct_users": 878,
+      "distinct_users_contrib": 9,
+      "passive_dns_count": 0,
+      "passive_dns_contrib": 0,
+      "otx_count": 0,
+      "otx_contrib": 0,
+      "ptr": "dynamicip-176-215-234-212.pppoe.irkutsk.ertelecom.ru",
+      "ptr_contrib": 0,
+      "whois_present": 0,
+      "whois_contrib": 0,
+      "country": "RU",
+      "country_contrib": 5,
+      "no_signals_penalty": 0,
+      "final_score_raw": 83,
+      "final_score": 83
+    },
+    "risk_bucket": "high"
+  },
+  {
+    "id": "ip::178.251.140.3",
+    "type": "ip",
+    "value": "178.251.140.3",
+    "source": "AbuseIPDB",
+    "sources_count": 1,
+    "enrichment": {
+      "dns": {
+        "a": [],
+        "aaaa": [],
+        "mx": [],
+        "txt": []
+      },
+      "reverse": {
+        "ptr": "b32-mgmt-gw.dssv.ru"
+      },
+      "geoip": {
+        "city": null,
+        "country": "Russia",
+        "country_iso": "RU",
+        "location": {
+          "lat": 55.7386,
+          "lon": 37.6068
+        }
+      },
+      "passive_dns": [],
+      "whois": {},
+      "abuseipdb": {
+        "ipAddress": "178.251.140.3",
+        "isPublic": true,
+        "ipVersion": 4,
+        "isWhitelisted": false,
+        "abuseConfidenceScore": 100,
+        "countryCode": "RU",
+        "usageType": "Fixed Line ISP",
+        "isp": "JSC ER-Telecom Holding",
+        "domain": "ertelecom.ru",
+        "hostnames": [
+          "b32-mgmt-gw.dssv.ru"
+        ],
+        "isTor": false,
+        "totalReports": 3726,
+        "numDistinctUsers": 842,
+        "lastReportedAt": "2025-11-18T19:00:43+00:00"
+      },
+      "abuseipdb_score": 100
+    },
+    "score": 83,
+    "score_breakdown": {
+      "base": 10,
+      "source_weight": 20,
+      "abuse_confidence": 100,
+      "abuse_contrib": 25,
+      "total_reports": 3726,
+      "total_reports_contrib": 14,
+      "distinct_users": 842,
+      "distinct_users_contrib": 9,
+      "passive_dns_count": 0,
+      "passive_dns_contrib": 0,
+      "otx_count": 0,
+      "otx_contrib": 0,
+      "ptr": "b32-mgmt-gw.dssv.ru",
+      "ptr_contrib": 0,
+      "whois_present": 0,
+      "whois_contrib": 0,
+      "country": "RU",
+      "country_contrib": 5,
+      "no_signals_penalty": 0,
+      "final_score_raw": 83,
+      "final_score": 83
+    },
+    "risk_bucket": "high"
+  },
+  {
+    "id": "ip::95.24.31.174",
+    "type": "ip",
+    "value": "95.24.31.174",
+    "source": "AbuseIPDB",
+    "sources_count": 1,
+    "enrichment": {
+      "dns": {
+        "a": [],
+        "aaaa": [],
+        "mx": [],
+        "txt": []
+      },
+      "reverse": {
+        "ptr": "95-24-31-174.broadband.corbina.ru"
+      },
+      "geoip": {
+        "city": "Moscow",
+        "country": "Russia",
+        "country_iso": "RU",
+        "location": {
+          "lat": 55.7487,
+          "lon": 37.6187
+        }
+      },
+      "passive_dns": [],
+      "whois": {},
+      "abuseipdb": {
+        "ipAddress": "95.24.31.174",
+        "isPublic": true,
+        "ipVersion": 4,
+        "isWhitelisted": false,
+        "abuseConfidenceScore": 100,
+        "countryCode": "RU",
+        "usageType": "Mobile ISP",
+        "isp": "PJSC Vimpelcom",
+        "domain": "corbina.ru",
+        "hostnames": [
+          "95-24-31-174.broadband.corbina.ru"
+        ],
+        "isTor": false,
+        "totalReports": 2065,
+        "numDistinctUsers": 632,
+        "lastReportedAt": "2025-11-18T15:00:10+00:00"
+      },
+      "abuseipdb_score": 100
+    },
+    "score": 83,
+    "score_breakdown": {
+      "base": 10,
+      "source_weight": 20,
+      "abuse_confidence": 100,
+      "abuse_contrib": 25,
+      "total_reports": 2065,
+      "total_reports_contrib": 14,
+      "distinct_users": 632,
+      "distinct_users_contrib": 9,
+      "passive_dns_count": 0,
+      "passive_dns_contrib": 0,
+      "otx_count": 0,
+      "otx_contrib": 0,
+      "ptr": "95-24-31-174.broadband.corbina.ru",
+      "ptr_contrib": 0,
+      "whois_present": 0,
+      "whois_contrib": 0,
+      "country": "RU",
+      "country_contrib": 5,
+      "no_signals_penalty": 0,
+      "final_score_raw": 83,
+      "final_score": 83
+    },
+    "risk_bucket": "high"
+  },
+  {
+    "id": "ip::103.203.59.5",
+    "type": "ip",
+    "value": "103.203.59.5",
+    "source": "AbuseIPDB",
+    "sources_count": 1,
+    "enrichment": {
+      "dns": {
+        "a": [],
+        "aaaa": [],
+        "mx": [],
+        "txt": []
+      },
+      "reverse": {
+        "ptr": "scan-59-5.security.ipip.net"
+      },
+      "geoip": {
+        "city": null,
+        "country": "China",
+        "country_iso": "CN",
+        "location": {
+          "lat": 34.7732,
+          "lon": 113.722
+        }
+      },
+      "passive_dns": [],
+      "whois": {},
+      "abuseipdb": {
+        "ipAddress": "103.203.59.5",
+        "isPublic": true,
+        "ipVersion": 4,
+        "isWhitelisted": false,
+        "abuseConfidenceScore": 100,
+        "countryCode": "JP",
+        "usageType": "Data Center/Web Hosting/Transit",
+        "isp": "Beijing Tiantexin Tech. Co., Ltd.",
+        "domain": "ipip.com",
+        "hostnames": [
+          "scan-59-5.security.ipip.net"
+        ],
+        "isTor": false,
+        "totalReports": 357,
+        "numDistinctUsers": 37,
+        "lastReportedAt": "2025-11-18T16:14:13+00:00"
+      },
+      "abuseipdb_score": 100
+    },
+    "score": 83,
+    "score_breakdown": {
+      "base": 10,
+      "source_weight": 20,
+      "abuse_confidence": 100,
+      "abuse_contrib": 25,
+      "total_reports": 357,
+      "total_reports_contrib": 8,
+      "distinct_users": 37,
+      "distinct_users_contrib": 3,
+      "passive_dns_count": 0,
+      "passive_dns_contrib": 0,
+      "otx_count": 0,
+      "otx_contrib": 0,
+      "ptr": "scan-59-5.security.ipip.net",
+      "ptr_contrib": 12,
+      "whois_present": 0,
+      "whois_contrib": 0,
+      "country": "CN",
+      "country_contrib": 5,
+      "no_signals_penalty": 0,
+      "final_score_raw": 83,
+      "final_score": 83
+    },
+    "risk_bucket": "high"
+  },
+  {
+    "id": "ip::121.204.179.231",
+    "type": "ip",
+    "value": "121.204.179.231",
+    "source": "AbuseIPDB",
+    "sources_count": 1,
+    "enrichment": {
+      "dns": {
+        "a": [],
+        "aaaa": [],
+        "mx": [],
+        "txt": []
+      },
+      "reverse": {
+        "ptr": "231.179.204.121.broad.xm.fj.dynamic.163data.com.cn"
+      },
+      "geoip": {
+        "city": null,
+        "country": "China",
+        "country_iso": "CN",
+        "location": {
+          "lat": 34.7732,
+          "lon": 113.722
+        }
+      },
+      "passive_dns": [],
+      "whois": {},
+      "abuseipdb": {
+        "ipAddress": "121.204.179.231",
+        "isPublic": true,
+        "ipVersion": 4,
+        "isWhitelisted": false,
+        "abuseConfidenceScore": 100,
+        "countryCode": "CN",
+        "usageType": "Data Center/Web Hosting/Transit",
+        "isp": "CHINANET Fujian province network",
+        "domain": "chinatelecom.cn",
+        "hostnames": [
+          "231.179.204.121.broad.xm.fj.dynamic.163data.com.cn"
+        ],
+        "isTor": false,
+        "totalReports": 2800,
+        "numDistinctUsers": 769,
+        "lastReportedAt": "2025-11-18T17:40:48+00:00"
+      },
+      "abuseipdb_score": 100
+    },
+    "score": 83,
+    "score_breakdown": {
+      "base": 10,
+      "source_weight": 20,
+      "abuse_confidence": 100,
+      "abuse_contrib": 25,
+      "total_reports": 2800,
+      "total_reports_contrib": 14,
+      "distinct_users": 769,
+      "distinct_users_contrib": 9,
+      "passive_dns_count": 0,
+      "passive_dns_contrib": 0,
+      "otx_count": 0,
+      "otx_contrib": 0,
+      "ptr": "231.179.204.121.broad.xm.fj.dynamic.163data.com.cn",
+      "ptr_contrib": 0,
+      "whois_present": 0,
+      "whois_contrib": 0,
+      "country": "CN",
+      "country_contrib": 5,
+      "no_signals_penalty": 0,
+      "final_score_raw": 83,
+      "final_score": 83
+    },
+    "risk_bucket": "high"
+  },
+  {
+    "id": "ip::85.198.17.88",
+    "type": "ip",
+    "value": "85.198.17.88",
+    "source": "AbuseIPDB",
+    "sources_count": 1,
+    "enrichment": {
+      "dns": {
+        "a": [],
+        "aaaa": [],
+        "mx": [],
+        "txt": []
+      },
+      "reverse": {
+        "ptr": "85.198.17.88.asiatech.cloud"
+      },
+      "geoip": {
+        "city": null,
+        "country": "Iran",
+        "country_iso": "IR",
+        "location": {
+          "lat": 35.698,
+          "lon": 51.4115
+        }
+      },
+      "passive_dns": [],
+      "whois": {},
+      "abuseipdb": {
+        "ipAddress": "85.198.17.88",
+        "isPublic": true,
+        "ipVersion": 4,
+        "isWhitelisted": false,
+        "abuseConfidenceScore": 100,
+        "countryCode": "IR",
+        "usageType": "Data Center/Web Hosting/Transit",
+        "isp": "Asiatech Data Transmission company",
+        "domain": "asiatech.ir",
+        "hostnames": [],
+        "isTor": false,
+        "totalReports": 2519,
+        "numDistinctUsers": 545,
+        "lastReportedAt": "2025-11-18T19:14:38+00:00"
+      },
+      "abuseipdb_score": 100
+    },
+    "score": 83,
+    "score_breakdown": {
+      "base": 10,
+      "source_weight": 20,
+      "abuse_confidence": 100,
+      "abuse_contrib": 25,
+      "total_reports": 2519,
+      "total_reports_contrib": 14,
+      "distinct_users": 545,
+      "distinct_users_contrib": 9,
+      "passive_dns_count": 0,
+      "passive_dns_contrib": 0,
+      "otx_count": 0,
+      "otx_contrib": 0,
+      "ptr": "85.198.17.88.asiatech.cloud",
+      "ptr_contrib": 0,
+      "whois_present": 0,
+      "whois_contrib": 0,
+      "country": "IR",
+      "country_contrib": 5,
+      "no_signals_penalty": 0,
+      "final_score_raw": 83,
+      "final_score": 83
+    },
+    "risk_bucket": "high"
+  },
+  {
+    "id": "ip::61.182.2.26",
+    "type": "ip",
+    "value": "61.182.2.26",
+    "source": "AbuseIPDB",
+    "sources_count": 1,
+    "enrichment": {
+      "dns": {
+        "a": [],
+        "aaaa": [],
+        "mx": [],
+        "txt": []
+      },
+      "reverse": {
+        "ptr": "hebei.182.61.in-addr.arpa"
+      },
+      "geoip": {
+        "city": null,
+        "country": "China",
+        "country_iso": "CN",
+        "location": {
+          "lat": 34.7732,
+          "lon": 113.722
+        }
+      },
+      "passive_dns": [],
+      "whois": {},
+      "abuseipdb": {
+        "ipAddress": "61.182.2.26",
+        "isPublic": true,
+        "ipVersion": 4,
+        "isWhitelisted": false,
+        "abuseConfidenceScore": 100,
+        "countryCode": "CN",
+        "usageType": "Fixed Line ISP",
+        "isp": "China Unicom Hebei province network",
+        "domain": "chinaunicom.cn",
+        "hostnames": [
+          "hebei.182.61.in-addr.arpa"
+        ],
+        "isTor": false,
+        "totalReports": 4238,
+        "numDistinctUsers": 805,
+        "lastReportedAt": "2025-11-18T19:21:37+00:00"
+      },
+      "abuseipdb_score": 100
+    },
+    "score": 83,
+    "score_breakdown": {
+      "base": 10,
+      "source_weight": 20,
+      "abuse_confidence": 100,
+      "abuse_contrib": 25,
+      "total_reports": 4238,
+      "total_reports_contrib": 14,
+      "distinct_users": 805,
+      "distinct_users_contrib": 9,
+      "passive_dns_count": 0,
+      "passive_dns_contrib": 0,
+      "otx_count": 0,
+      "otx_contrib": 0,
+      "ptr": "hebei.182.61.in-addr.arpa",
+      "ptr_contrib": 0,
+      "whois_present": 0,
+      "whois_contrib": 0,
+      "country": "CN",
+      "country_contrib": 5,
+      "no_signals_penalty": 0,
+      "final_score_raw": 83,
+      "final_score": 83
+    },
+    "risk_bucket": "high"
+  },
+  {
+    "id": "ip::178.49.109.109",
+    "type": "ip",
+    "value": "178.49.109.109",
+    "source": "AbuseIPDB",
+    "sources_count": 1,
+    "enrichment": {
+      "dns": {
+        "a": [],
+        "aaaa": [],
+        "mx": [],
+        "txt": []
+      },
+      "reverse": {
+        "ptr": "l49-109-109.novotelecom.ru"
+      },
+      "geoip": {
+        "city": "Novosibirsk",
+        "country": "Russia",
+        "country_iso": "RU",
+        "location": {
+          "lat": 55.0226,
+          "lon": 82.9317
+        }
+      },
+      "passive_dns": [],
+      "whois": {},
+      "abuseipdb": {
+        "ipAddress": "178.49.109.109",
+        "isPublic": true,
+        "ipVersion": 4,
+        "isWhitelisted": false,
+        "abuseConfidenceScore": 100,
+        "countryCode": "RU",
+        "usageType": "Fixed Line ISP",
+        "isp": "Novotelecom Ltd",
+        "domain": "novotelecom.ru",
+        "hostnames": [
+          "l49-109-109.novotelecom.ru"
+        ],
+        "isTor": false,
+        "totalReports": 3264,
+        "numDistinctUsers": 711,
+        "lastReportedAt": "2025-11-18T19:11:41+00:00"
+      },
+      "abuseipdb_score": 100
+    },
+    "score": 83,
+    "score_breakdown": {
+      "base": 10,
+      "source_weight": 20,
+      "abuse_confidence": 100,
+      "abuse_contrib": 25,
+      "total_reports": 3264,
+      "total_reports_contrib": 14,
+      "distinct_users": 711,
+      "distinct_users_contrib": 9,
+      "passive_dns_count": 0,
+      "passive_dns_contrib": 0,
+      "otx_count": 0,
+      "otx_contrib": 0,
+      "ptr": "l49-109-109.novotelecom.ru",
+      "ptr_contrib": 0,
+      "whois_present": 0,
+      "whois_contrib": 0,
+      "country": "RU",
+      "country_contrib": 5,
+      "no_signals_penalty": 0,
+      "final_score_raw": 83,
+      "final_score": 83
+    },
+    "risk_bucket": "high"
+  },
+  {
+    "id": "ip::103.203.57.10",
+    "type": "ip",
+    "value": "103.203.57.10",
+    "source": "AbuseIPDB",
+    "sources_count": 1,
+    "enrichment": {
+      "dns": {
+        "a": [],
+        "aaaa": [],
+        "mx": [],
+        "txt": []
+      },
+      "reverse": {
+        "ptr": "scan-57-10.security.ipip.net"
+      },
+      "geoip": {
+        "city": null,
+        "country": "China",
+        "country_iso": "CN",
+        "location": {
+          "lat": 34.7732,
+          "lon": 113.722
+        }
+      },
+      "passive_dns": [],
+      "whois": {},
+      "abuseipdb": {
+        "ipAddress": "103.203.57.10",
+        "isPublic": true,
+        "ipVersion": 4,
+        "isWhitelisted": false,
+        "abuseConfidenceScore": 100,
+        "countryCode": "US",
+        "usageType": "Data Center/Web Hosting/Transit",
+        "isp": "Beijing Tiantexin Tech. Co., Ltd.",
+        "domain": "ipip.com",
+        "hostnames": [
+          "scan-57-10.security.ipip.net"
+        ],
+        "isTor": false,
+        "totalReports": 740,
+        "numDistinctUsers": 23,
+        "lastReportedAt": "2025-11-18T16:10:09+00:00"
+      },
+      "abuseipdb_score": 100
+    },
+    "score": 82,
+    "score_breakdown": {
+      "base": 10,
+      "source_weight": 20,
+      "abuse_confidence": 100,
+      "abuse_contrib": 25,
+      "total_reports": 740,
+      "total_reports_contrib": 10,
+      "distinct_users": 23,
+      "distinct_users_contrib": 0,
+      "passive_dns_count": 0,
+      "passive_dns_contrib": 0,
+      "otx_count": 0,
+      "otx_contrib": 0,
+      "ptr": "scan-57-10.security.ipip.net",
+      "ptr_contrib": 12,
+      "whois_present": 0,
+      "whois_contrib": 0,
+      "country": "CN",
+      "country_contrib": 5,
+      "no_signals_penalty": 0,
+      "final_score_raw": 82,
+      "final_score": 82
+    },
+    "risk_bucket": "high"
+  },
+  {
+    "id": "ip::77.222.100.142",
+    "type": "ip",
+    "value": "77.222.100.142",
+    "source": "AbuseIPDB",
+    "sources_count": 1,
+    "enrichment": {
+      "dns": {
+        "a": [],
+        "aaaa": [],
+        "mx": [],
+        "txt": []
+      },
+      "reverse": {
+        "ptr": "pool-77-222-100-142.is74.ru"
+      },
+      "geoip": {
+        "city": "Chelyabinsk",
+        "country": "Russia",
+        "country_iso": "RU",
+        "location": {
+          "lat": 55.1586,
+          "lon": 61.4296
+        }
+      },
+      "passive_dns": [],
+      "whois": {},
+      "abuseipdb": {
+        "ipAddress": "77.222.100.142",
+        "isPublic": true,
+        "ipVersion": 4,
+        "isWhitelisted": false,
+        "abuseConfidenceScore": 100,
+        "countryCode": "RU",
+        "usageType": "Fixed Line ISP",
+        "isp": "Intersvyaz-2 JSC Net",
+        "domain": "is74.ru",
+        "hostnames": [
+          "pool-77-222-100-142.is74.ru"
+        ],
+        "isTor": false,
+        "totalReports": 1945,
+        "numDistinctUsers": 639,
+        "lastReportedAt": "2025-11-18T18:52:21+00:00"
+      },
+      "abuseipdb_score": 100
+    },
+    "score": 81,
+    "score_breakdown": {
+      "base": 10,
+      "source_weight": 20,
+      "abuse_confidence": 100,
+      "abuse_contrib": 25,
+      "total_reports": 1945,
+      "total_reports_contrib": 12,
+      "distinct_users": 639,
+      "distinct_users_contrib": 9,
+      "passive_dns_count": 0,
+      "passive_dns_contrib": 0,
+      "otx_count": 0,
+      "otx_contrib": 0,
+      "ptr": "pool-77-222-100-142.is74.ru",
+      "ptr_contrib": 0,
+      "whois_present": 0,
+      "whois_contrib": 0,
+      "country": "RU",
+      "country_contrib": 5,
+      "no_signals_penalty": 0,
+      "final_score_raw": 81,
+      "final_score": 81
+    },
+    "risk_bucket": "high"
+  },
+  {
+    "id": "ip::188.32.210.218",
+    "type": "ip",
+    "value": "188.32.210.218",
+    "source": "AbuseIPDB",
+    "sources_count": 1,
+    "enrichment": {
+      "dns": {
+        "a": [],
+        "aaaa": [],
+        "mx": [],
+        "txt": []
+      },
+      "reverse": {
+        "ptr": "broadband-188-32-210-218.ip.moscow.rt.ru"
+      },
+      "geoip": {
+        "city": "Moscow",
+        "country": "Russia",
+        "country_iso": "RU",
+        "location": {
+          "lat": 55.7487,
+          "lon": 37.6187
+        }
+      },
+      "passive_dns": [],
+      "whois": {},
+      "abuseipdb": {
+        "ipAddress": "188.32.210.218",
+        "isPublic": true,
+        "ipVersion": 4,
+        "isWhitelisted": false,
+        "abuseConfidenceScore": 100,
+        "countryCode": "RU",
+        "usageType": "Fixed Line ISP",
+        "isp": "PJSC Rostelecom",
+        "domain": "rt.ru",
+        "hostnames": [
+          "broadband-188-32-210-218.ip.moscow.rt.ru"
+        ],
+        "isTor": false,
+        "totalReports": 1546,
+        "numDistinctUsers": 500,
+        "lastReportedAt": "2025-11-18T17:58:19+00:00"
+      },
+      "abuseipdb_score": 100
+    },
+    "score": 81,
+    "score_breakdown": {
+      "base": 10,
+      "source_weight": 20,
+      "abuse_confidence": 100,
+      "abuse_contrib": 25,
+      "total_reports": 1546,
+      "total_reports_contrib": 12,
+      "distinct_users": 500,
+      "distinct_users_contrib": 9,
+      "passive_dns_count": 0,
+      "passive_dns_contrib": 0,
+      "otx_count": 0,
+      "otx_contrib": 0,
+      "ptr": "broadband-188-32-210-218.ip.moscow.rt.ru",
+      "ptr_contrib": 0,
+      "whois_present": 0,
+      "whois_contrib": 0,
+      "country": "RU",
+      "country_contrib": 5,
+      "no_signals_penalty": 0,
+      "final_score_raw": 81,
+      "final_score": 81
+    },
+    "risk_bucket": "high"
+  },
+  {
+    "id": "ip::1.194.239.240",
+    "type": "ip",
+    "value": "1.194.239.240",
+    "source": "AbuseIPDB",
+    "sources_count": 1,
+    "enrichment": {
+      "dns": {
+        "a": [],
+        "aaaa": [],
+        "mx": [],
+        "txt": []
+      },
+      "reverse": {
+        "ptr": "194.1.broad.ha.dynamic.163data.com.cn"
+      },
+      "geoip": {
+        "city": "Hefei",
+        "country": "China",
+        "country_iso": "CN",
+        "location": {
+          "lat": 31.8696,
+          "lon": 117.293
+        }
+      },
+      "passive_dns": [],
+      "whois": {},
+      "abuseipdb": {
+        "ipAddress": "1.194.239.240",
+        "isPublic": true,
+        "ipVersion": 4,
+        "isWhitelisted": false,
+        "abuseConfidenceScore": 100,
+        "countryCode": "CN",
+        "usageType": "Commercial",
+        "isp": "CHINANET henan province network",
+        "domain": "hntele.com",
+        "hostnames": [],
+        "isTor": false,
+        "totalReports": 1885,
+        "numDistinctUsers": 572,
+        "lastReportedAt": "2025-11-18T19:02:38+00:00"
+      },
+      "abuseipdb_score": 100
+    },
+    "score": 81,
+    "score_breakdown": {
+      "base": 10,
+      "source_weight": 20,
+      "abuse_confidence": 100,
+      "abuse_contrib": 25,
+      "total_reports": 1885,
+      "total_reports_contrib": 12,
+      "distinct_users": 572,
+      "distinct_users_contrib": 9,
+      "passive_dns_count": 0,
+      "passive_dns_contrib": 0,
+      "otx_count": 0,
+      "otx_contrib": 0,
+      "ptr": "194.1.broad.ha.dynamic.163data.com.cn",
+      "ptr_contrib": 0,
+      "whois_present": 0,
+      "whois_contrib": 0,
+      "country": "CN",
+      "country_contrib": 5,
+      "no_signals_penalty": 0,
+      "final_score_raw": 81,
+      "final_score": 81
+    },
+    "risk_bucket": "high"
+  },
+  {
+    "id": "ip::195.88.120.62",
+    "type": "ip",
+    "value": "195.88.120.62",
+    "source": "AbuseIPDB",
+    "sources_count": 1,
+    "enrichment": {
+      "dns": {
+        "a": [],
+        "aaaa": [],
+        "mx": [],
+        "txt": []
+      },
+      "reverse": {
+        "ptr": "195-88-120-62.parustelecom.ru"
+      },
+      "geoip": {
+        "city": null,
+        "country": "Russia",
+        "country_iso": "RU",
+        "location": {
+          "lat": 55.7386,
+          "lon": 37.6068
+        }
+      },
+      "passive_dns": [],
+      "whois": {},
+      "abuseipdb": {
+        "ipAddress": "195.88.120.62",
+        "isPublic": true,
+        "ipVersion": 4,
+        "isWhitelisted": false,
+        "abuseConfidenceScore": 100,
+        "countryCode": "RU",
+        "usageType": "Fixed Line ISP",
+        "isp": "Parus-Telecom Ltd.",
+        "domain": "parustelecom.ru",
+        "hostnames": [
+          "195-88-120-62.parustelecom.ru"
+        ],
+        "isTor": false,
+        "totalReports": 3876,
+        "numDistinctUsers": 324,
+        "lastReportedAt": "2025-11-18T17:45:53+00:00"
+      },
+      "abuseipdb_score": 100
+    },
+    "score": 81,
+    "score_breakdown": {
+      "base": 10,
+      "source_weight": 20,
+      "abuse_confidence": 100,
+      "abuse_contrib": 25,
+      "total_reports": 3876,
+      "total_reports_contrib": 14,
+      "distinct_users": 324,
+      "distinct_users_contrib": 7,
+      "passive_dns_count": 0,
+      "passive_dns_contrib": 0,
+      "otx_count": 0,
+      "otx_contrib": 0,
+      "ptr": "195-88-120-62.parustelecom.ru",
+      "ptr_contrib": 0,
+      "whois_present": 0,
+      "whois_contrib": 0,
+      "country": "RU",
+      "country_contrib": 5,
+      "no_signals_penalty": 0,
+      "final_score_raw": 81,
+      "final_score": 81
+    },
+    "risk_bucket": "high"
+  },
+  {
+    "id": "ip::85.208.254.241",
+    "type": "ip",
+    "value": "85.208.254.241",
+    "source": "AbuseIPDB",
+    "sources_count": 1,
+    "enrichment": {
+      "dns": {
+        "a": [],
+        "aaaa": [],
+        "mx": [],
+        "txt": []
+      },
+      "reverse": {
+        "ptr": "static.241.254.208.85.clients.irandns.com"
+      },
+      "geoip": {
+        "city": null,
+        "country": "Iran",
+        "country_iso": "IR",
+        "location": {
+          "lat": 35.698,
+          "lon": 51.4115
+        }
+      },
+      "passive_dns": [],
+      "whois": {},
+      "abuseipdb": {
+        "ipAddress": "85.208.254.241",
+        "isPublic": true,
+        "ipVersion": 4,
+        "isWhitelisted": false,
+        "abuseConfidenceScore": 100,
+        "countryCode": "IR",
+        "usageType": "Data Center/Web Hosting/Transit",
+        "isp": "Green Web Samaneh Novin Co Ltd",
+        "domain": "greenweb.ir",
+        "hostnames": [
+          "static.241.254.208.85.clients.irandns.com"
+        ],
+        "isTor": false,
+        "totalReports": 1244,
+        "numDistinctUsers": 475,
+        "lastReportedAt": "2025-11-18T19:14:58+00:00"
+      },
+      "abuseipdb_score": 100
+    },
+    "score": 79,
+    "score_breakdown": {
+      "base": 10,
+      "source_weight": 20,
+      "abuse_confidence": 100,
+      "abuse_contrib": 25,
+      "total_reports": 1244,
+      "total_reports_contrib": 12,
+      "distinct_users": 475,
+      "distinct_users_contrib": 7,
+      "passive_dns_count": 0,
+      "passive_dns_contrib": 0,
+      "otx_count": 0,
+      "otx_contrib": 0,
+      "ptr": "static.241.254.208.85.clients.irandns.com",
+      "ptr_contrib": 0,
+      "whois_present": 0,
+      "whois_contrib": 0,
+      "country": "IR",
+      "country_contrib": 5,
+      "no_signals_penalty": 0,
+      "final_score_raw": 79,
+      "final_score": 79
+    },
+    "risk_bucket": "high"
+  },
+  {
+    "id": "ip::94.182.106.61",
+    "type": "ip",
+    "value": "94.182.106.61",
+    "source": "AbuseIPDB",
+    "sources_count": 1,
+    "enrichment": {
+      "dns": {
+        "a": [],
+        "aaaa": [],
+        "mx": [],
+        "txt": []
+      },
+      "reverse": {
+        "ptr": "94-182-106-61.shatel.ir"
+      },
+      "geoip": {
+        "city": null,
+        "country": "Iran",
+        "country_iso": "IR",
+        "location": {
+          "lat": 35.698,
+          "lon": 51.4115
+        }
+      },
+      "passive_dns": [],
+      "whois": {},
+      "abuseipdb": {
+        "ipAddress": "94.182.106.61",
+        "isPublic": true,
+        "ipVersion": 4,
+        "isWhitelisted": false,
+        "abuseConfidenceScore": 100,
+        "countryCode": "IR",
+        "usageType": "Data Center/Web Hosting/Transit",
+        "isp": "SHTL-NET-DED",
+        "domain": "rasana.net",
+        "hostnames": [
+          "94-182-106-61.shatel.ir"
+        ],
+        "isTor": false,
+        "totalReports": 1145,
+        "numDistinctUsers": 449,
+        "lastReportedAt": "2025-11-18T19:22:19+00:00"
+      },
+      "abuseipdb_score": 100
+    },
+    "score": 79,
+    "score_breakdown": {
+      "base": 10,
+      "source_weight": 20,
+      "abuse_confidence": 100,
+      "abuse_contrib": 25,
+      "total_reports": 1145,
+      "total_reports_contrib": 12,
+      "distinct_users": 449,
+      "distinct_users_contrib": 7,
+      "passive_dns_count": 0,
+      "passive_dns_contrib": 0,
+      "otx_count": 0,
+      "otx_contrib": 0,
+      "ptr": "94-182-106-61.shatel.ir",
+      "ptr_contrib": 0,
+      "whois_present": 0,
+      "whois_contrib": 0,
+      "country": "IR",
+      "country_contrib": 5,
+      "no_signals_penalty": 0,
+      "final_score_raw": 79,
+      "final_score": 79
+    },
+    "risk_bucket": "high"
+  },
+  {
+    "id": "ip::95.105.113.109",
+    "type": "ip",
+    "value": "95.105.113.109",
+    "source": "AbuseIPDB",
+    "sources_count": 1,
+    "enrichment": {
+      "dns": {
+        "a": [],
+        "aaaa": [],
+        "mx": [],
+        "txt": []
+      },
+      "reverse": {
+        "ptr": "95.105.113.109.dynamic.o56.ru"
+      },
+      "geoip": {
+        "city": "Orenburg",
+        "country": "Russia",
+        "country_iso": "RU",
+        "location": {
+          "lat": 51.7675,
+          "lon": 55.0977
+        }
+      },
+      "passive_dns": [],
+      "whois": {},
+      "abuseipdb": {
+        "ipAddress": "95.105.113.109",
+        "isPublic": true,
+        "ipVersion": 4,
+        "isWhitelisted": false,
+        "abuseConfidenceScore": 100,
+        "countryCode": "RU",
+        "usageType": "Fixed Line ISP",
+        "isp": "JSC Ufanet",
+        "domain": "ufanet.ru",
+        "hostnames": [
+          "95.105.113.109.dynamic.o56.ru"
+        ],
+        "isTor": false,
+        "totalReports": 1023,
+        "numDistinctUsers": 211,
+        "lastReportedAt": "2025-11-18T16:39:00+00:00"
+      },
+      "abuseipdb_score": 100
+    },
+    "score": 79,
+    "score_breakdown": {
+      "base": 10,
+      "source_weight": 20,
+      "abuse_confidence": 100,
+      "abuse_contrib": 25,
+      "total_reports": 1023,
+      "total_reports_contrib": 12,
+      "distinct_users": 211,
+      "distinct_users_contrib": 7,
+      "passive_dns_count": 0,
+      "passive_dns_contrib": 0,
+      "otx_count": 0,
+      "otx_contrib": 0,
+      "ptr": "95.105.113.109.dynamic.o56.ru",
+      "ptr_contrib": 0,
+      "whois_present": 0,
+      "whois_contrib": 0,
+      "country": "RU",
+      "country_contrib": 5,
+      "no_signals_penalty": 0,
+      "final_score_raw": 79,
+      "final_score": 79
+    },
+    "risk_bucket": "high"
+  },
+  {
+    "id": "ip::188.65.133.110",
+    "type": "ip",
+    "value": "188.65.133.110",
+    "source": "AbuseIPDB",
+    "sources_count": 1,
+    "enrichment": {
+      "dns": {
+        "a": [],
+        "aaaa": [],
+        "mx": [],
+        "txt": []
+      },
+      "reverse": {
+        "ptr": "188-65-133-110.in-addr.netone.ru"
+      },
+      "geoip": {
+        "city": null,
+        "country": "Russia",
+        "country_iso": "RU",
+        "location": {
+          "lat": 55.7386,
+          "lon": 37.6068
+        }
+      },
+      "passive_dns": [],
+      "whois": {},
+      "abuseipdb": {
+        "ipAddress": "188.65.133.110",
+        "isPublic": true,
+        "ipVersion": 4,
+        "isWhitelisted": false,
+        "abuseConfidenceScore": 100,
+        "countryCode": "RU",
+        "usageType": "Fixed Line ISP",
+        "isp": "NetOne Rus JSC",
+        "domain": "netone.ru",
+        "hostnames": [
+          "188-65-133-110.in-addr.netone.ru"
+        ],
+        "isTor": false,
+        "totalReports": 3399,
+        "numDistinctUsers": 109,
+        "lastReportedAt": "2025-11-18T18:53:15+00:00"
+      },
+      "abuseipdb_score": 100
+    },
+    "score": 79,
+    "score_breakdown": {
+      "base": 10,
+      "source_weight": 20,
+      "abuse_confidence": 100,
+      "abuse_contrib": 25,
+      "total_reports": 3399,
+      "total_reports_contrib": 14,
+      "distinct_users": 109,
+      "distinct_users_contrib": 5,
+      "passive_dns_count": 0,
+      "passive_dns_contrib": 0,
+      "otx_count": 0,
+      "otx_contrib": 0,
+      "ptr": "188-65-133-110.in-addr.netone.ru",
+      "ptr_contrib": 0,
+      "whois_present": 0,
+      "whois_contrib": 0,
+      "country": "RU",
+      "country_contrib": 5,
+      "no_signals_penalty": 0,
+      "final_score_raw": 79,
+      "final_score": 79
+    },
+    "risk_bucket": "high"
+  },
+  {
+    "id": "ip::109.173.122.138",
+    "type": "ip",
+    "value": "109.173.122.138",
+    "source": "AbuseIPDB",
+    "sources_count": 1,
+    "enrichment": {
+      "dns": {
+        "a": [],
+        "aaaa": [],
+        "mx": [],
+        "txt": []
+      },
+      "reverse": {
+        "ptr": "broadband-109-173-122-138.ip.moscow.rt.ru"
+      },
+      "geoip": {
+        "city": "Moscow",
+        "country": "Russia",
+        "country_iso": "RU",
+        "location": {
+          "lat": 55.7487,
+          "lon": 37.6187
+        }
+      },
+      "passive_dns": [],
+      "whois": {},
+      "abuseipdb": {
+        "ipAddress": "109.173.122.138",
+        "isPublic": true,
+        "ipVersion": 4,
+        "isWhitelisted": false,
+        "abuseConfidenceScore": 100,
+        "countryCode": "RU",
+        "usageType": "Fixed Line ISP",
+        "isp": "PJSC Rostelecom",
+        "domain": "rt.ru",
+        "hostnames": [
+          "broadband-109-173-122-138.ip.moscow.rt.ru"
+        ],
+        "isTor": false,
+        "totalReports": 1032,
+        "numDistinctUsers": 403,
+        "lastReportedAt": "2025-11-18T12:39:36+00:00"
+      },
+      "abuseipdb_score": 100
+    },
+    "score": 79,
+    "score_breakdown": {
+      "base": 10,
+      "source_weight": 20,
+      "abuse_confidence": 100,
+      "abuse_contrib": 25,
+      "total_reports": 1032,
+      "total_reports_contrib": 12,
+      "distinct_users": 403,
+      "distinct_users_contrib": 7,
+      "passive_dns_count": 0,
+      "passive_dns_contrib": 0,
+      "otx_count": 0,
+      "otx_contrib": 0,
+      "ptr": "broadband-109-173-122-138.ip.moscow.rt.ru",
+      "ptr_contrib": 0,
+      "whois_present": 0,
+      "whois_contrib": 0,
+      "country": "RU",
+      "country_contrib": 5,
+      "no_signals_penalty": 0,
+      "final_score_raw": 79,
+      "final_score": 79
+    },
+    "risk_bucket": "high"
+  },
+  {
+    "id": "ip::221.237.163.202",
+    "type": "ip",
+    "value": "221.237.163.202",
+    "source": "AbuseIPDB",
+    "sources_count": 1,
+    "enrichment": {
+      "dns": {
+        "a": [],
+        "aaaa": [],
+        "mx": [],
+        "txt": []
+      },
+      "reverse": {
+        "ptr": "202.163.237.221.broad.cd.sc.dynamic.163data.com.cn"
+      },
+      "geoip": {
+        "city": null,
+        "country": "China",
+        "country_iso": "CN",
+        "location": {
+          "lat": 34.7732,
+          "lon": 113.722
+        }
+      },
+      "passive_dns": [],
+      "whois": {},
+      "abuseipdb": {
+        "ipAddress": "221.237.163.202",
+        "isPublic": true,
+        "ipVersion": 4,
+        "isWhitelisted": false,
+        "abuseConfidenceScore": 100,
+        "countryCode": "CN",
+        "usageType": "Fixed Line ISP",
+        "isp": "CHINANET Sichuan province network",
+        "domain": "chinatelecom.cn",
+        "hostnames": [
+          "202.163.237.221.broad.cd.sc.dynamic.163data.com.cn"
+        ],
+        "isTor": false,
+        "totalReports": 1042,
+        "numDistinctUsers": 376,
+        "lastReportedAt": "2025-11-18T10:33:51+00:00"
+      },
+      "abuseipdb_score": 100
+    },
+    "score": 79,
+    "score_breakdown": {
+      "base": 10,
+      "source_weight": 20,
+      "abuse_confidence": 100,
+      "abuse_contrib": 25,
+      "total_reports": 1042,
+      "total_reports_contrib": 12,
+      "distinct_users": 376,
+      "distinct_users_contrib": 7,
+      "passive_dns_count": 0,
+      "passive_dns_contrib": 0,
+      "otx_count": 0,
+      "otx_contrib": 0,
+      "ptr": "202.163.237.221.broad.cd.sc.dynamic.163data.com.cn",
+      "ptr_contrib": 0,
+      "whois_present": 0,
+      "whois_contrib": 0,
+      "country": "CN",
+      "country_contrib": 5,
+      "no_signals_penalty": 0,
+      "final_score_raw": 79,
+      "final_score": 79
+    },
+    "risk_bucket": "high"
+  },
+  {
+    "id": "ip::188.32.79.237",
+    "type": "ip",
+    "value": "188.32.79.237",
+    "source": "AbuseIPDB",
+    "sources_count": 1,
+    "enrichment": {
+      "dns": {
+        "a": [],
+        "aaaa": [],
+        "mx": [],
+        "txt": []
+      },
+      "reverse": {
+        "ptr": "broadband-188-32-79-237.ip.moscow.rt.ru"
+      },
+      "geoip": {
+        "city": "Moscow",
+        "country": "Russia",
+        "country_iso": "RU",
+        "location": {
+          "lat": 55.7487,
+          "lon": 37.6187
+        }
+      },
+      "passive_dns": [],
+      "whois": {},
+      "abuseipdb": {
+        "ipAddress": "188.32.79.237",
+        "isPublic": true,
+        "ipVersion": 4,
+        "isWhitelisted": false,
+        "abuseConfidenceScore": 100,
+        "countryCode": "RU",
+        "usageType": "Fixed Line ISP",
+        "isp": "PJSC Rostelecom",
+        "domain": "rt.ru",
+        "hostnames": [
+          "broadband-188-32-79-237.ip.moscow.rt.ru"
+        ],
+        "isTor": false,
+        "totalReports": 1325,
+        "numDistinctUsers": 480,
+        "lastReportedAt": "2025-11-18T19:19:03+00:00"
+      },
+      "abuseipdb_score": 100
+    },
+    "score": 79,
+    "score_breakdown": {
+      "base": 10,
+      "source_weight": 20,
+      "abuse_confidence": 100,
+      "abuse_contrib": 25,
+      "total_reports": 1325,
+      "total_reports_contrib": 12,
+      "distinct_users": 480,
+      "distinct_users_contrib": 7,
+      "passive_dns_count": 0,
+      "passive_dns_contrib": 0,
+      "otx_count": 0,
+      "otx_contrib": 0,
+      "ptr": "broadband-188-32-79-237.ip.moscow.rt.ru",
+      "ptr_contrib": 0,
+      "whois_present": 0,
+      "whois_contrib": 0,
+      "country": "RU",
+      "country_contrib": 5,
+      "no_signals_penalty": 0,
+      "final_score_raw": 79,
+      "final_score": 79
+    },
+    "risk_bucket": "high"
+  },
+  {
+    "id": "ip::37.202.239.136",
+    "type": "ip",
+    "value": "37.202.239.136",
+    "source": "AbuseIPDB",
+    "sources_count": 1,
+    "enrichment": {
+      "dns": {
+        "a": [],
+        "aaaa": [],
+        "mx": [],
+        "txt": []
+      },
+      "reverse": {
+        "ptr": "37-202-239-136.shatel.ir"
+      },
+      "geoip": {
+        "city": null,
+        "country": "Iran",
+        "country_iso": "IR",
+        "location": {
+          "lat": 35.698,
+          "lon": 51.4115
+        }
+      },
+      "passive_dns": [],
+      "whois": {},
+      "abuseipdb": {
+        "ipAddress": "37.202.239.136",
+        "isPublic": true,
+        "ipVersion": 4,
+        "isWhitelisted": false,
+        "abuseConfidenceScore": 100,
+        "countryCode": "IR",
+        "usageType": "Data Center/Web Hosting/Transit",
+        "isp": "TehranServer",
+        "domain": "rasana.net",
+        "hostnames": [
+          "37-202-239-136.shatel.ir"
+        ],
+        "isTor": false,
+        "totalReports": 1222,
+        "numDistinctUsers": 434,
+        "lastReportedAt": "2025-11-17T23:35:59+00:00"
+      },
+      "abuseipdb_score": 100
+    },
+    "score": 79,
+    "score_breakdown": {
+      "base": 10,
+      "source_weight": 20,
+      "abuse_confidence": 100,
+      "abuse_contrib": 25,
+      "total_reports": 1222,
+      "total_reports_contrib": 12,
+      "distinct_users": 434,
+      "distinct_users_contrib": 7,
+      "passive_dns_count": 0,
+      "passive_dns_contrib": 0,
+      "otx_count": 0,
+      "otx_contrib": 0,
+      "ptr": "37-202-239-136.shatel.ir",
+      "ptr_contrib": 0,
+      "whois_present": 0,
+      "whois_contrib": 0,
+      "country": "IR",
+      "country_contrib": 5,
+      "no_signals_penalty": 0,
+      "final_score_raw": 79,
+      "final_score": 79
+    },
+    "risk_bucket": "high"
+  },
+  {
+    "id": "ip::61.53.69.210",
+    "type": "ip",
+    "value": "61.53.69.210",
+    "source": "AbuseIPDB",
+    "sources_count": 1,
+    "enrichment": {
+      "dns": {
+        "a": [],
+        "aaaa": [],
+        "mx": [],
+        "txt": []
+      },
+      "reverse": {
+        "ptr": "hn.kd.dhcp"
+      },
+      "geoip": {
+        "city": "Kaifeng",
+        "country": "China",
+        "country_iso": "CN",
+        "location": {
+          "lat": 34.7986,
+          "lon": 114.3074
+        }
+      },
+      "passive_dns": [],
+      "whois": {},
+      "abuseipdb": {
+        "ipAddress": "61.53.69.210",
+        "isPublic": true,
+        "ipVersion": 4,
+        "isWhitelisted": false,
+        "abuseConfidenceScore": 100,
+        "countryCode": "CN",
+        "usageType": "Fixed Line ISP",
+        "isp": "China Unicom Henan province network",
+        "domain": "chinaunicom.cn",
+        "hostnames": [
+          "hn.kd.dhcp"
+        ],
+        "isTor": false,
+        "totalReports": 1011,
+        "numDistinctUsers": 363,
+        "lastReportedAt": "2025-11-18T17:59:28+00:00"
+      },
+      "abuseipdb_score": 100
+    },
+    "score": 79,
+    "score_breakdown": {
+      "base": 10,
+      "source_weight": 20,
+      "abuse_confidence": 100,
+      "abuse_contrib": 25,
+      "total_reports": 1011,
+      "total_reports_contrib": 12,
+      "distinct_users": 363,
+      "distinct_users_contrib": 7,
+      "passive_dns_count": 0,
+      "passive_dns_contrib": 0,
+      "otx_count": 0,
+      "otx_contrib": 0,
+      "ptr": "hn.kd.dhcp",
+      "ptr_contrib": 0,
+      "whois_present": 0,
+      "whois_contrib": 0,
+      "country": "CN",
+      "country_contrib": 5,
+      "no_signals_penalty": 0,
+      "final_score_raw": 79,
+      "final_score": 79
+    },
+    "risk_bucket": "high"
+  },
+  {
+    "id": "ip::61.182.241.146",
+    "type": "ip",
+    "value": "61.182.241.146",
+    "source": "AbuseIPDB",
+    "sources_count": 1,
+    "enrichment": {
+      "dns": {
+        "a": [],
+        "aaaa": [],
+        "mx": [],
+        "txt": []
+      },
+      "reverse": {
+        "ptr": "hebei.182.61.in-addr.arpa"
+      },
+      "geoip": {
+        "city": null,
+        "country": "China",
+        "country_iso": "CN",
+        "location": {
+          "lat": 34.7732,
+          "lon": 113.722
+        }
+      },
+      "passive_dns": [],
+      "whois": {},
+      "abuseipdb": {
+        "ipAddress": "61.182.241.146",
+        "isPublic": true,
+        "ipVersion": 4,
+        "isWhitelisted": false,
+        "abuseConfidenceScore": 100,
+        "countryCode": "CN",
+        "usageType": "Fixed Line ISP",
+        "isp": "China Unicom Hebei province network",
+        "domain": "chinaunicom.cn",
+        "hostnames": [
+          "hebei.182.61.in-addr.arpa"
+        ],
+        "isTor": false,
+        "totalReports": 671,
+        "numDistinctUsers": 262,
+        "lastReportedAt": "2025-11-18T19:27:12+00:00"
+      },
+      "abuseipdb_score": 100
+    },
+    "score": 77,
+    "score_breakdown": {
+      "base": 10,
+      "source_weight": 20,
+      "abuse_confidence": 100,
+      "abuse_contrib": 25,
+      "total_reports": 671,
+      "total_reports_contrib": 10,
+      "distinct_users": 262,
+      "distinct_users_contrib": 7,
+      "passive_dns_count": 0,
+      "passive_dns_contrib": 0,
+      "otx_count": 0,
+      "otx_contrib": 0,
+      "ptr": "hebei.182.61.in-addr.arpa",
+      "ptr_contrib": 0,
+      "whois_present": 0,
+      "whois_contrib": 0,
+      "country": "CN",
+      "country_contrib": 5,
+      "no_signals_penalty": 0,
+      "final_score_raw": 77,
+      "final_score": 77
+    },
+    "risk_bucket": "high"
+  },
+  {
+    "id": "ip::122.136.195.32",
+    "type": "ip",
+    "value": "122.136.195.32",
+    "source": "AbuseIPDB",
+    "sources_count": 1,
+    "enrichment": {
+      "dns": {
+        "a": [],
+        "aaaa": [],
+        "mx": [],
+        "txt": []
+      },
+      "reverse": {
+        "ptr": "32.195.136.122.adsl-pool.jlccptt.net.cn"
+      },
+      "geoip": {
+        "city": null,
+        "country": "China",
+        "country_iso": "CN",
+        "location": {
+          "lat": 34.7732,
+          "lon": 113.722
+        }
+      },
+      "passive_dns": [],
+      "whois": {},
+      "abuseipdb": {
+        "ipAddress": "122.136.195.32",
+        "isPublic": true,
+        "ipVersion": 4,
+        "isWhitelisted": false,
+        "abuseConfidenceScore": 100,
+        "countryCode": "CN",
+        "usageType": "Fixed Line ISP",
+        "isp": "China Unicom Jilin province network",
+        "domain": "chinaunicom.cn",
+        "hostnames": [
+          "32.195.136.122.adsl-pool.jlccptt.net.cn"
+        ],
+        "isTor": false,
+        "totalReports": 1077,
+        "numDistinctUsers": 163,
+        "lastReportedAt": "2025-11-18T19:00:09+00:00"
+      },
+      "abuseipdb_score": 100
+    },
+    "score": 77,
+    "score_breakdown": {
+      "base": 10,
+      "source_weight": 20,
+      "abuse_confidence": 100,
+      "abuse_contrib": 25,
+      "total_reports": 1077,
+      "total_reports_contrib": 12,
+      "distinct_users": 163,
+      "distinct_users_contrib": 5,
+      "passive_dns_count": 0,
+      "passive_dns_contrib": 0,
+      "otx_count": 0,
+      "otx_contrib": 0,
+      "ptr": "32.195.136.122.adsl-pool.jlccptt.net.cn",
+      "ptr_contrib": 0,
+      "whois_present": 0,
+      "whois_contrib": 0,
+      "country": "CN",
+      "country_contrib": 5,
+      "no_signals_penalty": 0,
+      "final_score_raw": 77,
+      "final_score": 77
+    },
+    "risk_bucket": "high"
+  },
+  {
+    "id": "ip::78.157.49.100",
+    "type": "ip",
+    "value": "78.157.49.100",
+    "source": "AbuseIPDB",
+    "sources_count": 1,
+    "enrichment": {
+      "dns": {
+        "a": [],
+        "aaaa": [],
+        "mx": [],
+        "txt": []
+      },
+      "reverse": {
+        "ptr": "mail.katringroup.com"
+      },
+      "geoip": {
+        "city": null,
+        "country": "Iran",
+        "country_iso": "IR",
+        "location": {
+          "lat": 35.698,
+          "lon": 51.4115
+        }
+      },
+      "passive_dns": [],
+      "whois": {},
+      "abuseipdb": {
+        "ipAddress": "78.157.49.100",
+        "isPublic": true,
+        "ipVersion": 4,
+        "isWhitelisted": false,
+        "abuseConfidenceScore": 100,
+        "countryCode": "IR",
+        "usageType": "Data Center/Web Hosting/Transit",
+        "isp": "Dade Samane Fanava Company (PJS)",
+        "domain": "fanavaidc.com",
+        "hostnames": [
+          "mail.katringroup.com",
+          "mail.medicib.com",
+          "mail.sepeedpowder.com",
+          "bmcars.online"
+        ],
+        "isTor": false,
+        "totalReports": 1935,
+        "numDistinctUsers": 162,
+        "lastReportedAt": "2025-11-18T19:26:30+00:00"
+      },
+      "abuseipdb_score": 100
+    },
+    "score": 77,
+    "score_breakdown": {
+      "base": 10,
+      "source_weight": 20,
+      "abuse_confidence": 100,
+      "abuse_contrib": 25,
+      "total_reports": 1935,
+      "total_reports_contrib": 12,
+      "distinct_users": 162,
+      "distinct_users_contrib": 5,
+      "passive_dns_count": 0,
+      "passive_dns_contrib": 0,
+      "otx_count": 0,
+      "otx_contrib": 0,
+      "ptr": "mail.katringroup.com",
+      "ptr_contrib": 0,
+      "whois_present": 0,
+      "whois_contrib": 0,
+      "country": "IR",
+      "country_contrib": 5,
+      "no_signals_penalty": 0,
+      "final_score_raw": 77,
+      "final_score": 77
+    },
+    "risk_bucket": "high"
+  },
+  {
+    "id": "ip::222.223.62.8",
+    "type": "ip",
+    "value": "222.223.62.8",
+    "source": "AbuseIPDB",
+    "sources_count": 1,
+    "enrichment": {
+      "dns": {
+        "a": [],
+        "aaaa": [],
+        "mx": [],
+        "txt": []
+      },
+      "reverse": {
+        "ptr": "8.62.223.222.broad.cz.he.dynamic.163data.com.cn"
+      },
+      "geoip": {
+        "city": "Tianjin",
+        "country": "China",
+        "country_iso": "CN",
+        "location": {
+          "lat": 39.1424,
+          "lon": 117.1727
+        }
+      },
+      "passive_dns": [],
+      "whois": {},
+      "abuseipdb": {
+        "ipAddress": "222.223.62.8",
+        "isPublic": true,
+        "ipVersion": 4,
+        "isWhitelisted": false,
+        "abuseConfidenceScore": 100,
+        "countryCode": "CN",
+        "usageType": "Fixed Line ISP",
+        "isp": "CHINANET hebei province network",
+        "domain": "chinatelecom.cn",
+        "hostnames": [
+          "8.62.223.222.broad.cz.he.dynamic.163data.com.cn"
+        ],
+        "isTor": false,
+        "totalReports": 906,
+        "numDistinctUsers": 356,
+        "lastReportedAt": "2025-11-18T17:50:19+00:00"
+      },
+      "abuseipdb_score": 100
+    },
+    "score": 77,
+    "score_breakdown": {
+      "base": 10,
+      "source_weight": 20,
+      "abuse_confidence": 100,
+      "abuse_contrib": 25,
+      "total_reports": 906,
+      "total_reports_contrib": 10,
+      "distinct_users": 356,
+      "distinct_users_contrib": 7,
+      "passive_dns_count": 0,
+      "passive_dns_contrib": 0,
+      "otx_count": 0,
+      "otx_contrib": 0,
+      "ptr": "8.62.223.222.broad.cz.he.dynamic.163data.com.cn",
+      "ptr_contrib": 0,
+      "whois_present": 0,
+      "whois_contrib": 0,
+      "country": "CN",
+      "country_contrib": 5,
+      "no_signals_penalty": 0,
+      "final_score_raw": 77,
+      "final_score": 77
+    },
+    "risk_bucket": "high"
+  },
+  {
+    "id": "ip::125.94.107.91",
+    "type": "ip",
+    "value": "125.94.107.91",
+    "source": "AbuseIPDB",
+    "sources_count": 1,
+    "enrichment": {
+      "dns": {
+        "a": [],
+        "aaaa": [],
+        "mx": [],
+        "txt": []
+      },
+      "geoip": {
+        "city": "Shenzhen",
+        "country": "China",
+        "country_iso": "CN",
+        "location": {
+          "lat": 22.5455,
+          "lon": 114.0683
+        }
+      },
+      "passive_dns": [],
+      "reverse": {},
+      "whois": {},
+      "abuseipdb": {
+        "ipAddress": "125.94.107.91",
+        "isPublic": true,
+        "ipVersion": 4,
+        "isWhitelisted": false,
+        "abuseConfidenceScore": 100,
+        "countryCode": "CN",
+        "usageType": "Fixed Line ISP",
+        "isp": "CHINANET Guangdong province network",
+        "domain": "chinatelecom.cn",
+        "hostnames": [],
+        "isTor": false,
+        "totalReports": 711,
+        "numDistinctUsers": 295,
+        "lastReportedAt": "2025-11-18T19:09:37+00:00"
+      },
+      "abuseipdb_score": 100
+    },
+    "score": 77,
+    "score_breakdown": {
+      "base": 10,
+      "source_weight": 20,
+      "abuse_confidence": 100,
+      "abuse_contrib": 25,
+      "total_reports": 711,
+      "total_reports_contrib": 10,
+      "distinct_users": 295,
+      "distinct_users_contrib": 7,
+      "passive_dns_count": 0,
+      "passive_dns_contrib": 0,
+      "otx_count": 0,
+      "otx_contrib": 0,
+      "ptr": null,
+      "ptr_contrib": 0,
+      "whois_present": 0,
+      "whois_contrib": 0,
+      "country": "CN",
+      "country_contrib": 5,
+      "no_signals_penalty": 0,
+      "final_score_raw": 77,
+      "final_score": 77
+    },
+    "risk_bucket": "high"
+  },
+  {
+    "id": "ip::222.161.223.54",
+    "type": "ip",
+    "value": "222.161.223.54",
+    "source": "AbuseIPDB",
+    "sources_count": 1,
+    "enrichment": {
+      "dns": {
+        "a": [],
+        "aaaa": [],
+        "mx": [],
+        "txt": []
+      },
+      "reverse": {
+        "ptr": "54.223.161.222.adsl-pool.jlccptt.net.cn"
+      },
+      "geoip": {
+        "city": null,
+        "country": "China",
+        "country_iso": "CN",
+        "location": {
+          "lat": 34.7732,
+          "lon": 113.722
+        }
+      },
+      "passive_dns": [],
+      "whois": {},
+      "abuseipdb": {
+        "ipAddress": "222.161.223.54",
+        "isPublic": true,
+        "ipVersion": 4,
+        "isWhitelisted": false,
+        "abuseConfidenceScore": 100,
+        "countryCode": "CN",
+        "usageType": "Fixed Line ISP",
+        "isp": "China Unicom Jilin province network",
+        "domain": "chinaunicom.cn",
+        "hostnames": [
+          "54.223.161.222.adsl-pool.jlccptt.net.cn"
+        ],
+        "isTor": false,
+        "totalReports": 2459,
+        "numDistinctUsers": 54,
+        "lastReportedAt": "2025-11-18T19:04:43+00:00"
+      },
+      "abuseipdb_score": 100
+    },
+    "score": 77,
+    "score_breakdown": {
+      "base": 10,
+      "source_weight": 20,
+      "abuse_confidence": 100,
+      "abuse_contrib": 25,
+      "total_reports": 2459,
+      "total_reports_contrib": 14,
+      "distinct_users": 54,
+      "distinct_users_contrib": 3,
+      "passive_dns_count": 0,
+      "passive_dns_contrib": 0,
+      "otx_count": 0,
+      "otx_contrib": 0,
+      "ptr": "54.223.161.222.adsl-pool.jlccptt.net.cn",
+      "ptr_contrib": 0,
+      "whois_present": 0,
+      "whois_contrib": 0,
+      "country": "CN",
+      "country_contrib": 5,
+      "no_signals_penalty": 0,
+      "final_score_raw": 77,
+      "final_score": 77
+    },
+    "risk_bucket": "high"
+  },
+  {
+    "id": "ip::81.29.140.4",
+    "type": "ip",
+    "value": "81.29.140.4",
+    "source": "AbuseIPDB",
+    "sources_count": 1,
+    "enrichment": {
+      "dns": {
+        "a": [],
+        "aaaa": [],
+        "mx": [],
+        "txt": []
+      },
+      "reverse": {
+        "ptr": "host-81-29-140-4.iqdata.center"
+      },
+      "geoip": {
+        "city": null,
+        "country": "Russia",
+        "country_iso": "RU",
+        "location": {
+          "lat": 55.7386,
+          "lon": 37.6068
+        }
+      },
+      "passive_dns": [],
+      "whois": {},
+      "abuseipdb": {
+        "ipAddress": "81.29.140.4",
+        "isPublic": true,
+        "ipVersion": 4,
+        "isWhitelisted": false,
+        "abuseConfidenceScore": 100,
+        "countryCode": "RU",
+        "usageType": "Data Center/Web Hosting/Transit",
+        "isp": "Data-center IMAQLIQ Ltd.",
+        "domain": "iqdata.center",
+        "hostnames": [
+          "host-81-29-140-4.iqdata.center"
+        ],
+        "isTor": false,
+        "totalReports": 1087,
+        "numDistinctUsers": 120,
+        "lastReportedAt": "2025-11-18T19:20:46+00:00"
+      },
+      "abuseipdb_score": 100
+    },
+    "score": 77,
+    "score_breakdown": {
+      "base": 10,
+      "source_weight": 20,
+      "abuse_confidence": 100,
+      "abuse_contrib": 25,
+      "total_reports": 1087,
+      "total_reports_contrib": 12,
+      "distinct_users": 120,
+      "distinct_users_contrib": 5,
+      "passive_dns_count": 0,
+      "passive_dns_contrib": 0,
+      "otx_count": 0,
+      "otx_contrib": 0,
+      "ptr": "host-81-29-140-4.iqdata.center",
+      "ptr_contrib": 0,
+      "whois_present": 0,
+      "whois_contrib": 0,
+      "country": "RU",
+      "country_contrib": 5,
+      "no_signals_penalty": 0,
+      "final_score_raw": 77,
+      "final_score": 77
+    },
+    "risk_bucket": "high"
+  },
+  {
+    "id": "ip::46.0.19.251",
+    "type": "ip",
+    "value": "46.0.19.251",
+    "source": "AbuseIPDB",
+    "sources_count": 1,
+    "enrichment": {
+      "dns": {
+        "a": [],
+        "aaaa": [],
+        "mx": [],
+        "txt": []
+      },
+      "reverse": {
+        "ptr": "dynamicip-46-0-19-251.pppoe.samara.ertelecom.ru"
+      },
+      "geoip": {
+        "city": "Samara",
+        "country": "Russia",
+        "country_iso": "RU",
+        "location": {
+          "lat": 53.2061,
+          "lon": 50.1509
+        }
+      },
+      "passive_dns": [],
+      "whois": {},
+      "abuseipdb": {
+        "ipAddress": "46.0.19.251",
+        "isPublic": true,
+        "ipVersion": 4,
+        "isWhitelisted": false,
+        "abuseConfidenceScore": 100,
+        "countryCode": "RU",
+        "usageType": "Fixed Line ISP",
+        "isp": "CJSC ER-Telecom Company Samara",
+        "domain": "ertelecom.ru",
+        "hostnames": [
+          "dynamicip-46-0-19-251.pppoe.samara.ertelecom.ru"
+        ],
+        "isTor": false,
+        "totalReports": 1623,
+        "numDistinctUsers": 110,
+        "lastReportedAt": "2025-11-18T19:01:07+00:00"
+      },
+      "abuseipdb_score": 100
+    },
+    "score": 77,
+    "score_breakdown": {
+      "base": 10,
+      "source_weight": 20,
+      "abuse_confidence": 100,
+      "abuse_contrib": 25,
+      "total_reports": 1623,
+      "total_reports_contrib": 12,
+      "distinct_users": 110,
+      "distinct_users_contrib": 5,
+      "passive_dns_count": 0,
+      "passive_dns_contrib": 0,
+      "otx_count": 0,
+      "otx_contrib": 0,
+      "ptr": "dynamicip-46-0-19-251.pppoe.samara.ertelecom.ru",
+      "ptr_contrib": 0,
+      "whois_present": 0,
+      "whois_contrib": 0,
+      "country": "RU",
+      "country_contrib": 5,
+      "no_signals_penalty": 0,
+      "final_score_raw": 77,
+      "final_score": 77
+    },
+    "risk_bucket": "high"
+  },
+  {
+    "id": "ip::37.110.142.162",
+    "type": "ip",
+    "value": "37.110.142.162",
+    "source": "AbuseIPDB",
+    "sources_count": 1,
+    "enrichment": {
+      "dns": {
+        "a": [],
+        "aaaa": [],
+        "mx": [],
+        "txt": []
+      },
+      "reverse": {
+        "ptr": "broadband-37-110-142-162.ip.moscow.rt.ru"
+      },
+      "geoip": {
+        "city": "Moscow",
+        "country": "Russia",
+        "country_iso": "RU",
+        "location": {
+          "lat": 55.7487,
+          "lon": 37.6187
+        }
+      },
+      "passive_dns": [],
+      "whois": {},
+      "abuseipdb": {
+        "ipAddress": "37.110.142.162",
+        "isPublic": true,
+        "ipVersion": 4,
+        "isWhitelisted": false,
+        "abuseConfidenceScore": 100,
+        "countryCode": "RU",
+        "usageType": "Fixed Line ISP",
+        "isp": "PJSC Rostelecom",
+        "domain": "rt.ru",
+        "hostnames": [
+          "broadband-37-110-142-162.ip.moscow.rt.ru"
+        ],
+        "isTor": false,
+        "totalReports": 647,
+        "numDistinctUsers": 284,
+        "lastReportedAt": "2025-11-18T12:50:07+00:00"
+      },
+      "abuseipdb_score": 100
+    },
+    "score": 77,
+    "score_breakdown": {
+      "base": 10,
+      "source_weight": 20,
+      "abuse_confidence": 100,
+      "abuse_contrib": 25,
+      "total_reports": 647,
+      "total_reports_contrib": 10,
+      "distinct_users": 284,
+      "distinct_users_contrib": 7,
+      "passive_dns_count": 0,
+      "passive_dns_contrib": 0,
+      "otx_count": 0,
+      "otx_contrib": 0,
+      "ptr": "broadband-37-110-142-162.ip.moscow.rt.ru",
+      "ptr_contrib": 0,
+      "whois_present": 0,
+      "whois_contrib": 0,
+      "country": "RU",
+      "country_contrib": 5,
+      "no_signals_penalty": 0,
+      "final_score_raw": 77,
+      "final_score": 77
+    },
+    "risk_bucket": "high"
+  },
+  {
+    "id": "ip::37.110.149.139",
+    "type": "ip",
+    "value": "37.110.149.139",
+    "source": "AbuseIPDB",
+    "sources_count": 1,
+    "enrichment": {
+      "dns": {
+        "a": [],
+        "aaaa": [],
+        "mx": [],
+        "txt": []
+      },
+      "reverse": {
+        "ptr": "broadband-37-110-149-139.ip.moscow.rt.ru"
+      },
+      "geoip": {
+        "city": "Moscow",
+        "country": "Russia",
+        "country_iso": "RU",
+        "location": {
+          "lat": 55.7487,
+          "lon": 37.6187
+        }
+      },
+      "passive_dns": [],
+      "whois": {},
+      "abuseipdb": {
+        "ipAddress": "37.110.149.139",
+        "isPublic": true,
+        "ipVersion": 4,
+        "isWhitelisted": false,
+        "abuseConfidenceScore": 100,
+        "countryCode": "RU",
+        "usageType": "Fixed Line ISP",
+        "isp": "PJSC Rostelecom",
+        "domain": "rt.ru",
+        "hostnames": [
+          "broadband-37-110-149-139.ip.moscow.rt.ru"
+        ],
+        "isTor": false,
+        "totalReports": 1181,
+        "numDistinctUsers": 104,
+        "lastReportedAt": "2025-11-18T18:57:10+00:00"
+      },
+      "abuseipdb_score": 100
+    },
+    "score": 77,
+    "score_breakdown": {
+      "base": 10,
+      "source_weight": 20,
+      "abuse_confidence": 100,
+      "abuse_contrib": 25,
+      "total_reports": 1181,
+      "total_reports_contrib": 12,
+      "distinct_users": 104,
+      "distinct_users_contrib": 5,
+      "passive_dns_count": 0,
+      "passive_dns_contrib": 0,
+      "otx_count": 0,
+      "otx_contrib": 0,
+      "ptr": "broadband-37-110-149-139.ip.moscow.rt.ru",
+      "ptr_contrib": 0,
+      "whois_present": 0,
+      "whois_contrib": 0,
+      "country": "RU",
+      "country_contrib": 5,
+      "no_signals_penalty": 0,
+      "final_score_raw": 77,
+      "final_score": 77
+    },
+    "risk_bucket": "high"
+  },
+  {
+    "id": "ip::112.74.38.239",
+    "type": "ip",
+    "value": "112.74.38.239",
+    "source": "AbuseIPDB",
+    "sources_count": 1,
+    "enrichment": {
+      "dns": {
+        "a": [],
+        "aaaa": [],
+        "mx": [],
+        "txt": []
+      },
+      "reverse": {
+        "ptr": "measurements.ki3.org.cn"
+      },
+      "geoip": {
+        "city": "Shenzhen",
+        "country": "China",
+        "country_iso": "CN",
+        "location": {
+          "lat": 22.5455,
+          "lon": 114.0683
+        }
+      },
+      "passive_dns": [],
+      "whois": {},
+      "abuseipdb": {
+        "ipAddress": "112.74.38.239",
+        "isPublic": true,
+        "ipVersion": 4,
+        "isWhitelisted": false,
+        "abuseConfidenceScore": 100,
+        "countryCode": "CN",
+        "usageType": "Commercial",
+        "isp": "Aliyun Computing Co., LTD",
+        "domain": "alibabacloud.com",
+        "hostnames": [
+          "measurements.ki3.org.cn"
+        ],
+        "isTor": false,
+        "totalReports": 1277,
+        "numDistinctUsers": 174,
+        "lastReportedAt": "2025-11-18T03:04:51+00:00"
+      },
+      "abuseipdb_score": 100
+    },
+    "score": 77,
+    "score_breakdown": {
+      "base": 10,
+      "source_weight": 20,
+      "abuse_confidence": 100,
+      "abuse_contrib": 25,
+      "total_reports": 1277,
+      "total_reports_contrib": 12,
+      "distinct_users": 174,
+      "distinct_users_contrib": 5,
+      "passive_dns_count": 0,
+      "passive_dns_contrib": 0,
+      "otx_count": 0,
+      "otx_contrib": 0,
+      "ptr": "measurements.ki3.org.cn",
+      "ptr_contrib": 0,
+      "whois_present": 0,
+      "whois_contrib": 0,
+      "country": "CN",
+      "country_contrib": 5,
+      "no_signals_penalty": 0,
+      "final_score_raw": 77,
+      "final_score": 77
+    },
+    "risk_bucket": "high"
+  },
+  {
+    "id": "ip::145.255.15.187",
+    "type": "ip",
+    "value": "145.255.15.187",
+    "source": "AbuseIPDB",
+    "sources_count": 1,
+    "enrichment": {
+      "dns": {
+        "a": [],
+        "aaaa": [],
+        "mx": [],
+        "txt": []
+      },
+      "reverse": {
+        "ptr": "145.255.15.187.dynamic.ufanet.ru"
+      },
+      "geoip": {
+        "city": "Ufa",
+        "country": "Russia",
+        "country_iso": "RU",
+        "location": {
+          "lat": 54.7431,
+          "lon": 55.9678
+        }
+      },
+      "passive_dns": [],
+      "whois": {},
+      "abuseipdb": {
+        "ipAddress": "145.255.15.187",
+        "isPublic": true,
+        "ipVersion": 4,
+        "isWhitelisted": false,
+        "abuseConfidenceScore": 100,
+        "countryCode": "RU",
+        "usageType": "Fixed Line ISP",
+        "isp": "JSC Ufanet",
+        "domain": "ufanet.ru",
+        "hostnames": [
+          "145.255.15.187.dynamic.ufanet.ru"
+        ],
+        "isTor": false,
+        "totalReports": 1463,
+        "numDistinctUsers": 109,
+        "lastReportedAt": "2025-11-18T16:10:39+00:00"
+      },
+      "abuseipdb_score": 100
+    },
+    "score": 77,
+    "score_breakdown": {
+      "base": 10,
+      "source_weight": 20,
+      "abuse_confidence": 100,
+      "abuse_contrib": 25,
+      "total_reports": 1463,
+      "total_reports_contrib": 12,
+      "distinct_users": 109,
+      "distinct_users_contrib": 5,
+      "passive_dns_count": 0,
+      "passive_dns_contrib": 0,
+      "otx_count": 0,
+      "otx_contrib": 0,
+      "ptr": "145.255.15.187.dynamic.ufanet.ru",
+      "ptr_contrib": 0,
+      "whois_present": 0,
+      "whois_contrib": 0,
+      "country": "RU",
+      "country_contrib": 5,
+      "no_signals_penalty": 0,
+      "final_score_raw": 77,
+      "final_score": 77
+    },
+    "risk_bucket": "high"
+  },
+  {
+    "id": "ip::212.12.20.108",
+    "type": "ip",
+    "value": "212.12.20.108",
+    "source": "AbuseIPDB",
+    "sources_count": 1,
+    "enrichment": {
+      "dns": {
+        "a": [],
+        "aaaa": [],
+        "mx": [],
+        "txt": []
+      },
+      "reverse": {
+        "ptr": "rev-108-20-12-212.tula.net"
+      },
+      "geoip": {
+        "city": null,
+        "country": "Russia",
+        "country_iso": "RU",
+        "location": {
+          "lat": 55.7386,
+          "lon": 37.6068
+        }
+      },
+      "passive_dns": [],
+      "whois": {},
+      "abuseipdb": {
+        "ipAddress": "212.12.20.108",
+        "isPublic": true,
+        "ipVersion": 4,
+        "isWhitelisted": false,
+        "abuseConfidenceScore": 100,
+        "countryCode": "RU",
+        "usageType": "Fixed Line ISP",
+        "isp": "Client leased link network (MCC)",
+        "domain": "tula.net",
+        "hostnames": [
+          "rev-108-20-12-212.tula.net"
+        ],
+        "isTor": false,
+        "totalReports": 1562,
+        "numDistinctUsers": 104,
+        "lastReportedAt": "2025-11-18T16:10:52+00:00"
+      },
+      "abuseipdb_score": 100
+    },
+    "score": 77,
+    "score_breakdown": {
+      "base": 10,
+      "source_weight": 20,
+      "abuse_confidence": 100,
+      "abuse_contrib": 25,
+      "total_reports": 1562,
+      "total_reports_contrib": 12,
+      "distinct_users": 104,
+      "distinct_users_contrib": 5,
+      "passive_dns_count": 0,
+      "passive_dns_contrib": 0,
+      "otx_count": 0,
+      "otx_contrib": 0,
+      "ptr": "rev-108-20-12-212.tula.net",
+      "ptr_contrib": 0,
+      "whois_present": 0,
+      "whois_contrib": 0,
+      "country": "RU",
+      "country_contrib": 5,
+      "no_signals_penalty": 0,
+      "final_score_raw": 77,
+      "final_score": 77
+    },
+    "risk_bucket": "high"
+  },
+  {
+    "id": "ip::77.37.179.158",
+    "type": "ip",
+    "value": "77.37.179.158",
+    "source": "AbuseIPDB",
+    "sources_count": 1,
+    "enrichment": {
+      "dns": {
+        "a": [],
+        "aaaa": [],
+        "mx": [],
+        "txt": []
+      },
+      "reverse": {
+        "ptr": "broadband-77-37-179-158.ip.moscow.rt.ru"
+      },
+      "geoip": {
+        "city": "Moscow",
+        "country": "Russia",
+        "country_iso": "RU",
+        "location": {
+          "lat": 55.7487,
+          "lon": 37.6187
+        }
+      },
+      "passive_dns": [],
+      "whois": {},
+      "abuseipdb": {
+        "ipAddress": "77.37.179.158",
+        "isPublic": true,
+        "ipVersion": 4,
+        "isWhitelisted": false,
+        "abuseConfidenceScore": 100,
+        "countryCode": "RU",
+        "usageType": "Fixed Line ISP",
+        "isp": "PJSC Rostelecom",
+        "domain": "rt.ru",
+        "hostnames": [
+          "broadband-77-37-179-158.ip.moscow.rt.ru"
+        ],
+        "isTor": false,
+        "totalReports": 776,
+        "numDistinctUsers": 170,
+        "lastReportedAt": "2025-11-18T16:51:40+00:00"
+      },
+      "abuseipdb_score": 100
+    },
+    "score": 75,
+    "score_breakdown": {
+      "base": 10,
+      "source_weight": 20,
+      "abuse_confidence": 100,
+      "abuse_contrib": 25,
+      "total_reports": 776,
+      "total_reports_contrib": 10,
+      "distinct_users": 170,
+      "distinct_users_contrib": 5,
+      "passive_dns_count": 0,
+      "passive_dns_contrib": 0,
+      "otx_count": 0,
+      "otx_contrib": 0,
+      "ptr": "broadband-77-37-179-158.ip.moscow.rt.ru",
+      "ptr_contrib": 0,
+      "whois_present": 0,
+      "whois_contrib": 0,
+      "country": "RU",
+      "country_contrib": 5,
+      "no_signals_penalty": 0,
+      "final_score_raw": 75,
+      "final_score": 75
+    },
+    "risk_bucket": "high"
+  },
+  {
+    "id": "ip::188.235.158.134",
+    "type": "ip",
+    "value": "188.235.158.134",
+    "source": "AbuseIPDB",
+    "sources_count": 1,
+    "enrichment": {
+      "dns": {
+        "a": [],
+        "aaaa": [],
+        "mx": [],
+        "txt": []
+      },
+      "reverse": {
+        "ptr": "188x235x158x134.static-business.saratov.ertelecom.ru"
+      },
+      "geoip": {
+        "city": "Saratov",
+        "country": "Russia",
+        "country_iso": "RU",
+        "location": {
+          "lat": 51.5391,
+          "lon": 45.9985
+        }
+      },
+      "passive_dns": [],
+      "whois": {},
+      "abuseipdb": {
+        "ipAddress": "188.235.158.134",
+        "isPublic": true,
+        "ipVersion": 4,
+        "isWhitelisted": false,
+        "abuseConfidenceScore": 100,
+        "countryCode": "RU",
+        "usageType": "Fixed Line ISP",
+        "isp": "CJSC ER-Telecom Holding Saratov branch",
+        "domain": "ertelecom.ru",
+        "hostnames": [
+          "188x235x158x134.static-business.saratov.ertelecom.ru"
+        ],
+        "isTor": false,
+        "totalReports": 425,
+        "numDistinctUsers": 221,
+        "lastReportedAt": "2025-11-18T14:42:57+00:00"
+      },
+      "abuseipdb_score": 100
+    },
+    "score": 75,
+    "score_breakdown": {
+      "base": 10,
+      "source_weight": 20,
+      "abuse_confidence": 100,
+      "abuse_contrib": 25,
+      "total_reports": 425,
+      "total_reports_contrib": 8,
+      "distinct_users": 221,
+      "distinct_users_contrib": 7,
+      "passive_dns_count": 0,
+      "passive_dns_contrib": 0,
+      "otx_count": 0,
+      "otx_contrib": 0,
+      "ptr": "188x235x158x134.static-business.saratov.ertelecom.ru",
+      "ptr_contrib": 0,
+      "whois_present": 0,
+      "whois_contrib": 0,
+      "country": "RU",
+      "country_contrib": 5,
+      "no_signals_penalty": 0,
+      "final_score_raw": 75,
+      "final_score": 75
+    },
+    "risk_bucket": "high"
+  },
+  {
+    "id": "ip::106.75.148.140",
+    "type": "ip",
+    "value": "106.75.148.140",
+    "source": "AbuseIPDB",
+    "sources_count": 1,
+    "enrichment": {
+      "dns": {
+        "a": [],
+        "aaaa": [],
+        "mx": [],
+        "txt": []
+      },
+      "reverse": {
+        "ptr": "alishenshen.com"
+      },
+      "geoip": {
+        "city": null,
+        "country": "China",
+        "country_iso": "CN",
+        "location": {
+          "lat": 34.7732,
+          "lon": 113.722
+        }
+      },
+      "passive_dns": [],
+      "whois": {},
+      "abuseipdb": {
+        "ipAddress": "106.75.148.140",
+        "isPublic": true,
+        "ipVersion": 4,
+        "isWhitelisted": false,
+        "abuseConfidenceScore": 100,
+        "countryCode": "CN",
+        "usageType": "Commercial",
+        "isp": "Shanghai UCloud Information Technology Company Limited",
+        "domain": "ucloud.cn",
+        "hostnames": [],
+        "isTor": false,
+        "totalReports": 1259,
+        "numDistinctUsers": 60,
+        "lastReportedAt": "2025-11-18T12:59:02+00:00"
+      },
+      "abuseipdb_score": 100
+    },
+    "score": 75,
+    "score_breakdown": {
+      "base": 10,
+      "source_weight": 20,
+      "abuse_confidence": 100,
+      "abuse_contrib": 25,
+      "total_reports": 1259,
+      "total_reports_contrib": 12,
+      "distinct_users": 60,
+      "distinct_users_contrib": 3,
+      "passive_dns_count": 0,
+      "passive_dns_contrib": 0,
+      "otx_count": 0,
+      "otx_contrib": 0,
+      "ptr": "alishenshen.com",
+      "ptr_contrib": 0,
+      "whois_present": 0,
+      "whois_contrib": 0,
+      "country": "CN",
+      "country_contrib": 5,
+      "no_signals_penalty": 0,
+      "final_score_raw": 75,
+      "final_score": 75
+    },
+    "risk_bucket": "high"
+  },
+  {
+    "id": "ip::106.75.153.202",
+    "type": "ip",
+    "value": "106.75.153.202",
+    "source": "AbuseIPDB",
+    "sources_count": 1,
+    "enrichment": {
+      "dns": {
+        "a": [],
+        "aaaa": [],
+        "mx": [],
+        "txt": []
+      },
+      "reverse": {
+        "ptr": "ykttaz.cn"
+      },
+      "geoip": {
+        "city": null,
+        "country": "China",
+        "country_iso": "CN",
+        "location": {
+          "lat": 34.7732,
+          "lon": 113.722
+        }
+      },
+      "passive_dns": [],
+      "whois": {},
+      "abuseipdb": {
+        "ipAddress": "106.75.153.202",
+        "isPublic": true,
+        "ipVersion": 4,
+        "isWhitelisted": false,
+        "abuseConfidenceScore": 100,
+        "countryCode": "CN",
+        "usageType": "Commercial",
+        "isp": "Shanghai UCloud Information Technology Company Limited",
+        "domain": "ucloud.cn",
+        "hostnames": [
+          "ykttaz.cn"
+        ],
+        "isTor": false,
+        "totalReports": 1229,
+        "numDistinctUsers": 68,
+        "lastReportedAt": "2025-11-18T17:12:27+00:00"
+      },
+      "abuseipdb_score": 100
+    },
+    "score": 75,
+    "score_breakdown": {
+      "base": 10,
+      "source_weight": 20,
+      "abuse_confidence": 100,
+      "abuse_contrib": 25,
+      "total_reports": 1229,
+      "total_reports_contrib": 12,
+      "distinct_users": 68,
+      "distinct_users_contrib": 3,
+      "passive_dns_count": 0,
+      "passive_dns_contrib": 0,
+      "otx_count": 0,
+      "otx_contrib": 0,
+      "ptr": "ykttaz.cn",
+      "ptr_contrib": 0,
+      "whois_present": 0,
+      "whois_contrib": 0,
+      "country": "CN",
+      "country_contrib": 5,
+      "no_signals_penalty": 0,
+      "final_score_raw": 75,
+      "final_score": 75
+    },
+    "risk_bucket": "high"
+  },
+  {
+    "id": "ip::106.75.162.242",
+    "type": "ip",
+    "value": "106.75.162.242",
+    "source": "AbuseIPDB",
+    "sources_count": 1,
+    "enrichment": {
+      "dns": {
+        "a": [],
+        "aaaa": [],
+        "mx": [],
+        "txt": []
+      },
+      "reverse": {
+        "ptr": "srmycfh.cn"
+      },
+      "geoip": {
+        "city": null,
+        "country": "China",
+        "country_iso": "CN",
+        "location": {
+          "lat": 34.7732,
+          "lon": 113.722
+        }
+      },
+      "passive_dns": [],
+      "whois": {},
+      "abuseipdb": {
+        "ipAddress": "106.75.162.242",
+        "isPublic": true,
+        "ipVersion": 4,
+        "isWhitelisted": false,
+        "abuseConfidenceScore": 100,
+        "countryCode": "CN",
+        "usageType": "Commercial",
+        "isp": "Shanghai UCloud Information Technology Company Limited",
+        "domain": "ucloud.cn",
+        "hostnames": [
+          "srmycfh.cn"
+        ],
+        "isTor": false,
+        "totalReports": 1208,
+        "numDistinctUsers": 67,
+        "lastReportedAt": "2025-11-18T14:48:27+00:00"
+      },
+      "abuseipdb_score": 100
+    },
+    "score": 75,
+    "score_breakdown": {
+      "base": 10,
+      "source_weight": 20,
+      "abuse_confidence": 100,
+      "abuse_contrib": 25,
+      "total_reports": 1208,
+      "total_reports_contrib": 12,
+      "distinct_users": 67,
+      "distinct_users_contrib": 3,
+      "passive_dns_count": 0,
+      "passive_dns_contrib": 0,
+      "otx_count": 0,
+      "otx_contrib": 0,
+      "ptr": "srmycfh.cn",
+      "ptr_contrib": 0,
+      "whois_present": 0,
+      "whois_contrib": 0,
+      "country": "CN",
+      "country_contrib": 5,
+      "no_signals_penalty": 0,
+      "final_score_raw": 75,
+      "final_score": 75
+    },
+    "risk_bucket": "high"
+  },
+  {
+    "id": "ip::188.168.12.14",
+    "type": "ip",
+    "value": "188.168.12.14",
+    "source": "AbuseIPDB",
+    "sources_count": 1,
+    "enrichment": {
+      "dns": {
+        "a": [],
+        "aaaa": [],
+        "mx": [],
+        "txt": []
+      },
+      "reverse": {
+        "ptr": "14.12.168.188.retail.ttk.ru"
+      },
+      "geoip": {
+        "city": null,
+        "country": "Russia",
+        "country_iso": "RU",
+        "location": {
+          "lat": 55.7386,
+          "lon": 37.6068
+        }
+      },
+      "passive_dns": [],
+      "whois": {},
+      "abuseipdb": {
+        "ipAddress": "188.168.12.14",
+        "isPublic": true,
+        "ipVersion": 4,
+        "isWhitelisted": false,
+        "abuseConfidenceScore": 100,
+        "countryCode": "RU",
+        "usageType": "Fixed Line ISP",
+        "isp": "TTK-Chita/BRAS1 in Hilok",
+        "domain": "ttk.ru",
+        "hostnames": [
+          "14.12.168.188.retail.ttk.ru"
+        ],
+        "isTor": false,
+        "totalReports": 798,
+        "numDistinctUsers": 183,
+        "lastReportedAt": "2025-11-18T15:15:04+00:00"
+      },
+      "abuseipdb_score": 100
+    },
+    "score": 75,
+    "score_breakdown": {
+      "base": 10,
+      "source_weight": 20,
+      "abuse_confidence": 100,
+      "abuse_contrib": 25,
+      "total_reports": 798,
+      "total_reports_contrib": 10,
+      "distinct_users": 183,
+      "distinct_users_contrib": 5,
+      "passive_dns_count": 0,
+      "passive_dns_contrib": 0,
+      "otx_count": 0,
+      "otx_contrib": 0,
+      "ptr": "14.12.168.188.retail.ttk.ru",
+      "ptr_contrib": 0,
+      "whois_present": 0,
+      "whois_contrib": 0,
+      "country": "RU",
+      "country_contrib": 5,
+      "no_signals_penalty": 0,
+      "final_score_raw": 75,
+      "final_score": 75
+    },
+    "risk_bucket": "high"
+  },
+  {
+    "id": "ip::106.75.148.181",
+    "type": "ip",
+    "value": "106.75.148.181",
+    "source": "AbuseIPDB",
+    "sources_count": 1,
+    "enrichment": {
+      "dns": {
+        "a": [],
+        "aaaa": [],
+        "mx": [],
+        "txt": []
+      },
+      "reverse": {
+        "ptr": "sender0014.lwq22.cn"
+      },
+      "geoip": {
+        "city": null,
+        "country": "China",
+        "country_iso": "CN",
+        "location": {
+          "lat": 34.7732,
+          "lon": 113.722
+        }
+      },
+      "passive_dns": [],
+      "whois": {},
+      "abuseipdb": {
+        "ipAddress": "106.75.148.181",
+        "isPublic": true,
+        "ipVersion": 4,
+        "isWhitelisted": false,
+        "abuseConfidenceScore": 100,
+        "countryCode": "CN",
+        "usageType": "Commercial",
+        "isp": "Shanghai UCloud Information Technology Company Limited",
+        "domain": "ucloud.cn",
+        "hostnames": [
+          "sender0014.lwq22.cn"
+        ],
+        "isTor": false,
+        "totalReports": 1228,
+        "numDistinctUsers": 64,
+        "lastReportedAt": "2025-11-18T16:13:19+00:00"
+      },
+      "abuseipdb_score": 100
+    },
+    "score": 75,
+    "score_breakdown": {
+      "base": 10,
+      "source_weight": 20,
+      "abuse_confidence": 100,
+      "abuse_contrib": 25,
+      "total_reports": 1228,
+      "total_reports_contrib": 12,
+      "distinct_users": 64,
+      "distinct_users_contrib": 3,
+      "passive_dns_count": 0,
+      "passive_dns_contrib": 0,
+      "otx_count": 0,
+      "otx_contrib": 0,
+      "ptr": "sender0014.lwq22.cn",
+      "ptr_contrib": 0,
+      "whois_present": 0,
+      "whois_contrib": 0,
+      "country": "CN",
+      "country_contrib": 5,
+      "no_signals_penalty": 0,
+      "final_score_raw": 75,
+      "final_score": 75
+    },
+    "risk_bucket": "high"
+  },
+  {
+    "id": "ip::106.75.165.79",
+    "type": "ip",
+    "value": "106.75.165.79",
+    "source": "AbuseIPDB",
+    "sources_count": 1,
+    "enrichment": {
+      "dns": {
+        "a": [],
+        "aaaa": [],
+        "mx": [],
+        "txt": []
+      },
+      "reverse": {
+        "ptr": "uvygkqd.cn"
+      },
+      "geoip": {
+        "city": null,
+        "country": "China",
+        "country_iso": "CN",
+        "location": {
+          "lat": 34.7732,
+          "lon": 113.722
+        }
+      },
+      "passive_dns": [],
+      "whois": {},
+      "abuseipdb": {
+        "ipAddress": "106.75.165.79",
+        "isPublic": true,
+        "ipVersion": 4,
+        "isWhitelisted": false,
+        "abuseConfidenceScore": 100,
+        "countryCode": "CN",
+        "usageType": "Commercial",
+        "isp": "Shanghai UCloud Information Technology Company Limited",
+        "domain": "ucloud.cn",
+        "hostnames": [
+          "uvygkqd.cn"
+        ],
+        "isTor": false,
+        "totalReports": 1225,
+        "numDistinctUsers": 68,
+        "lastReportedAt": "2025-11-18T18:15:20+00:00"
+      },
+      "abuseipdb_score": 100
+    },
+    "score": 75,
+    "score_breakdown": {
+      "base": 10,
+      "source_weight": 20,
+      "abuse_confidence": 100,
+      "abuse_contrib": 25,
+      "total_reports": 1225,
+      "total_reports_contrib": 12,
+      "distinct_users": 68,
+      "distinct_users_contrib": 3,
+      "passive_dns_count": 0,
+      "passive_dns_contrib": 0,
+      "otx_count": 0,
+      "otx_contrib": 0,
+      "ptr": "uvygkqd.cn",
+      "ptr_contrib": 0,
+      "whois_present": 0,
+      "whois_contrib": 0,
+      "country": "CN",
+      "country_contrib": 5,
+      "no_signals_penalty": 0,
+      "final_score_raw": 75,
+      "final_score": 75
+    },
+    "risk_bucket": "high"
+  },
+  {
+    "id": "ip::106.75.154.105",
+    "type": "ip",
+    "value": "106.75.154.105",
+    "source": "AbuseIPDB",
+    "sources_count": 1,
+    "enrichment": {
+      "dns": {
+        "a": [],
+        "aaaa": [],
+        "mx": [],
+        "txt": []
+      },
+      "reverse": {
+        "ptr": "rmpzblp.cn"
+      },
+      "geoip": {
+        "city": null,
+        "country": "China",
+        "country_iso": "CN",
+        "location": {
+          "lat": 34.7732,
+          "lon": 113.722
+        }
+      },
+      "passive_dns": [],
+      "whois": {},
+      "abuseipdb": {
+        "ipAddress": "106.75.154.105",
+        "isPublic": true,
+        "ipVersion": 4,
+        "isWhitelisted": false,
+        "abuseConfidenceScore": 100,
+        "countryCode": "CN",
+        "usageType": "Commercial",
+        "isp": "Shanghai UCloud Information Technology Company Limited",
+        "domain": "ucloud.cn",
+        "hostnames": [
+          "rmpzblp.cn"
+        ],
+        "isTor": false,
+        "totalReports": 1363,
+        "numDistinctUsers": 78,
+        "lastReportedAt": "2025-11-18T17:33:04+00:00"
+      },
+      "abuseipdb_score": 100
+    },
+    "score": 75,
+    "score_breakdown": {
+      "base": 10,
+      "source_weight": 20,
+      "abuse_confidence": 100,
+      "abuse_contrib": 25,
+      "total_reports": 1363,
+      "total_reports_contrib": 12,
+      "distinct_users": 78,
+      "distinct_users_contrib": 3,
+      "passive_dns_count": 0,
+      "passive_dns_contrib": 0,
+      "otx_count": 0,
+      "otx_contrib": 0,
+      "ptr": "rmpzblp.cn",
+      "ptr_contrib": 0,
+      "whois_present": 0,
+      "whois_contrib": 0,
+      "country": "CN",
+      "country_contrib": 5,
+      "no_signals_penalty": 0,
+      "final_score_raw": 75,
+      "final_score": 75
+    },
+    "risk_bucket": "high"
+  },
+  {
+    "id": "ip::116.142.86.70",
+    "type": "ip",
+    "value": "116.142.86.70",
+    "source": "AbuseIPDB",
+    "sources_count": 1,
+    "enrichment": {
+      "dns": {
+        "a": [],
+        "aaaa": [],
+        "mx": [],
+        "txt": []
+      },
+      "reverse": {
+        "ptr": "70.86.142.116.adsl-pool.jlccptt.net.cn"
+      },
+      "geoip": {
+        "city": null,
+        "country": "China",
+        "country_iso": "CN",
+        "location": {
+          "lat": 34.7732,
+          "lon": 113.722
+        }
+      },
+      "passive_dns": [],
+      "whois": {},
+      "abuseipdb": {
+        "ipAddress": "116.142.86.70",
+        "isPublic": true,
+        "ipVersion": 4,
+        "isWhitelisted": false,
+        "abuseConfidenceScore": 100,
+        "countryCode": "CN",
+        "usageType": "Fixed Line ISP",
+        "isp": "China United Network Communications Corporation Limited",
+        "domain": "chinaunicom.cn",
+        "hostnames": [
+          "70.86.142.116.adsl-pool.jlccptt.net.cn"
+        ],
+        "isTor": false,
+        "totalReports": 489,
+        "numDistinctUsers": 212,
+        "lastReportedAt": "2025-11-18T19:04:49+00:00"
+      },
+      "abuseipdb_score": 100
+    },
+    "score": 75,
+    "score_breakdown": {
+      "base": 10,
+      "source_weight": 20,
+      "abuse_confidence": 100,
+      "abuse_contrib": 25,
+      "total_reports": 489,
+      "total_reports_contrib": 8,
+      "distinct_users": 212,
+      "distinct_users_contrib": 7,
+      "passive_dns_count": 0,
+      "passive_dns_contrib": 0,
+      "otx_count": 0,
+      "otx_contrib": 0,
+      "ptr": "70.86.142.116.adsl-pool.jlccptt.net.cn",
+      "ptr_contrib": 0,
+      "whois_present": 0,
+      "whois_contrib": 0,
+      "country": "CN",
+      "country_contrib": 5,
+      "no_signals_penalty": 0,
+      "final_score_raw": 75,
+      "final_score": 75
+    },
+    "risk_bucket": "high"
+  },
+  {
+    "id": "ip::85.30.248.213",
+    "type": "ip",
+    "value": "85.30.248.213",
+    "source": "AbuseIPDB",
+    "sources_count": 1,
+    "enrichment": {
+      "dns": {
+        "a": [],
+        "aaaa": [],
+        "mx": [],
+        "txt": []
+      },
+      "reverse": {
+        "ptr": "broadband-85-30-248-213.ip.moscow.rt.ru"
+      },
+      "geoip": {
+        "city": "Moscow",
+        "country": "Russia",
+        "country_iso": "RU",
+        "location": {
+          "lat": 55.7487,
+          "lon": 37.6187
+        }
+      },
+      "passive_dns": [],
+      "whois": {},
+      "abuseipdb": {
+        "ipAddress": "85.30.248.213",
+        "isPublic": true,
+        "ipVersion": 4,
+        "isWhitelisted": false,
+        "abuseConfidenceScore": 100,
+        "countryCode": "RU",
+        "usageType": "Fixed Line ISP",
+        "isp": "PJSC Rostelecom",
+        "domain": "rt.ru",
+        "hostnames": [
+          "broadband-85-30-248-213.ip.moscow.rt.ru"
+        ],
+        "isTor": false,
+        "totalReports": 723,
+        "numDistinctUsers": 175,
+        "lastReportedAt": "2025-11-18T09:59:38+00:00"
+      },
+      "abuseipdb_score": 100
+    },
+    "score": 75,
+    "score_breakdown": {
+      "base": 10,
+      "source_weight": 20,
+      "abuse_confidence": 100,
+      "abuse_contrib": 25,
+      "total_reports": 723,
+      "total_reports_contrib": 10,
+      "distinct_users": 175,
+      "distinct_users_contrib": 5,
+      "passive_dns_count": 0,
+      "passive_dns_contrib": 0,
+      "otx_count": 0,
+      "otx_contrib": 0,
+      "ptr": "broadband-85-30-248-213.ip.moscow.rt.ru",
+      "ptr_contrib": 0,
+      "whois_present": 0,
+      "whois_contrib": 0,
+      "country": "RU",
+      "country_contrib": 5,
+      "no_signals_penalty": 0,
+      "final_score_raw": 75,
+      "final_score": 75
+    },
+    "risk_bucket": "high"
+  },
+  {
+    "id": "ip::58.251.252.112",
+    "type": "ip",
+    "value": "58.251.252.112",
+    "source": "AbuseIPDB",
+    "sources_count": 1,
+    "enrichment": {
+      "dns": {
+        "a": [],
+        "aaaa": [],
+        "mx": [],
+        "txt": []
+      },
+      "reverse": {
+        "ptr": "reverse.gdsz.cncnet.net"
+      },
+      "geoip": {
+        "city": null,
+        "country": "China",
+        "country_iso": "CN",
+        "location": {
+          "lat": 34.7732,
+          "lon": 113.722
+        }
+      },
+      "passive_dns": [],
+      "whois": {},
+      "abuseipdb": {
+        "ipAddress": "58.251.252.112",
+        "isPublic": true,
+        "ipVersion": 4,
+        "isWhitelisted": false,
+        "abuseConfidenceScore": 100,
+        "countryCode": "CN",
+        "usageType": "Fixed Line ISP",
+        "isp": "China Unicom Guangdong province network",
+        "domain": "chinaunicom.cn",
+        "hostnames": [
+          "reverse.gdsz.cncnet.net"
+        ],
+        "isTor": false,
+        "totalReports": 473,
+        "numDistinctUsers": 209,
+        "lastReportedAt": "2025-11-18T19:20:26+00:00"
+      },
+      "abuseipdb_score": 100
+    },
+    "score": 75,
+    "score_breakdown": {
+      "base": 10,
+      "source_weight": 20,
+      "abuse_confidence": 100,
+      "abuse_contrib": 25,
+      "total_reports": 473,
+      "total_reports_contrib": 8,
+      "distinct_users": 209,
+      "distinct_users_contrib": 7,
+      "passive_dns_count": 0,
+      "passive_dns_contrib": 0,
+      "otx_count": 0,
+      "otx_contrib": 0,
+      "ptr": "reverse.gdsz.cncnet.net",
+      "ptr_contrib": 0,
+      "whois_present": 0,
+      "whois_contrib": 0,
+      "country": "CN",
+      "country_contrib": 5,
+      "no_signals_penalty": 0,
+      "final_score_raw": 75,
+      "final_score": 75
+    },
+    "risk_bucket": "high"
+  },
+  {
+    "id": "ip::106.75.147.73",
+    "type": "ip",
+    "value": "106.75.147.73",
+    "source": "AbuseIPDB",
+    "sources_count": 1,
+    "enrichment": {
+      "dns": {
+        "a": [],
+        "aaaa": [],
+        "mx": [],
+        "txt": []
+      },
+      "reverse": {
+        "ptr": "ao8az8.shop"
+      },
+      "geoip": {
+        "city": null,
+        "country": "China",
+        "country_iso": "CN",
+        "location": {
+          "lat": 34.7732,
+          "lon": 113.722
+        }
+      },
+      "passive_dns": [],
+      "whois": {},
+      "abuseipdb": {
+        "ipAddress": "106.75.147.73",
+        "isPublic": true,
+        "ipVersion": 4,
+        "isWhitelisted": false,
+        "abuseConfidenceScore": 100,
+        "countryCode": "CN",
+        "usageType": "Commercial",
+        "isp": "Shanghai UCloud Information Technology Company Limited",
+        "domain": "ucloud.cn",
+        "hostnames": [
+          "epait.cn",
+          "fiugzzv.cn",
+          "ao8az8.shop",
+          "vddejfj.cn"
+        ],
+        "isTor": false,
+        "totalReports": 1267,
+        "numDistinctUsers": 70,
+        "lastReportedAt": "2025-11-18T18:04:07+00:00"
+      },
+      "abuseipdb_score": 100
+    },
+    "score": 75,
+    "score_breakdown": {
+      "base": 10,
+      "source_weight": 20,
+      "abuse_confidence": 100,
+      "abuse_contrib": 25,
+      "total_reports": 1267,
+      "total_reports_contrib": 12,
+      "distinct_users": 70,
+      "distinct_users_contrib": 3,
+      "passive_dns_count": 0,
+      "passive_dns_contrib": 0,
+      "otx_count": 0,
+      "otx_contrib": 0,
+      "ptr": "ao8az8.shop",
+      "ptr_contrib": 0,
+      "whois_present": 0,
+      "whois_contrib": 0,
+      "country": "CN",
+      "country_contrib": 5,
+      "no_signals_penalty": 0,
+      "final_score_raw": 75,
+      "final_score": 75
+    },
+    "risk_bucket": "high"
+  },
+  {
+    "id": "ip::94.251.77.40",
+    "type": "ip",
+    "value": "94.251.77.40",
+    "source": "AbuseIPDB",
+    "sources_count": 1,
+    "enrichment": {
+      "dns": {
+        "a": [],
+        "aaaa": [],
+        "mx": [],
+        "txt": []
+      },
+      "reverse": {
+        "ptr": "host-94-251-77-40.bbcustomer.zsttk.net"
+      },
+      "geoip": {
+        "city": "Omsk",
+        "country": "Russia",
+        "country_iso": "RU",
+        "location": {
+          "lat": 54.9896,
+          "lon": 73.3729
+        }
+      },
+      "passive_dns": [],
+      "whois": {},
+      "abuseipdb": {
+        "ipAddress": "94.251.77.40",
+        "isPublic": true,
+        "ipVersion": 4,
+        "isWhitelisted": false,
+        "abuseConfidenceScore": 100,
+        "countryCode": "RU",
+        "usageType": "Fixed Line ISP",
+        "isp": "JSC Zap-SibTranstelecom",
+        "domain": "zsttk.ru",
+        "hostnames": [
+          "host-94-251-77-40.bbcustomer.zsttk.net"
+        ],
+        "isTor": false,
+        "totalReports": 761,
+        "numDistinctUsers": 137,
+        "lastReportedAt": "2025-11-18T15:43:14+00:00"
+      },
+      "abuseipdb_score": 100
+    },
+    "score": 75,
+    "score_breakdown": {
+      "base": 10,
+      "source_weight": 20,
+      "abuse_confidence": 100,
+      "abuse_contrib": 25,
+      "total_reports": 761,
+      "total_reports_contrib": 10,
+      "distinct_users": 137,
+      "distinct_users_contrib": 5,
+      "passive_dns_count": 0,
+      "passive_dns_contrib": 0,
+      "otx_count": 0,
+      "otx_contrib": 0,
+      "ptr": "host-94-251-77-40.bbcustomer.zsttk.net",
+      "ptr_contrib": 0,
+      "whois_present": 0,
+      "whois_contrib": 0,
+      "country": "RU",
+      "country_contrib": 5,
+      "no_signals_penalty": 0,
+      "final_score_raw": 75,
+      "final_score": 75
+    },
+    "risk_bucket": "high"
+  },
+  {
+    "id": "ip::46.48.66.253",
+    "type": "ip",
+    "value": "46.48.66.253",
+    "source": "AbuseIPDB",
+    "sources_count": 1,
+    "enrichment": {
+      "dns": {
+        "a": [],
+        "aaaa": [],
+        "mx": [],
+        "txt": []
+      },
+      "reverse": {
+        "ptr": "46.48.66.253-fttb.planeta.tc"
+      },
+      "geoip": {
+        "city": "Yekaterinburg",
+        "country": "Russia",
+        "country_iso": "RU",
+        "location": {
+          "lat": 56.8577,
+          "lon": 60.6113
+        }
+      },
+      "passive_dns": [],
+      "whois": {},
+      "abuseipdb": {
+        "ipAddress": "46.48.66.253",
+        "isPublic": true,
+        "ipVersion": 4,
+        "isWhitelisted": false,
+        "abuseConfidenceScore": 100,
+        "countryCode": "RU",
+        "usageType": "Fixed Line ISP",
+        "isp": "LLC KomTehCentr",
+        "domain": "itmh.ru",
+        "hostnames": [
+          "46.48.66.253-FTTB.planeta.tc"
+        ],
+        "isTor": false,
+        "totalReports": 1082,
+        "numDistinctUsers": 92,
+        "lastReportedAt": "2025-11-18T18:05:20+00:00"
+      },
+      "abuseipdb_score": 100
+    },
+    "score": 75,
+    "score_breakdown": {
+      "base": 10,
+      "source_weight": 20,
+      "abuse_confidence": 100,
+      "abuse_contrib": 25,
+      "total_reports": 1082,
+      "total_reports_contrib": 12,
+      "distinct_users": 92,
+      "distinct_users_contrib": 3,
+      "passive_dns_count": 0,
+      "passive_dns_contrib": 0,
+      "otx_count": 0,
+      "otx_contrib": 0,
+      "ptr": "46.48.66.253-fttb.planeta.tc",
+      "ptr_contrib": 0,
+      "whois_present": 0,
+      "whois_contrib": 0,
+      "country": "RU",
+      "country_contrib": 5,
+      "no_signals_penalty": 0,
+      "final_score_raw": 75,
+      "final_score": 75
+    },
+    "risk_bucket": "high"
+  },
+  {
+    "id": "ip::42.233.33.162",
+    "type": "ip",
+    "value": "42.233.33.162",
+    "source": "AbuseIPDB",
+    "sources_count": 1,
+    "enrichment": {
+      "dns": {
+        "a": [],
+        "aaaa": [],
+        "mx": [],
+        "txt": []
+      },
+      "reverse": {
+        "ptr": "hn.kd.ny.adsl"
+      },
+      "geoip": {
+        "city": "Xinxiang",
+        "country": "China",
+        "country_iso": "CN",
+        "location": {
+          "lat": 35.1874,
+          "lon": 113.8025
+        }
+      },
+      "passive_dns": [],
+      "whois": {},
+      "abuseipdb": {
+        "ipAddress": "42.233.33.162",
+        "isPublic": true,
+        "ipVersion": 4,
+        "isWhitelisted": false,
+        "abuseConfidenceScore": 100,
+        "countryCode": "CN",
+        "usageType": "Fixed Line ISP",
+        "isp": "China Unicom Henan province network",
+        "domain": "chinaunicom.cn",
+        "hostnames": [
+          "hn.kd.ny.adsl"
+        ],
+        "isTor": false,
+        "totalReports": 698,
+        "numDistinctUsers": 109,
+        "lastReportedAt": "2025-11-18T19:04:52+00:00"
+      },
+      "abuseipdb_score": 100
+    },
+    "score": 75,
+    "score_breakdown": {
+      "base": 10,
+      "source_weight": 20,
+      "abuse_confidence": 100,
+      "abuse_contrib": 25,
+      "total_reports": 698,
+      "total_reports_contrib": 10,
+      "distinct_users": 109,
+      "distinct_users_contrib": 5,
+      "passive_dns_count": 0,
+      "passive_dns_contrib": 0,
+      "otx_count": 0,
+      "otx_contrib": 0,
+      "ptr": "hn.kd.ny.adsl",
+      "ptr_contrib": 0,
+      "whois_present": 0,
+      "whois_contrib": 0,
+      "country": "CN",
+      "country_contrib": 5,
+      "no_signals_penalty": 0,
+      "final_score_raw": 75,
+      "final_score": 75
+    },
+    "risk_bucket": "high"
+  },
+  {
+    "id": "ip::106.75.138.227",
+    "type": "ip",
+    "value": "106.75.138.227",
+    "source": "AbuseIPDB",
+    "sources_count": 1,
+    "enrichment": {
+      "dns": {
+        "a": [],
+        "aaaa": [],
+        "mx": [],
+        "txt": []
+      },
+      "reverse": {
+        "ptr": "net-mkting.com"
+      },
+      "geoip": {
+        "city": null,
+        "country": "China",
+        "country_iso": "CN",
+        "location": {
+          "lat": 34.7732,
+          "lon": 113.722
+        }
+      },
+      "passive_dns": [],
+      "whois": {},
+      "abuseipdb": {
+        "ipAddress": "106.75.138.227",
+        "isPublic": true,
+        "ipVersion": 4,
+        "isWhitelisted": false,
+        "abuseConfidenceScore": 100,
+        "countryCode": "CN",
+        "usageType": "Commercial",
+        "isp": "Shanghai UCloud Information Technology Company Limited",
+        "domain": "ucloud.cn",
+        "hostnames": [
+          "net-mkting.com"
+        ],
+        "isTor": false,
+        "totalReports": 1360,
+        "numDistinctUsers": 71,
+        "lastReportedAt": "2025-11-18T18:20:53+00:00"
+      },
+      "abuseipdb_score": 100
+    },
+    "score": 75,
+    "score_breakdown": {
+      "base": 10,
+      "source_weight": 20,
+      "abuse_confidence": 100,
+      "abuse_contrib": 25,
+      "total_reports": 1360,
+      "total_reports_contrib": 12,
+      "distinct_users": 71,
+      "distinct_users_contrib": 3,
+      "passive_dns_count": 0,
+      "passive_dns_contrib": 0,
+      "otx_count": 0,
+      "otx_contrib": 0,
+      "ptr": "net-mkting.com",
+      "ptr_contrib": 0,
+      "whois_present": 0,
+      "whois_contrib": 0,
+      "country": "CN",
+      "country_contrib": 5,
+      "no_signals_penalty": 0,
+      "final_score_raw": 75,
+      "final_score": 75
+    },
+    "risk_bucket": "high"
+  },
+  {
+    "id": "ip::185.116.161.213",
+    "type": "ip",
+    "value": "185.116.161.213",
+    "source": "AbuseIPDB",
+    "sources_count": 1,
+    "enrichment": {
+      "dns": {
+        "a": [],
+        "aaaa": [],
+        "mx": [],
+        "txt": []
+      },
+      "reverse": {
+        "ptr": "static.213.161.116.185.clients.irandns.com"
+      },
+      "geoip": {
+        "city": "Tehran",
+        "country": "Iran",
+        "country_iso": "IR",
+        "location": {
+          "lat": 35.6824,
+          "lon": 51.4158
+        }
+      },
+      "passive_dns": [],
+      "whois": {},
+      "abuseipdb": {
+        "ipAddress": "185.116.161.213",
+        "isPublic": true,
+        "ipVersion": 4,
+        "isWhitelisted": false,
+        "abuseConfidenceScore": 100,
+        "countryCode": "IR",
+        "usageType": "Data Center/Web Hosting/Transit",
+        "isp": "Green Web Samaneh Novin Network",
+        "domain": "greenweb.ir",
+        "hostnames": [
+          "static.213.161.116.185.clients.irandns.com"
+        ],
+        "isTor": false,
+        "totalReports": 3194,
+        "numDistinctUsers": 24,
+        "lastReportedAt": "2025-11-18T19:26:55+00:00"
+      },
+      "abuseipdb_score": 100
+    },
+    "score": 74,
+    "score_breakdown": {
+      "base": 10,
+      "source_weight": 20,
+      "abuse_confidence": 100,
+      "abuse_contrib": 25,
+      "total_reports": 3194,
+      "total_reports_contrib": 14,
+      "distinct_users": 24,
+      "distinct_users_contrib": 0,
+      "passive_dns_count": 0,
+      "passive_dns_contrib": 0,
+      "otx_count": 0,
+      "otx_contrib": 0,
+      "ptr": "static.213.161.116.185.clients.irandns.com",
+      "ptr_contrib": 0,
+      "whois_present": 0,
+      "whois_contrib": 0,
+      "country": "IR",
+      "country_contrib": 5,
+      "no_signals_penalty": 0,
+      "final_score_raw": 74,
+      "final_score": 74
+    },
+    "risk_bucket": "high"
+  },
+  {
+    "id": "ip::1.95.194.223",
+    "type": "ip",
+    "value": "1.95.194.223",
+    "source": "AbuseIPDB",
+    "sources_count": 1,
+    "enrichment": {
+      "dns": {
+        "a": [],
+        "aaaa": [],
+        "mx": [],
+        "txt": []
+      },
+      "reverse": {
+        "ptr": "ecs-1-95-194-223.compute.hwclouds-dns.com"
+      },
+      "geoip": {
+        "city": "Guiyang",
+        "country": "China",
+        "country_iso": "CN",
+        "location": {
+          "lat": 26.58,
+          "lon": 106.7223
+        }
+      },
+      "passive_dns": [],
+      "whois": {},
+      "abuseipdb": {
+        "ipAddress": "1.95.194.223",
+        "isPublic": true,
+        "ipVersion": 4,
+        "isWhitelisted": false,
+        "abuseConfidenceScore": 100,
+        "countryCode": "CN",
+        "usageType": "Data Center/Web Hosting/Transit",
+        "isp": "Beijing Teletron Telecom Engineering Co., Ltd.",
+        "domain": "drpeng.com.cn",
+        "hostnames": [
+          "ecs-1-95-194-223.compute.hwclouds-dns.com"
+        ],
+        "isTor": false,
+        "totalReports": 231,
+        "numDistinctUsers": 127,
+        "lastReportedAt": "2025-11-18T09:12:17+00:00"
+      },
+      "abuseipdb_score": 100
+    },
+    "score": 73,
+    "score_breakdown": {
+      "base": 10,
+      "source_weight": 20,
+      "abuse_confidence": 100,
+      "abuse_contrib": 25,
+      "total_reports": 231,
+      "total_reports_contrib": 8,
+      "distinct_users": 127,
+      "distinct_users_contrib": 5,
+      "passive_dns_count": 0,
+      "passive_dns_contrib": 0,
+      "otx_count": 0,
+      "otx_contrib": 0,
+      "ptr": "ecs-1-95-194-223.compute.hwclouds-dns.com",
+      "ptr_contrib": 0,
+      "whois_present": 0,
+      "whois_contrib": 0,
+      "country": "CN",
+      "country_contrib": 5,
+      "no_signals_penalty": 0,
+      "final_score_raw": 73,
+      "final_score": 73
+    },
+    "risk_bucket": "high"
+  },
+  {
+    "id": "ip::213.232.126.39",
+    "type": "ip",
+    "value": "213.232.126.39",
+    "source": "AbuseIPDB",
+    "sources_count": 1,
+    "enrichment": {
+      "dns": {
+        "a": [],
+        "aaaa": [],
+        "mx": [],
+        "txt": []
+      },
+      "reverse": {
+        "ptr": "static.213-232-126-39.client.novinhost.org"
+      },
+      "geoip": {
+        "city": null,
+        "country": "Iran",
+        "country_iso": "IR",
+        "location": {
+          "lat": 35.698,
+          "lon": 51.4115
+        }
+      },
+      "passive_dns": [],
+      "whois": {},
+      "abuseipdb": {
+        "ipAddress": "213.232.126.39",
+        "isPublic": true,
+        "ipVersion": 4,
+        "isWhitelisted": false,
+        "abuseConfidenceScore": 100,
+        "countryCode": "IR",
+        "usageType": "Data Center/Web Hosting/Transit",
+        "isp": "Toesegaran Shabakeh Arseh Novin Ltd",
+        "domain": "novinhost.org",
+        "hostnames": [
+          "static.213-232-126-39.client.novinhost.org"
+        ],
+        "isTor": false,
+        "totalReports": 322,
+        "numDistinctUsers": 157,
+        "lastReportedAt": "2025-11-18T19:16:02+00:00"
+      },
+      "abuseipdb_score": 100
+    },
+    "score": 73,
+    "score_breakdown": {
+      "base": 10,
+      "source_weight": 20,
+      "abuse_confidence": 100,
+      "abuse_contrib": 25,
+      "total_reports": 322,
+      "total_reports_contrib": 8,
+      "distinct_users": 157,
+      "distinct_users_contrib": 5,
+      "passive_dns_count": 0,
+      "passive_dns_contrib": 0,
+      "otx_count": 0,
+      "otx_contrib": 0,
+      "ptr": "static.213-232-126-39.client.novinhost.org",
+      "ptr_contrib": 0,
+      "whois_present": 0,
+      "whois_contrib": 0,
+      "country": "IR",
+      "country_contrib": 5,
+      "no_signals_penalty": 0,
+      "final_score_raw": 73,
+      "final_score": 73
+    },
+    "risk_bucket": "high"
+  },
+  {
+    "id": "ip::87.76.4.158",
+    "type": "ip",
+    "value": "87.76.4.158",
+    "source": "AbuseIPDB",
+    "sources_count": 1,
+    "enrichment": {
+      "dns": {
+        "a": [],
+        "aaaa": [],
+        "mx": [],
+        "txt": []
+      },
+      "reverse": {
+        "ptr": "pppoe-87-76-4.158.evolife.su"
+      },
+      "geoip": {
+        "city": "Ulyanovsk",
+        "country": "Russia",
+        "country_iso": "RU",
+        "location": {
+          "lat": 54.3307,
+          "lon": 48.3888
+        }
+      },
+      "passive_dns": [],
+      "whois": {},
+      "abuseipdb": {
+        "ipAddress": "87.76.4.158",
+        "isPublic": true,
+        "ipVersion": 4,
+        "isWhitelisted": false,
+        "abuseConfidenceScore": 100,
+        "countryCode": "RU",
+        "usageType": "Fixed Line ISP",
+        "isp": "Telecom.ru Ltd",
+        "domain": "telecom.ru",
+        "hostnames": [
+          "pppoe-87-76-4.158.evolife.su"
+        ],
+        "isTor": false,
+        "totalReports": 464,
+        "numDistinctUsers": 151,
+        "lastReportedAt": "2025-11-18T15:18:10+00:00"
+      },
+      "abuseipdb_score": 100
+    },
+    "score": 73,
+    "score_breakdown": {
+      "base": 10,
+      "source_weight": 20,
+      "abuse_confidence": 100,
+      "abuse_contrib": 25,
+      "total_reports": 464,
+      "total_reports_contrib": 8,
+      "distinct_users": 151,
+      "distinct_users_contrib": 5,
+      "passive_dns_count": 0,
+      "passive_dns_contrib": 0,
+      "otx_count": 0,
+      "otx_contrib": 0,
+      "ptr": "pppoe-87-76-4.158.evolife.su",
+      "ptr_contrib": 0,
+      "whois_present": 0,
+      "whois_contrib": 0,
+      "country": "RU",
+      "country_contrib": 5,
+      "no_signals_penalty": 0,
+      "final_score_raw": 73,
+      "final_score": 73
+    },
+    "risk_bucket": "high"
+  },
+  {
+    "id": "ip::185.88.176.214",
+    "type": "ip",
+    "value": "185.88.176.214",
+    "source": "AbuseIPDB",
+    "sources_count": 1,
+    "enrichment": {
+      "dns": {
+        "a": [],
+        "aaaa": [],
+        "mx": [],
+        "txt": []
+      },
+      "reverse": {
+        "ptr": "pro.tikahost.com"
+      },
+      "geoip": {
+        "city": null,
+        "country": "Iran",
+        "country_iso": "IR",
+        "location": {
+          "lat": 35.698,
+          "lon": 51.4115
+        }
+      },
+      "passive_dns": [],
+      "whois": {},
+      "abuseipdb": {
+        "ipAddress": "185.88.176.214",
+        "isPublic": true,
+        "ipVersion": 4,
+        "isWhitelisted": false,
+        "abuseConfidenceScore": 100,
+        "countryCode": "IR",
+        "usageType": "Data Center/Web Hosting/Transit",
+        "isp": "Fannavari Etelaate Samane Kavoshgar Ide Ltd.",
+        "domain": "radinpardazesh.com",
+        "hostnames": [
+          "pro.tikahost.com"
+        ],
+        "isTor": false,
+        "totalReports": 481,
+        "numDistinctUsers": 102,
+        "lastReportedAt": "2025-11-17T23:32:40+00:00"
+      },
+      "abuseipdb_score": 100
+    },
+    "score": 73,
+    "score_breakdown": {
+      "base": 10,
+      "source_weight": 20,
+      "abuse_confidence": 100,
+      "abuse_contrib": 25,
+      "total_reports": 481,
+      "total_reports_contrib": 8,
+      "distinct_users": 102,
+      "distinct_users_contrib": 5,
+      "passive_dns_count": 0,
+      "passive_dns_contrib": 0,
+      "otx_count": 0,
+      "otx_contrib": 0,
+      "ptr": "pro.tikahost.com",
+      "ptr_contrib": 0,
+      "whois_present": 0,
+      "whois_contrib": 0,
+      "country": "IR",
+      "country_contrib": 5,
+      "no_signals_penalty": 0,
+      "final_score_raw": 73,
+      "final_score": 73
+    },
+    "risk_bucket": "high"
+  },
+  {
+    "id": "ip::212.12.24.98",
+    "type": "ip",
+    "value": "212.12.24.98",
+    "source": "AbuseIPDB",
+    "sources_count": 1,
+    "enrichment": {
+      "dns": {
+        "a": [],
+        "aaaa": [],
+        "mx": [],
+        "txt": []
+      },
+      "reverse": {
+        "ptr": "rev-98-24-12-212.tula.net"
+      },
+      "geoip": {
+        "city": null,
+        "country": "Russia",
+        "country_iso": "RU",
+        "location": {
+          "lat": 55.7386,
+          "lon": 37.6068
+        }
+      },
+      "passive_dns": [],
+      "whois": {},
+      "abuseipdb": {
+        "ipAddress": "212.12.24.98",
+        "isPublic": true,
+        "ipVersion": 4,
+        "isWhitelisted": false,
+        "abuseConfidenceScore": 100,
+        "countryCode": "RU",
+        "usageType": "Fixed Line ISP",
+        "isp": "Client leased link network (MCC)",
+        "domain": "tula.net",
+        "hostnames": [
+          "rev-98-24-12-212.tula.net"
+        ],
+        "isTor": false,
+        "totalReports": 612,
+        "numDistinctUsers": 74,
+        "lastReportedAt": "2025-11-18T09:30:24+00:00"
+      },
+      "abuseipdb_score": 100
+    },
+    "score": 73,
+    "score_breakdown": {
+      "base": 10,
+      "source_weight": 20,
+      "abuse_confidence": 100,
+      "abuse_contrib": 25,
+      "total_reports": 612,
+      "total_reports_contrib": 10,
+      "distinct_users": 74,
+      "distinct_users_contrib": 3,
+      "passive_dns_count": 0,
+      "passive_dns_contrib": 0,
+      "otx_count": 0,
+      "otx_contrib": 0,
+      "ptr": "rev-98-24-12-212.tula.net",
+      "ptr_contrib": 0,
+      "whois_present": 0,
+      "whois_contrib": 0,
+      "country": "RU",
+      "country_contrib": 5,
+      "no_signals_penalty": 0,
+      "final_score_raw": 73,
+      "final_score": 73
+    },
+    "risk_bucket": "high"
+  },
+  {
+    "id": "ip::117.50.187.164",
+    "type": "ip",
+    "value": "117.50.187.164",
+    "source": "AbuseIPDB",
+    "sources_count": 1,
+    "enrichment": {
+      "dns": {
+        "a": [],
+        "aaaa": [],
+        "mx": [],
+        "txt": []
+      },
+      "reverse": {
+        "ptr": "ucrnjyv.cn"
+      },
+      "geoip": {
+        "city": null,
+        "country": "China",
+        "country_iso": "CN",
+        "location": {
+          "lat": 34.7732,
+          "lon": 113.722
+        }
+      },
+      "passive_dns": [],
+      "whois": {},
+      "abuseipdb": {
+        "ipAddress": "117.50.187.164",
+        "isPublic": true,
+        "ipVersion": 4,
+        "isWhitelisted": false,
+        "abuseConfidenceScore": 100,
+        "countryCode": "CN",
+        "usageType": "Commercial",
+        "isp": "Shanghai UCloud Information Technology Company Limited",
+        "domain": "ucloud.cn",
+        "hostnames": [
+          "tpijkvb.cn",
+          "rwynrmg.cn",
+          "szsrad.cn",
+          "ucrnjyv.cn",
+          "qbqjbuh.cn"
+        ],
+        "isTor": false,
+        "totalReports": 234,
+        "numDistinctUsers": 111,
+        "lastReportedAt": "2025-11-18T18:27:42+00:00"
+      },
+      "abuseipdb_score": 100
+    },
+    "score": 73,
+    "score_breakdown": {
+      "base": 10,
+      "source_weight": 20,
+      "abuse_confidence": 100,
+      "abuse_contrib": 25,
+      "total_reports": 234,
+      "total_reports_contrib": 8,
+      "distinct_users": 111,
+      "distinct_users_contrib": 5,
+      "passive_dns_count": 0,
+      "passive_dns_contrib": 0,
+      "otx_count": 0,
+      "otx_contrib": 0,
+      "ptr": "ucrnjyv.cn",
+      "ptr_contrib": 0,
+      "whois_present": 0,
+      "whois_contrib": 0,
+      "country": "CN",
+      "country_contrib": 5,
+      "no_signals_penalty": 0,
+      "final_score_raw": 73,
+      "final_score": 73
+    },
+    "risk_bucket": "high"
+  },
+  {
+    "id": "ip::106.75.139.20",
+    "type": "ip",
+    "value": "106.75.139.20",
+    "source": "AbuseIPDB",
+    "sources_count": 1,
+    "enrichment": {
+      "dns": {
+        "a": [],
+        "aaaa": [],
+        "mx": [],
+        "txt": []
+      },
+      "reverse": {
+        "ptr": "cw-iiot.cn"
+      },
+      "geoip": {
+        "city": null,
+        "country": "China",
+        "country_iso": "CN",
+        "location": {
+          "lat": 34.7732,
+          "lon": 113.722
+        }
+      },
+      "passive_dns": [],
+      "whois": {},
+      "abuseipdb": {
+        "ipAddress": "106.75.139.20",
+        "isPublic": true,
+        "ipVersion": 4,
+        "isWhitelisted": false,
+        "abuseConfidenceScore": 100,
+        "countryCode": "CN",
+        "usageType": "Commercial",
+        "isp": "Shanghai UCloud Information Technology Company Limited",
+        "domain": "ucloud.cn",
+        "hostnames": [
+          "s161q.shop",
+          "cw-iiot.cn"
+        ],
+        "isTor": false,
+        "totalReports": 888,
+        "numDistinctUsers": 75,
+        "lastReportedAt": "2025-11-18T18:13:06+00:00"
+      },
+      "abuseipdb_score": 100
+    },
+    "score": 73,
+    "score_breakdown": {
+      "base": 10,
+      "source_weight": 20,
+      "abuse_confidence": 100,
+      "abuse_contrib": 25,
+      "total_reports": 888,
+      "total_reports_contrib": 10,
+      "distinct_users": 75,
+      "distinct_users_contrib": 3,
+      "passive_dns_count": 0,
+      "passive_dns_contrib": 0,
+      "otx_count": 0,
+      "otx_contrib": 0,
+      "ptr": "cw-iiot.cn",
+      "ptr_contrib": 0,
+      "whois_present": 0,
+      "whois_contrib": 0,
+      "country": "CN",
+      "country_contrib": 5,
+      "no_signals_penalty": 0,
+      "final_score_raw": 73,
+      "final_score": 73
+    },
+    "risk_bucket": "high"
+  },
+  {
+    "id": "ip::85.95.183.178",
+    "type": "ip",
+    "value": "85.95.183.178",
+    "source": "AbuseIPDB",
+    "sources_count": 1,
+    "enrichment": {
+      "dns": {
+        "a": [],
+        "aaaa": [],
+        "mx": [],
+        "txt": []
+      },
+      "reverse": {
+        "ptr": "85-95-183-178.saransk.ru"
+      },
+      "geoip": {
+        "city": "Saransk",
+        "country": "Russia",
+        "country_iso": "RU",
+        "location": {
+          "lat": 54.1785,
+          "lon": 45.1786
+        }
+      },
+      "passive_dns": [],
+      "whois": {},
+      "abuseipdb": {
+        "ipAddress": "85.95.183.178",
+        "isPublic": true,
+        "ipVersion": 4,
+        "isWhitelisted": false,
+        "abuseConfidenceScore": 100,
+        "countryCode": "RU",
+        "usageType": "Fixed Line ISP",
+        "isp": "Branch in Mordovian Republic",
+        "domain": "moris.ru",
+        "hostnames": [
+          "85-95-183-178.saransk.ru"
+        ],
+        "isTor": false,
+        "totalReports": 519,
+        "numDistinctUsers": 30,
+        "lastReportedAt": "2025-11-18T16:10:28+00:00"
+      },
+      "abuseipdb_score": 100
+    },
+    "score": 73,
+    "score_breakdown": {
+      "base": 10,
+      "source_weight": 20,
+      "abuse_confidence": 100,
+      "abuse_contrib": 25,
+      "total_reports": 519,
+      "total_reports_contrib": 10,
+      "distinct_users": 30,
+      "distinct_users_contrib": 3,
+      "passive_dns_count": 0,
+      "passive_dns_contrib": 0,
+      "otx_count": 0,
+      "otx_contrib": 0,
+      "ptr": "85-95-183-178.saransk.ru",
+      "ptr_contrib": 0,
+      "whois_present": 0,
+      "whois_contrib": 0,
+      "country": "RU",
+      "country_contrib": 5,
+      "no_signals_penalty": 0,
+      "final_score_raw": 73,
+      "final_score": 73
+    },
+    "risk_bucket": "high"
+  },
+  {
+    "id": "ip::82.208.122.95",
+    "type": "ip",
+    "value": "82.208.122.95",
+    "source": "AbuseIPDB",
+    "sources_count": 1,
+    "enrichment": {
+      "dns": {
+        "a": [],
+        "aaaa": [],
+        "mx": [],
+        "txt": []
+      },
+      "reverse": {
+        "ptr": "82-208-122-95.static.mts-nn.ru"
+      },
+      "geoip": {
+        "city": "Nizhniy Novgorod",
+        "country": "Russia",
+        "country_iso": "RU",
+        "location": {
+          "lat": 56.3327,
+          "lon": 44.0012
+        }
+      },
+      "passive_dns": [],
+      "whois": {},
+      "abuseipdb": {
+        "ipAddress": "82.208.122.95",
+        "isPublic": true,
+        "ipVersion": 4,
+        "isWhitelisted": false,
+        "abuseConfidenceScore": 100,
+        "countryCode": "RU",
+        "usageType": "Fixed Line ISP",
+        "isp": "PJSC Rostelecom",
+        "domain": "rt.ru",
+        "hostnames": [
+          "82-208-122-95.static.mts-nn.ru"
+        ],
+        "isTor": false,
+        "totalReports": 537,
+        "numDistinctUsers": 84,
+        "lastReportedAt": "2025-11-18T18:14:56+00:00"
+      },
+      "abuseipdb_score": 100
+    },
+    "score": 73,
+    "score_breakdown": {
+      "base": 10,
+      "source_weight": 20,
+      "abuse_confidence": 100,
+      "abuse_contrib": 25,
+      "total_reports": 537,
+      "total_reports_contrib": 10,
+      "distinct_users": 84,
+      "distinct_users_contrib": 3,
+      "passive_dns_count": 0,
+      "passive_dns_contrib": 0,
+      "otx_count": 0,
+      "otx_contrib": 0,
+      "ptr": "82-208-122-95.static.mts-nn.ru",
+      "ptr_contrib": 0,
+      "whois_present": 0,
+      "whois_contrib": 0,
+      "country": "RU",
+      "country_contrib": 5,
+      "no_signals_penalty": 0,
+      "final_score_raw": 73,
+      "final_score": 73
+    },
+    "risk_bucket": "high"
+  },
+  {
+    "id": "ip::83.147.255.7",
+    "type": "ip",
+    "value": "83.147.255.7",
+    "source": "AbuseIPDB",
+    "sources_count": 1,
+    "enrichment": {
+      "dns": {
+        "a": [],
+        "aaaa": [],
+        "mx": [],
+        "txt": []
+      },
+      "reverse": {
+        "ptr": "hissingcalendar.ptr.network"
+      },
+      "geoip": {
+        "city": "St Petersburg",
+        "country": "Russia",
+        "country_iso": "RU",
+        "location": {
+          "lat": 59.9417,
+          "lon": 30.3096
+        }
+      },
+      "passive_dns": [],
+      "whois": {},
+      "abuseipdb": {
+        "ipAddress": "83.147.255.7",
+        "isPublic": true,
+        "ipVersion": 4,
+        "isWhitelisted": false,
+        "abuseConfidenceScore": 100,
+        "countryCode": "RU",
+        "usageType": "Data Center/Web Hosting/Transit",
+        "isp": "Smart Digital Ideas DOO",
+        "domain": "smartdigitalbd.com",
+        "hostnames": [
+          "hissingcalendar.ptr.network"
+        ],
+        "isTor": false,
+        "totalReports": 211,
+        "numDistinctUsers": 101,
+        "lastReportedAt": "2025-11-15T20:12:22+00:00"
+      },
+      "abuseipdb_score": 100
+    },
+    "score": 73,
+    "score_breakdown": {
+      "base": 10,
+      "source_weight": 20,
+      "abuse_confidence": 100,
+      "abuse_contrib": 25,
+      "total_reports": 211,
+      "total_reports_contrib": 8,
+      "distinct_users": 101,
+      "distinct_users_contrib": 5,
+      "passive_dns_count": 0,
+      "passive_dns_contrib": 0,
+      "otx_count": 0,
+      "otx_contrib": 0,
+      "ptr": "hissingcalendar.ptr.network",
+      "ptr_contrib": 0,
+      "whois_present": 0,
+      "whois_contrib": 0,
+      "country": "RU",
+      "country_contrib": 5,
+      "no_signals_penalty": 0,
+      "final_score_raw": 73,
+      "final_score": 73
+    },
+    "risk_bucket": "high"
+  },
+  {
+    "id": "ip::78.139.67.57",
+    "type": "ip",
+    "value": "78.139.67.57",
+    "source": "AbuseIPDB",
+    "sources_count": 1,
+    "enrichment": {
+      "dns": {
+        "a": [],
+        "aaaa": [],
+        "mx": [],
+        "txt": []
+      },
+      "reverse": {
+        "ptr": "57-67-139-78.kamensktel.ru"
+      },
+      "geoip": {
+        "city": "Kamensk-Uralsky",
+        "country": "Russia",
+        "country_iso": "RU",
+        "location": {
+          "lat": 56.4046,
+          "lon": 61.921
+        }
+      },
+      "passive_dns": [],
+      "whois": {},
+      "abuseipdb": {
+        "ipAddress": "78.139.67.57",
+        "isPublic": true,
+        "ipVersion": 4,
+        "isWhitelisted": false,
+        "abuseConfidenceScore": 100,
+        "countryCode": "RU",
+        "usageType": "Fixed Line ISP",
+        "isp": "CJSC Radiotelephone",
+        "domain": "kamensktel.ru",
+        "hostnames": [
+          "57-67-139-78.kamensktel.ru"
+        ],
+        "isTor": false,
+        "totalReports": 526,
+        "numDistinctUsers": 69,
+        "lastReportedAt": "2025-11-18T11:05:32+00:00"
+      },
+      "abuseipdb_score": 100
+    },
+    "score": 73,
+    "score_breakdown": {
+      "base": 10,
+      "source_weight": 20,
+      "abuse_confidence": 100,
+      "abuse_contrib": 25,
+      "total_reports": 526,
+      "total_reports_contrib": 10,
+      "distinct_users": 69,
+      "distinct_users_contrib": 3,
+      "passive_dns_count": 0,
+      "passive_dns_contrib": 0,
+      "otx_count": 0,
+      "otx_contrib": 0,
+      "ptr": "57-67-139-78.kamensktel.ru",
+      "ptr_contrib": 0,
+      "whois_present": 0,
+      "whois_contrib": 0,
+      "country": "RU",
+      "country_contrib": 5,
+      "no_signals_penalty": 0,
+      "final_score_raw": 73,
+      "final_score": 73
+    },
+    "risk_bucket": "high"
+  },
+  {
+    "id": "ip::37.202.239.11",
+    "type": "ip",
+    "value": "37.202.239.11",
+    "source": "AbuseIPDB",
+    "sources_count": 1,
+    "enrichment": {
+      "dns": {
+        "a": [],
+        "aaaa": [],
+        "mx": [],
+        "txt": []
+      },
+      "reverse": {
+        "ptr": "37-202-239-11.shatel.ir"
+      },
+      "geoip": {
+        "city": null,
+        "country": "Iran",
+        "country_iso": "IR",
+        "location": {
+          "lat": 35.698,
+          "lon": 51.4115
+        }
+      },
+      "passive_dns": [],
+      "whois": {},
+      "abuseipdb": {
+        "ipAddress": "37.202.239.11",
+        "isPublic": true,
+        "ipVersion": 4,
+        "isWhitelisted": false,
+        "abuseConfidenceScore": 100,
+        "countryCode": "IR",
+        "usageType": "Data Center/Web Hosting/Transit",
+        "isp": "TehranServer",
+        "domain": "rasana.net",
+        "hostnames": [
+          "37-202-239-11.shatel.ir"
+        ],
+        "isTor": false,
+        "totalReports": 588,
+        "numDistinctUsers": 64,
+        "lastReportedAt": "2025-11-18T18:20:11+00:00"
+      },
+      "abuseipdb_score": 100
+    },
+    "score": 73,
+    "score_breakdown": {
+      "base": 10,
+      "source_weight": 20,
+      "abuse_confidence": 100,
+      "abuse_contrib": 25,
+      "total_reports": 588,
+      "total_reports_contrib": 10,
+      "distinct_users": 64,
+      "distinct_users_contrib": 3,
+      "passive_dns_count": 0,
+      "passive_dns_contrib": 0,
+      "otx_count": 0,
+      "otx_contrib": 0,
+      "ptr": "37-202-239-11.shatel.ir",
+      "ptr_contrib": 0,
+      "whois_present": 0,
+      "whois_contrib": 0,
+      "country": "IR",
+      "country_contrib": 5,
+      "no_signals_penalty": 0,
+      "final_score_raw": 73,
+      "final_score": 73
+    },
+    "risk_bucket": "high"
+  },
+  {
+    "id": "ip::37.205.80.235",
+    "type": "ip",
+    "value": "37.205.80.235",
+    "source": "AbuseIPDB",
+    "sources_count": 1,
+    "enrichment": {
+      "dns": {
+        "a": [],
+        "aaaa": [],
+        "mx": [],
+        "txt": []
+      },
+      "reverse": {
+        "ptr": "host-37-205-80-235.bbcustomer.zsttk.net"
+      },
+      "geoip": {
+        "city": null,
+        "country": "Russia",
+        "country_iso": "RU",
+        "location": {
+          "lat": 55.7386,
+          "lon": 37.6068
+        }
+      },
+      "passive_dns": [],
+      "whois": {},
+      "abuseipdb": {
+        "ipAddress": "37.205.80.235",
+        "isPublic": true,
+        "ipVersion": 4,
+        "isWhitelisted": false,
+        "abuseConfidenceScore": 100,
+        "countryCode": "RU",
+        "usageType": "Fixed Line ISP",
+        "isp": "JSC Zap-Sib TransTeleCom",
+        "domain": "zsttk.ru",
+        "hostnames": [
+          "host-37-205-80-235.bbcustomer.zsttk.net"
+        ],
+        "isTor": false,
+        "totalReports": 843,
+        "numDistinctUsers": 96,
+        "lastReportedAt": "2025-11-18T16:10:17+00:00"
+      },
+      "abuseipdb_score": 100
+    },
+    "score": 73,
+    "score_breakdown": {
+      "base": 10,
+      "source_weight": 20,
+      "abuse_confidence": 100,
+      "abuse_contrib": 25,
+      "total_reports": 843,
+      "total_reports_contrib": 10,
+      "distinct_users": 96,
+      "distinct_users_contrib": 3,
+      "passive_dns_count": 0,
+      "passive_dns_contrib": 0,
+      "otx_count": 0,
+      "otx_contrib": 0,
+      "ptr": "host-37-205-80-235.bbcustomer.zsttk.net",
+      "ptr_contrib": 0,
+      "whois_present": 0,
+      "whois_contrib": 0,
+      "country": "RU",
+      "country_contrib": 5,
+      "no_signals_penalty": 0,
+      "final_score_raw": 73,
+      "final_score": 73
+    },
+    "risk_bucket": "high"
+  },
+  {
+    "id": "ip::45.131.46.137",
+    "type": "ip",
+    "value": "45.131.46.137",
+    "source": "AbuseIPDB",
+    "sources_count": 1,
+    "enrichment": {
+      "dns": {
+        "a": [],
+        "aaaa": [],
+        "mx": [],
+        "txt": []
+      },
+      "reverse": {
+        "ptr": "sjs.ce"
+      },
+      "geoip": {
+        "city": "Moscow",
+        "country": "Russia",
+        "country_iso": "RU",
+        "location": {
+          "lat": 55.7487,
+          "lon": 37.6187
+        }
+      },
+      "passive_dns": [],
+      "whois": {},
+      "abuseipdb": {
+        "ipAddress": "45.131.46.137",
+        "isPublic": true,
+        "ipVersion": 4,
+        "isWhitelisted": false,
+        "abuseConfidenceScore": 100,
+        "countryCode": "RU",
+        "usageType": "Data Center/Web Hosting/Transit",
+        "isp": "IPX - FZCO",
+        "domain": "iplir.com",
+        "hostnames": [
+          "sjs.ce"
+        ],
+        "isTor": false,
+        "totalReports": 492,
+        "numDistinctUsers": 111,
+        "lastReportedAt": "2025-11-18T03:01:53+00:00"
+      },
+      "abuseipdb_score": 100
+    },
+    "score": 73,
+    "score_breakdown": {
+      "base": 10,
+      "source_weight": 20,
+      "abuse_confidence": 100,
+      "abuse_contrib": 25,
+      "total_reports": 492,
+      "total_reports_contrib": 8,
+      "distinct_users": 111,
+      "distinct_users_contrib": 5,
+      "passive_dns_count": 0,
+      "passive_dns_contrib": 0,
+      "otx_count": 0,
+      "otx_contrib": 0,
+      "ptr": "sjs.ce",
+      "ptr_contrib": 0,
+      "whois_present": 0,
+      "whois_contrib": 0,
+      "country": "RU",
+      "country_contrib": 5,
+      "no_signals_penalty": 0,
+      "final_score_raw": 73,
+      "final_score": 73
+    },
+    "risk_bucket": "high"
+  },
+  {
+    "id": "ip::95.79.27.174",
+    "type": "ip",
+    "value": "95.79.27.174",
+    "source": "AbuseIPDB",
+    "sources_count": 1,
+    "enrichment": {
+      "dns": {
+        "a": [],
+        "aaaa": [],
+        "mx": [],
+        "txt": []
+      },
+      "reverse": {
+        "ptr": "95x79x27x174.static-business.nn.ertelecom.ru"
+      },
+      "geoip": {
+        "city": "Nizhniy Novgorod",
+        "country": "Russia",
+        "country_iso": "RU",
+        "location": {
+          "lat": 56.3327,
+          "lon": 44.0012
+        }
+      },
+      "passive_dns": [],
+      "whois": {},
+      "abuseipdb": {
+        "ipAddress": "95.79.27.174",
+        "isPublic": true,
+        "ipVersion": 4,
+        "isWhitelisted": false,
+        "abuseConfidenceScore": 100,
+        "countryCode": "RU",
+        "usageType": "Fixed Line ISP",
+        "isp": "CJSC Company ER-Telecom",
+        "domain": "ertelecom.ru",
+        "hostnames": [
+          "95x79x27x174.static-business.nn.ertelecom.ru"
+        ],
+        "isTor": false,
+        "totalReports": 548,
+        "numDistinctUsers": 71,
+        "lastReportedAt": "2025-11-18T12:10:47+00:00"
+      },
+      "abuseipdb_score": 100
+    },
+    "score": 73,
+    "score_breakdown": {
+      "base": 10,
+      "source_weight": 20,
+      "abuse_confidence": 100,
+      "abuse_contrib": 25,
+      "total_reports": 548,
+      "total_reports_contrib": 10,
+      "distinct_users": 71,
+      "distinct_users_contrib": 3,
+      "passive_dns_count": 0,
+      "passive_dns_contrib": 0,
+      "otx_count": 0,
+      "otx_contrib": 0,
+      "ptr": "95x79x27x174.static-business.nn.ertelecom.ru",
+      "ptr_contrib": 0,
+      "whois_present": 0,
+      "whois_contrib": 0,
+      "country": "RU",
+      "country_contrib": 5,
+      "no_signals_penalty": 0,
+      "final_score_raw": 73,
+      "final_score": 73
+    },
+    "risk_bucket": "high"
+  },
+  {
+    "id": "ip::130.185.76.118",
+    "type": "ip",
+    "value": "130.185.76.118",
+    "source": "AbuseIPDB",
+    "sources_count": 1,
+    "enrichment": {
+      "dns": {
+        "a": [],
+        "aaaa": [],
+        "mx": [],
+        "txt": []
+      },
+      "reverse": {
+        "ptr": "ptr.iica.ir"
+      },
+      "geoip": {
+        "city": null,
+        "country": "Iran",
+        "country_iso": "IR",
+        "location": {
+          "lat": 35.698,
+          "lon": 51.4115
+        }
+      },
+      "passive_dns": [],
+      "whois": {},
+      "abuseipdb": {
+        "ipAddress": "130.185.76.118",
+        "isPublic": true,
+        "ipVersion": 4,
+        "isWhitelisted": false,
+        "abuseConfidenceScore": 100,
+        "countryCode": "IR",
+        "usageType": "Data Center/Web Hosting/Transit",
+        "isp": "Cloud Computing",
+        "domain": "parspack.com",
+        "hostnames": [
+          "ptr.iica.ir"
+        ],
+        "isTor": false,
+        "totalReports": 312,
+        "numDistinctUsers": 169,
+        "lastReportedAt": "2025-11-17T20:13:49+00:00"
+      },
+      "abuseipdb_score": 100
+    },
+    "score": 73,
+    "score_breakdown": {
+      "base": 10,
+      "source_weight": 20,
+      "abuse_confidence": 100,
+      "abuse_contrib": 25,
+      "total_reports": 312,
+      "total_reports_contrib": 8,
+      "distinct_users": 169,
+      "distinct_users_contrib": 5,
+      "passive_dns_count": 0,
+      "passive_dns_contrib": 0,
+      "otx_count": 0,
+      "otx_contrib": 0,
+      "ptr": "ptr.iica.ir",
+      "ptr_contrib": 0,
+      "whois_present": 0,
+      "whois_contrib": 0,
+      "country": "IR",
+      "country_contrib": 5,
+      "no_signals_penalty": 0,
+      "final_score_raw": 73,
+      "final_score": 73
+    },
+    "risk_bucket": "high"
+  },
+  {
+    "id": "ip::106.75.241.127",
+    "type": "ip",
+    "value": "106.75.241.127",
+    "source": "AbuseIPDB",
+    "sources_count": 1,
+    "enrichment": {
+      "dns": {
+        "a": [],
+        "aaaa": [],
+        "mx": [],
+        "txt": []
+      },
+      "reverse": {
+        "ptr": "ytyctrk.cn"
+      },
+      "geoip": {
+        "city": null,
+        "country": "China",
+        "country_iso": "CN",
+        "location": {
+          "lat": 34.7732,
+          "lon": 113.722
+        }
+      },
+      "passive_dns": [],
+      "whois": {},
+      "abuseipdb": {
+        "ipAddress": "106.75.241.127",
+        "isPublic": true,
+        "ipVersion": 4,
+        "isWhitelisted": false,
+        "abuseConfidenceScore": 100,
+        "countryCode": "CN",
+        "usageType": "Fixed Line ISP",
+        "isp": "Shanghai UCloud Information Technology Company Limited",
+        "domain": "ucloud.cn",
+        "hostnames": [
+          "ytyctrk.cn"
+        ],
+        "isTor": false,
+        "totalReports": 218,
+        "numDistinctUsers": 27,
+        "lastReportedAt": "2025-11-18T08:35:36+00:00"
+      },
+      "abuseipdb_score": 100
+    },
+    "score": 71,
+    "score_breakdown": {
+      "base": 10,
+      "source_weight": 20,
+      "abuse_confidence": 100,
+      "abuse_contrib": 25,
+      "total_reports": 218,
+      "total_reports_contrib": 8,
+      "distinct_users": 27,
+      "distinct_users_contrib": 3,
+      "passive_dns_count": 0,
+      "passive_dns_contrib": 0,
+      "otx_count": 0,
+      "otx_contrib": 0,
+      "ptr": "ytyctrk.cn",
+      "ptr_contrib": 0,
+      "whois_present": 0,
+      "whois_contrib": 0,
+      "country": "CN",
+      "country_contrib": 5,
+      "no_signals_penalty": 0,
+      "final_score_raw": 71,
+      "final_score": 71
+    },
+    "risk_bucket": "high"
+  },
+  {
+    "id": "ip::176.62.84.105",
+    "type": "ip",
+    "value": "176.62.84.105",
+    "source": "AbuseIPDB",
+    "sources_count": 1,
+    "enrichment": {
+      "dns": {
+        "a": [],
+        "aaaa": [],
+        "mx": [],
+        "txt": []
+      },
+      "reverse": {
+        "ptr": "host105.net176-62-84.omkc.ru"
+      },
+      "geoip": {
+        "city": "Omsk",
+        "country": "Russia",
+        "country_iso": "RU",
+        "location": {
+          "lat": 54.9896,
+          "lon": 73.3729
+        }
+      },
+      "passive_dns": [],
+      "whois": {},
+      "abuseipdb": {
+        "ipAddress": "176.62.84.105",
+        "isPublic": true,
+        "ipVersion": 4,
+        "isWhitelisted": false,
+        "abuseConfidenceScore": 100,
+        "countryCode": "RU",
+        "usageType": "Fixed Line ISP",
+        "isp": "Omskie kabelnye seti Ltd.",
+        "domain": "omkc.ru",
+        "hostnames": [
+          "host105.net176-62-84.omkc.ru"
+        ],
+        "isTor": false,
+        "totalReports": 223,
+        "numDistinctUsers": 37,
+        "lastReportedAt": "2025-11-17T20:14:42+00:00"
+      },
+      "abuseipdb_score": 100
+    },
+    "score": 71,
+    "score_breakdown": {
+      "base": 10,
+      "source_weight": 20,
+      "abuse_confidence": 100,
+      "abuse_contrib": 25,
+      "total_reports": 223,
+      "total_reports_contrib": 8,
+      "distinct_users": 37,
+      "distinct_users_contrib": 3,
+      "passive_dns_count": 0,
+      "passive_dns_contrib": 0,
+      "otx_count": 0,
+      "otx_contrib": 0,
+      "ptr": "host105.net176-62-84.omkc.ru",
+      "ptr_contrib": 0,
+      "whois_present": 0,
+      "whois_contrib": 0,
+      "country": "RU",
+      "country_contrib": 5,
+      "no_signals_penalty": 0,
+      "final_score_raw": 71,
+      "final_score": 71
+    },
+    "risk_bucket": "high"
+  }
+]

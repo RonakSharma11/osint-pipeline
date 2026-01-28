@@ -1,0 +1,221 @@
+[
+  {
+    "id": "ip::46.161.50.108",
+    "type": "ip",
+    "value": "46.161.50.108",
+    "source": "AbuseIPDB",
+    "sources_count": 1,
+    "enrichment": {
+      "dns": {
+        "a": [],
+        "aaaa": [],
+        "mx": [],
+        "txt": []
+      },
+      "reverse": {
+        "ptr": "scan.f6.security"
+      },
+      "geoip": {
+        "city": null,
+        "country": "Russia",
+        "country_iso": "RU",
+        "location": {
+          "lat": 55.7386,
+          "lon": 37.6068
+        }
+      },
+      "passive_dns": [],
+      "whois": {},
+      "abuseipdb": {
+        "ipAddress": "46.161.50.108",
+        "isPublic": true,
+        "ipVersion": 4,
+        "isWhitelisted": false,
+        "abuseConfidenceScore": 100,
+        "countryCode": "RU",
+        "usageType": "Data Center/Web Hosting/Transit",
+        "isp": "public vlans of DC",
+        "domain": "pindc.ru",
+        "hostnames": [
+          "scan.f6.security"
+        ],
+        "isTor": false,
+        "totalReports": 8965,
+        "numDistinctUsers": 552,
+        "lastReportedAt": "2025-11-18T19:25:37+00:00"
+      },
+      "abuseipdb_score": 100
+    },
+    "score": 97,
+    "score_breakdown": {
+      "base": 10,
+      "source_weight": 20,
+      "abuse_confidence": 100,
+      "abuse_contrib": 25,
+      "total_reports": 8965,
+      "total_reports_contrib": 16,
+      "distinct_users": 552,
+      "distinct_users_contrib": 9,
+      "passive_dns_count": 0,
+      "passive_dns_contrib": 0,
+      "otx_count": 0,
+      "otx_contrib": 0,
+      "ptr": "scan.f6.security",
+      "ptr_contrib": 12,
+      "whois_present": 0,
+      "whois_contrib": 0,
+      "country": "RU",
+      "country_contrib": 5,
+      "no_signals_penalty": 0,
+      "final_score_raw": 97,
+      "final_score": 97
+    },
+    "risk_bucket": "high"
+  },
+  {
+    "id": "ip::95.215.0.144",
+    "type": "ip",
+    "value": "95.215.0.144",
+    "source": "AbuseIPDB",
+    "sources_count": 1,
+    "enrichment": {
+      "dns": {
+        "a": [],
+        "aaaa": [],
+        "mx": [],
+        "txt": []
+      },
+      "reverse": {
+        "ptr": "scan.f6.security"
+      },
+      "geoip": {
+        "city": null,
+        "country": "Russia",
+        "country_iso": "RU",
+        "location": {
+          "lat": 55.7386,
+          "lon": 37.6068
+        }
+      },
+      "passive_dns": [],
+      "whois": {},
+      "abuseipdb": {
+        "ipAddress": "95.215.0.144",
+        "isPublic": true,
+        "ipVersion": 4,
+        "isWhitelisted": false,
+        "abuseConfidenceScore": 100,
+        "countryCode": "RU",
+        "usageType": "Data Center/Web Hosting/Transit",
+        "isp": "Petersburg Internet Network ltd.",
+        "domain": "pindc.ru",
+        "hostnames": [
+          "scan.f6.security"
+        ],
+        "isTor": false,
+        "totalReports": 11553,
+        "numDistinctUsers": 591,
+        "lastReportedAt": "2025-11-18T19:19:09+00:00"
+      },
+      "abuseipdb_score": 100
+    },
+    "score": 99,
+    "score_breakdown": {
+      "base": 10,
+      "source_weight": 20,
+      "abuse_confidence": 100,
+      "abuse_contrib": 25,
+      "total_reports": 11553,
+      "total_reports_contrib": 18,
+      "distinct_users": 591,
+      "distinct_users_contrib": 9,
+      "passive_dns_count": 0,
+      "passive_dns_contrib": 0,
+      "otx_count": 0,
+      "otx_contrib": 0,
+      "ptr": "scan.f6.security",
+      "ptr_contrib": 12,
+      "whois_present": 0,
+      "whois_contrib": 0,
+      "country": "RU",
+      "country_contrib": 5,
+      "no_signals_penalty": 0,
+      "final_score_raw": 99,
+      "final_score": 99
+    },
+    "risk_bucket": "high"
+  },
+  {
+    "id": "ip::103.203.57.3",
+    "type": "ip",
+    "value": "103.203.57.3",
+    "source": "AbuseIPDB",
+    "sources_count": 1,
+    "enrichment": {
+      "dns": {
+        "a": [],
+        "aaaa": [],
+        "mx": [],
+        "txt": []
+      },
+      "reverse": {
+        "ptr": "scan-57-3.security.ipip.net"
+      },
+      "geoip": {
+        "city": null,
+        "country": "China",
+        "country_iso": "CN",
+        "location": {
+          "lat": 34.7732,
+          "lon": 113.722
+        }
+      },
+      "passive_dns": [],
+      "whois": {},
+      "abuseipdb": {
+        "ipAddress": "103.203.57.3",
+        "isPublic": true,
+        "ipVersion": 4,
+        "isWhitelisted": false,
+        "abuseConfidenceScore": 100,
+        "countryCode": "US",
+        "usageType": "Data Center/Web Hosting/Transit",
+        "isp": "Beijing Tiantexin Tech. Co., Ltd.",
+        "domain": "ipip.com",
+        "hostnames": [
+          "scan-57-3.security.ipip.net"
+        ],
+        "isTor": false,
+        "totalReports": 2751,
+        "numDistinctUsers": 136,
+        "lastReportedAt": "2025-11-18T19:05:44+00:00"
+      },
+      "abuseipdb_score": 100
+    },
+    "score": 91,
+    "score_breakdown": {
+      "base": 10,
+      "source_weight": 20,
+      "abuse_confidence": 100,
+      "abuse_contrib": 25,
+      "total_reports": 2751,
+      "total_reports_contrib": 14,
+      "distinct_users": 136,
+      "distinct_users_contrib": 5,
+      "passive_dns_count": 0,
+      "passive_dns_contrib": 0,
+      "otx_count": 0,
+      "otx_contrib": 0,
+      "ptr": "scan-57-3.security.ipip.net",
+      "ptr_contrib": 12,
+      "whois_present": 0,
+      "whois_contrib": 0,
+      "country": "CN",
+      "country_contrib": 5,
+      "no_signals_penalty": 0,
+      "final_score_raw": 91,
+      "final_score": 91
+    },
+    "risk_bucket": "high"
+  }
+]

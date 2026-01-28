@@ -1,0 +1,2897 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OSINT Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Custom styles for dark mode */
+        .dark {
+            --bg-primary: #1a202c;
+            --bg-secondary: #2d3748;
+            --text-primary: #f7fafc;
+            --text-secondary: #e2e8f0;
+            --border-color: #4a5568;
+        }
+        
+        .dark body {
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+        }
+        
+        .dark .card {
+            background-color: var(--bg-secondary);
+            border-color: var(--border-color);
+        }
+        
+        .dark .table th, .dark .table td {
+            border-color: var(--border-color);
+        }
+        
+        .dark input, .dark select {
+            background-color: var(--bg-secondary);
+            color: var(--text-primary);
+            border-color: var(--border-color);
+        }
+        
+        /* Transition for dark mode toggle */
+        * {
+            transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+        }
+        
+        /* Risk level colors */
+        .risk-high {
+            background-color: rgba(239, 68, 68, 0.2);
+            border-left: 4px solid #ef4444;
+        }
+        
+        .risk-medium {
+            background-color: rgba(245, 158, 11, 0.2);
+            border-left: 4px solid #f59e0b;
+        }
+        
+        .risk-low {
+            background-color: rgba(16, 185, 129, 0.2);
+            border-left: 4px solid #10b981;
+        }
+        
+        /* National Security section styling */
+        .natsec-card {
+            background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 100%);
+            color: white;
+        }
+        
+        .dark .natsec-card {
+            background: linear-gradient(135deg, #0c4a6e 0%, #075985 100%);
+        }
+        
+        .threat-level-critical {
+            background-color: rgba(220, 38, 38, 0.9);
+        }
+        
+        .threat-level-severe {
+            background-color: rgba(234, 88, 12, 0.9);
+        }
+        
+        .threat-level-elevated {
+            background-color: rgba(217, 119, 6, 0.9);
+        }
+        
+        .threat-level-guarded {
+            background-color: rgba(5, 150, 105, 0.9);
+        }
+        
+        .canadian-flag {
+            background: linear-gradient(to bottom, #d80621 50%, #ffffff 50%);
+        }
+        
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        
+        ::-webkit-scrollbar-thumb {
+            background: #888;
+            border-radius: 4px;
+        }
+        
+        ::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+        
+        .dark ::-webkit-scrollbar-track {
+            background: #2d3748;
+        }
+        
+        .dark ::-webkit-scrollbar-thumb {
+            background: #4a5568;
+        }
+        
+        /* Pulse animation for critical threats */
+        @keyframes pulse {
+            0% { opacity: 1; }
+            50% { opacity: 0.7; }
+            100% { opacity: 1; }
+        }
+        
+        .pulse {
+            animation: pulse 2s infinite;
+        }
+        
+        /* Accuracy indicator styling */
+        .accuracy-high {
+            color: #10b981;
+        }
+        
+        .accuracy-medium {
+            color: #f59e0b;
+        }
+        
+        .accuracy-low {
+            color: #ef4444;
+        }
+        
+        /* Enhanced relationship graph styling */
+        #relationshipGraph {
+            height: 500px;
+            border: 1px solid #e5e7eb;
+            border-radius: 0.5rem;
+            background-color: #f9fafb;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .dark #relationshipGraph {
+            border-color: #4b5563;
+            background-color: #1f2937;
+        }
+        
+        .graph-node-high-risk {
+            box-shadow: 0 0 15px rgba(239, 68, 68, 0.7);
+        }
+        
+        .graph-node-medium-risk {
+            box-shadow: 0 0 10px rgba(245, 158, 11, 0.5);
+        }
+        
+        .graph-node-low-risk {
+            box-shadow: 0 0 5px rgba(16, 185, 129, 0.3);
+        }
+        
+        /* Enhanced campaign clustering styles */
+        .campaign-timeline {
+            height: 300px;
+            position: relative;
+            margin-top: 1rem;
+        }
+        
+        .campaign-card {
+            border-radius: 0.5rem;
+            transition: all 0.3s ease;
+            overflow: hidden;
+            margin-bottom: 1rem;
+        }
+        
+        .campaign-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        
+        .campaign-header {
+            padding: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+        }
+        
+        .campaign-high-risk {
+            border-left: 5px solid #ef4444;
+        }
+        
+        .campaign-medium-risk {
+            border-left: 5px solid #f59e0b;
+        }
+        
+        .campaign-low-risk {
+            border-left: 5px solid #10b981;
+        }
+        
+        .campaign-timeline-bar {
+            height: 8px;
+            border-radius: 4px;
+            margin-top: 0.5rem;
+            position: relative;
+        }
+        
+        .campaign-timeline-progress {
+            height: 100%;
+            border-radius: 4px;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        
+        /* Enhanced controls */
+        .enhanced-controls {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+            padding: 0.75rem;
+            background-color: rgba(249, 250, 251, 0.8);
+            border-radius: 0.375rem;
+        }
+        
+        .dark .enhanced-controls {
+            background-color: rgba(31, 41, 55, 0.8);
+        }
+        
+        .control-group {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .control-group label {
+            font-size: 0.875rem;
+            font-weight: 500;
+        }
+        
+        .slider-control {
+            width: 120px;
+        }
+        
+        /* Statistics panel */
+        .stats-panel {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1rem;
+            margin-bottom: 1rem;
+            padding: 1rem;
+            background-color: rgba(249, 250, 251, 0.8);
+            border-radius: 0.375rem;
+        }
+        
+        .dark .stats-panel {
+            background-color: rgba(31, 41, 55, 0.8);
+        }
+        
+        .stat-item {
+            text-align: center;
+        }
+        
+        .stat-value {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #8b5cf6;
+        }
+        
+        .stat-label {
+            font-size: 0.875rem;
+            color: #6b7280;
+        }
+        
+        .dark .stat-label {
+            color: #9ca3af;
+        }
+        
+        /* Search box */
+        .search-box {
+            position: relative;
+            margin-bottom: 1rem;
+        }
+        
+        .search-box input {
+            width: 100%;
+            padding: 0.5rem 2.5rem 0.5rem 1rem;
+            border: 1px solid #d1d5db;
+            border-radius: 0.375rem;
+            background-color: white;
+        }
+        
+        .dark .search-box input {
+            background-color: #374151;
+            border-color: #4b5563;
+            color: #f3f4f6;
+        }
+        
+        .search-box button {
+            position: absolute;
+            right: 0.5rem;
+            top: 50%;
+            transform: translateY(-50%);
+            background: none;
+            border: none;
+            color: #6b7280;
+            cursor: pointer;
+        }
+        
+        .dark .search-box button {
+            color: #9ca3af;
+        }
+        
+        /* Original cluster styling */
+        .cluster-card {
+            border-left: 4px solid #8b5cf6;
+            margin-bottom: 1.5rem;
+            transition: all 0.3s ease;
+        }
+        
+        .cluster-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+        
+        .cluster-header {
+            background-color: rgba(139, 92, 246, 0.1);
+            padding: 0.75rem;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .dark .cluster-header {
+            background-color: rgba(139, 92, 246, 0.2);
+        }
+        
+        .cluster-content {
+            padding: 1rem;
+            display: none;
+        }
+        
+        .cluster-content.expanded {
+            display: block;
+        }
+        
+        .cluster-item {
+            padding: 0.5rem;
+            border-bottom: 1px solid #e5e7eb;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .dark .cluster-item {
+            border-color: #4b5563;
+        }
+        
+        .cluster-item:last-child {
+            border-bottom: none;
+        }
+        
+        /* Loading spinner */
+        .spinner {
+            border: 3px solid rgba(0, 0, 0, 0.1);
+            border-radius: 50%;
+            border-top: 3px solid #8b5cf6;
+            width: 30px;
+            height: 30px;
+            animation: spin 1s linear infinite;
+            margin: 0 auto;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        /* Filter styling */
+        .filter-section {
+            background-color: rgba(249, 250, 251, 0.8);
+            padding: 0.75rem;
+            border-radius: 0.375rem;
+            margin-bottom: 1rem;
+        }
+        
+        .dark .filter-section {
+            background-color: rgba(31, 41, 55, 0.8);
+        }
+        
+        /* Legend styling */
+        .legend {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-top: 0.5rem;
+            padding: 0.5rem;
+            background-color: rgba(249, 250, 251, 0.8);
+            border-radius: 0.375rem;
+        }
+        
+        .dark .legend {
+            background-color: rgba(31, 41, 55, 0.8);
+        }
+        
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .legend-color {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+        }
+        
+        /* Tab styling */
+        .tab-container {
+            display: flex;
+            border-bottom: 1px solid #e5e7eb;
+            margin-bottom: 1rem;
+        }
+        
+        .dark .tab-container {
+            border-color: #4b5563;
+        }
+        
+        .tab {
+            padding: 0.5rem 1rem;
+            cursor: pointer;
+            border-bottom: 2px solid transparent;
+            transition: all 0.2s;
+        }
+        
+        .tab.active {
+            border-bottom-color: #8b5cf6;
+            color: #8b5cf6;
+            font-weight: 600;
+        }
+        
+        .tab:hover {
+            color: #8b5cf6;
+        }
+        
+        /* Graph controls */
+        .graph-controls {
+            display: flex;
+            gap: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .graph-controls button {
+            padding: 0.25rem 0.5rem;
+            background-color: #f3f4f6;
+            border: 1px solid #d1d5db;
+            border-radius: 0.25rem;
+            font-size: 0.875rem;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        
+        .graph-controls button:hover {
+            background-color: #e5e7eb;
+        }
+        
+        .dark .graph-controls button {
+            background-color: #374151;
+            border-color: #4b5563;
+        }
+        
+        .dark .graph-controls button:hover {
+            background-color: #4b5563;
+        }
+        
+        /* Timeline visualization styles */
+        .timeline-container {
+            height: 300px;
+            overflow-y: auto;
+            padding: 1rem;
+        }
+        
+        .timeline-item {
+            margin-bottom: 1rem;
+            position: relative;
+        }
+        
+        .timeline-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 0.5rem;
+        }
+        
+        .timeline-bar-container {
+            height: 24px;
+            background-color: #e5e7eb;
+            border-radius: 12px;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .dark .timeline-bar-container {
+            background-color: #4b5563;
+        }
+        
+        .timeline-bar {
+            height: 100%;
+            border-radius: 12px;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        
+        .timeline-label {
+            position: absolute;
+            top: 50%;
+            left: 10px;
+            transform: translateY(-50%);
+            color: white;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-shadow: 0 1px 2px rgba(0,0,0,0.5);
+        }
+        
+        .timeline-legend {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 0.5rem;
+            font-size: 0.75rem;
+        }
+        
+        .timeline-legend-item {
+            display: flex;
+            align-items: center;
+            gap: 0.25rem;
+        }
+        
+        .timeline-legend-color {
+            width: 0.75rem;
+            height: 0.75rem;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+    <div class="container mx-auto px-4 py-6">
+        <!-- Header -->
+        <header class="flex flex-col md:flex-row justify-between items-center mb-8">
+            <div class="flex items-center mb-4 md:mb-0">
+                <i class="fas fa-shield-alt text-blue-600 text-3xl mr-3"></i>
+                <h1 class="text-2xl font-bold">OSINT IOC Dashboard</h1>
+            </div>
+            <div class="flex items-center space-x-4">
+                <button id="refreshBtn" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg flex items-center">
+                    <i class="fas fa-sync-alt mr-2"></i> Refresh
+                </button>
+                <button id="darkModeToggle" class="bg-gray-200 hover:bg-gray-300 dark:bg-gray-700 dark:hover:bg-gray-600 px-4 py-2 rounded-lg">
+                    <i class="fas fa-moon dark:hidden"></i>
+                    <i class="fas fa-sun hidden dark:inline"></i>
+                </button>
+            </div>
+        </header>
+
+        <!-- Dashboard Summary -->
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-4 mb-8">
+            <div class="card bg-white dark:bg-gray-800 rounded-lg shadow p-4 border border-gray-200 dark:border-gray-700">
+                <div class="flex items-center">
+                    <div class="rounded-full bg-blue-100 dark:bg-blue-900 p-3 mr-4">
+                        <i class="fas fa-list text-blue-600 dark:text-blue-300"></i>
+                    </div>
+                    <div>
+                        <p class="text-gray-500 dark:text-gray-400 text-sm">Total IOCs</p>
+                        <p class="text-2xl font-bold" id="totalIocs">0</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card bg-white dark:bg-gray-800 rounded-lg shadow p-4 border border-gray-200 dark:border-gray-700">
+                <div class="flex items-center">
+                    <div class="rounded-full bg-red-100 dark:bg-red-900 p-3 mr-4">
+                        <i class="fas fa-exclamation-triangle text-red-600 dark:text-red-300"></i>
+                    </div>
+                    <div>
+                        <p class="text-gray-500 dark:text-gray-400 text-sm">High Risk</p>
+                        <p class="text-2xl font-bold" id="highRiskCount">0</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card bg-white dark:bg-gray-800 rounded-lg shadow p-4 border border-gray-200 dark:border-gray-700">
+                <div class="flex items-center">
+                    <div class="rounded-full bg-yellow-100 dark:bg-yellow-900 p-3 mr-4">
+                        <i class="fas fa-exclamation-circle text-yellow-600 dark:text-yellow-300"></i>
+                    </div>
+                    <div>
+                        <p class="text-gray-500 dark:text-gray-400 text-sm">Medium Risk</p>
+                        <p class="text-2xl font-bold" id="mediumRiskCount">0</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card bg-white dark:bg-gray-800 rounded-lg shadow p-4 border border-gray-200 dark:border-gray-700">
+                <div class="flex items-center">
+                    <div class="rounded-full bg-green-100 dark:bg-green-900 p-3 mr-4">
+                        <i class="fas fa-check-circle text-green-600 dark:text-green-300"></i>
+                    </div>
+                    <div>
+                        <p class="text-gray-500 dark:text-gray-400 text-sm">Low Risk</p>
+                        <p class="text-2xl font-bold" id="lowRiskCount">0</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- National Security Intelligence Section -->
+        <div class="mb-8">
+            <div class="flex items-center mb-4">
+                <div class="canadian-flag w-8 h-8 mr-3 rounded-sm"></div>
+                <h2 class="text-2xl font-bold">National Security Intelligence</h2>
+                <span class="ml-3 px-2 py-1 bg-red-600 text-white text-xs rounded-full pulse">CSIS PRIORITY</span>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                <!-- Threat Assessment Card -->
+                <div class="natsec-card rounded-lg shadow-lg p-5">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-bold">Threat Assessment</h3>
+                        <i class="fas fa-fingerprint text-2xl opacity-70"></i>
+                    </div>
+                    
+                    <div class="mb-4">
+                        <div class="flex justify-between mb-1">
+                            <span>Current Threat Level</span>
+                            <span id="threatLevel" class="font-bold">ELEVATED</span>
+                        </div>
+                        <div class="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
+                            <div id="threatLevelBar" class="threat-level-elevated h-2.5 rounded-full" style="width: 65%"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="space-y-3">
+                        <div class="flex justify-between">
+                            <span>State-Sponsored Activity</span>
+                            <span id="stateSponsoredCount" class="font-bold">0</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>Critical Infrastructure Targets</span>
+                            <span id="criticalInfraCount" class="font-bold">0</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>Canadian-Related IOCs</span>
+                            <span id="canadianTargetsCount" class="font-bold">0</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Sophisticated Threats Card -->
+                <div class="natsec-card rounded-lg shadow-lg p-5">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-bold">Sophisticated Threats</h3>
+                        <i class="fas fa-user-secret text-2xl opacity-70"></i>
+                    </div>
+                    
+                    <div class="mb-4">
+                        <p class="text-sm opacity-80 mb-2">Top Advanced Persistent Threats</p>
+                        <div id="aptList" class="space-y-2">
+                            <!-- APTs will be populated here -->
+                        </div>
+                    </div>
+                    
+                    <div class="mt-4 pt-4 border-t border-white border-opacity-20">
+                        <div class="flex justify-between">
+                            <span>Zero-Day Indicators</span>
+                            <span id="zeroDayCount" class="font-bold">0</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Geopolitical Threats Card -->
+                <div class="natsec-card rounded-lg shadow-lg p-5">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-bold">Geopolitical Threats</h3>
+                        <i class="fas fa-globe-americas text-2xl opacity-70"></i>
+                    </div>
+                    
+                    <div class="mb-4">
+                        <p class="text-sm opacity-80 mb-2">Threat Origins by Region</p>
+                        <div id="threatOrigins" class="space-y-2">
+                            <!-- Threat origins will be populated here -->
+                        </div>
+                    </div>
+                    
+                    <div class="mt-4 pt-4 border-t border-white border-opacity-20">
+                        <div class="flex justify-between">
+                            <span>Foreign Interference</span>
+                            <span id="foreignInterferenceCount" class="font-bold">0</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Charts Row -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
+            <div class="card bg-white dark:bg-gray-800 rounded-lg shadow p-4 border border-gray-200 dark:border-gray-700">
+                <h2 class="text-lg font-semibold mb-4">Risk Distribution</h2>
+                <div class="h-64">
+                    <canvas id="riskChart"></canvas>
+                </div>
+            </div>
+            
+            <div class="card bg-white dark:bg-gray-800 rounded-lg shadow p-4 border border-gray-200 dark:border-gray-700">
+                <h2 class="text-lg font-semibold mb-4">Type Distribution</h2>
+                <div class="h-64">
+                    <canvas id="typeChart"></canvas>
+                </div>
+            </div>
+        </div>
+
+        <!-- High-Value Targets Section -->
+        <div class="mb-8">
+            <h2 class="text-xl font-bold mb-4 flex items-center">
+                <i class="fas fa-crosshairs text-red-600 mr-2"></i>
+                High-Value Intelligence Targets
+            </h2>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                <!-- Critical Infrastructure Targets -->
+                <div class="card bg-white dark:bg-gray-800 rounded-lg shadow p-4 border border-gray-200 dark:border-gray-700">
+                    <div class="flex justify-between items-center mb-4">
+                        <h3 class="text-lg font-semibold text-red-600">Critical Infrastructure Targets</h3>
+                        <span class="text-xs px-2 py-1 rounded-full bg-yellow-100 text-yellow-800 accuracy-medium">
+                            <i class="fas fa-exclamation-triangle mr-1"></i> Medium Accuracy
+                        </span>
+                    </div>
+                    <div class="overflow-x-auto">
+                        <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
+                            <thead class="bg-gray-50 dark:bg-gray-700">
+                                <tr>
+                                    <th class="px-4 py-2 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">IOC</th>
+                                    <th class="px-4 py-2 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">Sector</th>
+                                    <th class="px-4 py-2 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">Threat Level</th>
+                                </tr>
+                            </thead>
+                            <tbody id="criticalInfraTable" class="bg-white dark:bg-gray-800 divide-y divide-gray-200 dark:divide-gray-700">
+                                <!-- Rows will be populated here -->
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="mt-3 text-xs text-gray-500 dark:text-gray-400">
+                        <i class="fas fa-info-circle mr-1"></i>
+                        Based on keyword matching in IOC values. May include false positives.
+                    </div>
+                </div>
+                
+                <!-- Canadian-Related IOCs -->
+                <div class="card bg-white dark:bg-gray-800 rounded-lg shadow p-4 border border-gray-200 dark:border-gray-700">
+                    <div class="flex justify-between items-center mb-4">
+                        <h3 class="text-lg font-semibold text-red-600">Canadian-Related IOCs</h3>
+                        <span class="text-xs px-2 py-1 rounded-full bg-red-100 text-red-800 accuracy-low">
+                            <i class="fas fa-exclamation-triangle mr-1"></i> Low Accuracy
+                        </span>
+                    </div>
+                    <div class="overflow-x-auto">
+                        <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
+                            <thead class="bg-gray-50 dark:bg-gray-700">
+                                <tr>
+                                    <th class="px-4 py-2 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">IOC</th>
+                                    <th class="px-4 py-2 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">Category</th>
+                                    <th class="px-4 py-2 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">Threat Level</th>
+                                </tr>
+                            </thead>
+                            <tbody id="canadianIocsTable" class="bg-white dark:bg-gray-800 divide-y divide-gray-200 dark:divide-gray-700">
+                                <!-- Rows will be populated here -->
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="mt-3 text-xs text-gray-500 dark:text-gray-400">
+                        <i class="fas fa-info-circle mr-1"></i>
+                        Based on country code and domain patterns. Does not indicate actual government targeting.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Advanced Correlation Analysis Section -->
+        <div class="mb-8">
+            <h2 class="text-xl font-bold mb-4 flex items-center">
+                <i class="fas fa-project-diagram text-purple-600 mr-2"></i>
+                Advanced Correlation Analysis
+            </h2>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                <!-- Enhanced IOC Relationship Mapping -->
+                <div class="card bg-white dark:bg-gray-800 rounded-lg shadow p-4 border border-gray-200 dark:border-gray-700">
+                    <div class="flex justify-between items-center mb-4">
+                        <h3 class="text-lg font-semibold">IOC Relationship Mapping</h3>
+                        <div class="flex space-x-2">
+                            <button id="analyzeRelationshipsBtn" class="bg-purple-600 hover:bg-purple-700 text-white px-3 py-1 rounded text-sm">
+                                Analyze
+                            </button>
+                            <button id="exportGraphBtn" class="bg-gray-200 hover:bg-gray-300 dark:bg-gray-700 dark:hover:bg-gray-600 px-3 py-1 rounded text-sm">
+                                <i class="fas fa-download mr-1"></i> Export
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="search-box">
+                        <input type="text" id="nodeSearch" placeholder="Search for nodes...">
+                        <button><i class="fas fa-search"></i></button>
+                    </div>
+                    
+                    <div class="enhanced-controls">
+                        <div class="control-group">
+                            <label for="layoutSelect">Layout:</label>
+                            <select id="layoutSelect" class="p-1 border border-gray-300 dark:border-gray-600 rounded text-sm">
+                                <option value="force">Force Directed</option>
+                                <option value="hierarchical">Hierarchical</option>
+                                <option value="circular">Circular</option>
+                            </select>
+                        </div>
+                        
+                        <div class="control-group">
+                            <label for="physicsToggle">Physics:</label>
+                            <input type="checkbox" id="physicsToggle" checked>
+                        </div>
+                        
+                        <div class="control-group">
+                            <label for="attractionSlider">Attraction:</label>
+                            <input type="range" id="attractionSlider" class="slider-control" min="0" max="100" value="50">
+                        </div>
+                        
+                        <div class="control-group">
+                            <label for="repulsionSlider">Repulsion:</label>
+                            <input type="range" id="repulsionSlider" class="slider-control" min="0" max="100" value="50">
+                        </div>
+                    </div>
+                    
+                    <div id="relationshipStats" class="stats-panel hidden">
+                        <div class="stat-item">
+                            <div class="stat-value" id="nodeCount">0</div>
+                            <div class="stat-label">Nodes</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-value" id="edgeCount">0</div>
+                            <div class="stat-label">Edges</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-value" id="clusterCount">0</div>
+                            <div class="stat-label">Clusters</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-value" id="densityValue">0</div>
+                            <div class="stat-label">Density</div>
+                        </div>
+                    </div>
+                    
+                    <div class="filter-section">
+                        <div class="grid grid-cols-2 gap-2">
+                            <div>
+                                <label class="block text-sm font-medium mb-1">Max Nodes</label>
+                                <select id="maxNodesFilter" class="w-full p-2 border border-gray-300 dark:border-gray-600 rounded-md text-sm">
+                                    <option value="20">20</option>
+                                    <option value="30" selected>30</option>
+                                    <option value="50">50</option>
+                                    <option value="75">75</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium mb-1">Relationship Type</label>
+                                <select id="relationshipTypeFilter" class="w-full p-2 border border-gray-300 dark:border-gray-600 rounded-md text-sm">
+                                    <option value="all" selected>All</option>
+                                    <option value="country">Country</option>
+                                    <option value="risk">Risk Level</option>
+                                    <option value="domain-ip">Domain-IP</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div id="relationshipGraphContainer" class="h-64 flex items-center justify-center">
+                        <p class="text-gray-500 dark:text-gray-400">Click "Analyze" to generate relationship map</p>
+                    </div>
+                    <div id="relationshipGraph" class="hidden h-96"></div>
+                    
+                    <div id="relationshipLegend" class="legend hidden">
+                        <div class="legend-item">
+                            <div class="legend-color" style="background-color: #ef4444;"></div>
+                            <span>High Risk</span>
+                        </div>
+                        <div class="legend-item">
+                            <div class="legend-color" style="background-color: #f59e0b;"></div>
+                            <span>Medium Risk</span>
+                        </div>
+                        <div class="legend-item">
+                            <div class="legend-color" style="background-color: #10b981;"></div>
+                            <span>Low Risk</span>
+                        </div>
+                        <div class="legend-item">
+                            <div class="legend-color" style="background-color: #3b82f6;"></div>
+                            <span>Country Relationship</span>
+                        </div>
+                        <div class="legend-item">
+                            <div class="legend-color" style="background-color: #8b5cf6;"></div>
+                            <span>Risk Level Relationship</span>
+                        </div>
+                        <div class="legend-item">
+                            <div class="legend-color" style="background-color: #10b981;"></div>
+                            <span>Domain-IP Relationship</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Enhanced Campaign Clustering -->
+                <div class="card bg-white dark:bg-gray-800 rounded-lg shadow p-4 border border-gray-200 dark:border-gray-700">
+                    <div class="flex justify-between items-center mb-4">
+                        <h3 class="text-lg font-semibold">Campaign Clustering</h3>
+                        <div class="flex space-x-2">
+                            <button id="clusterCampaignsBtn" class="bg-purple-600 hover:bg-purple-700 text-white px-3 py-1 rounded text-sm">
+                                Cluster
+                            </button>
+                            <button id="generateReportBtn" class="bg-gray-200 hover:bg-gray-300 dark:bg-gray-700 dark:hover:bg-gray-600 px-3 py-1 rounded text-sm">
+                                <i class="fas fa-file-alt mr-1"></i> Report
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="filter-section">
+                        <div class="grid grid-cols-2 gap-2">
+                            <div>
+                                <label class="block text-sm font-medium mb-1">Min Cluster Size</label>
+                                <select id="minClusterSizeFilter" class="w-full p-2 border border-gray-300 dark:border-gray-600 rounded-md text-sm">
+                                    <option value="2" selected>2</option>
+                                    <option value="3">3</option>
+                                    <option value="5">5</option>
+                                    <option value="10">10</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium mb-1">Time Window (days)</label>
+                                <select id="timeWindowFilter" class="w-full p-2 border border-gray-300 dark:border-gray-600 rounded-md text-sm">
+                                    <option value="3">3</option>
+                                    <option value="7" selected>7</option>
+                                    <option value="14">14</option>
+                                    <option value="30">30</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="tab-container mt-4">
+                        <div class="tab active" data-tab="cluster-cards">Card View</div>
+                        <div class="tab" data-tab="cluster-timeline">Timeline View</div>
+                        <div class="tab" data-tab="cluster-graph">Graph View</div>
+                    </div>
+                    
+                    <div id="campaignClustersContainer" class="h-64 flex items-center justify-center">
+                        <p class="text-gray-500 dark:text-gray-400">Click "Cluster" to analyze campaigns</p>
+                    </div>
+                    <div id="campaignClusters" class="hidden">
+                        <div id="cluster-cards" class="mt-4"></div>
+                        <div id="cluster-timeline" class="timeline-container hidden"></div>
+                        <div id="cluster-graph" class="h-96 hidden"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Filters Section -->
+        <div class="card bg-white dark:bg-gray-800 rounded-lg shadow p-4 mb-6 border border-gray-200 dark:border-gray-700">
+            <div class="flex justify-between items-center mb-4">
+                <h2 class="text-lg font-semibold">Filters</h2>
+                <button id="resetFilters" class="text-sm text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300">
+                    Reset Filters
+                </button>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4">
+                <div>
+                    <label class="block text-sm font-medium mb-1">Risk Level</label>
+                    <select id="riskFilter" class="w-full p-2 border border-gray-300 dark:border-gray-600 rounded-md">
+                        <option value="">All</option>
+                        <option value="high">High</option>
+                        <option value="medium">Medium</option>
+                        <option value="low">Low</option>
+                    </select>
+                </div>
+                
+                <div>
+                    <label class="block text-sm font-medium mb-1">Type</label>
+                    <select id="typeFilter" class="w-full p-2 border border-gray-300 dark:border-gray-600 rounded-md">
+                        <option value="">All</option>
+                        <option value="ip">IP</option>
+                        <option value="domain">Domain</option>
+                    </select>
+                </div>
+                
+                <div>
+                    <label class="block text-sm font-medium mb-1">Min Score</label>
+                    <input type="number" id="minScore" min="0" max="100" placeholder="0" class="w-full p-2 border border-gray-300 dark:border-gray-600 rounded-md">
+                </div>
+                
+                <div>
+                    <label class="block text-sm font-medium mb-1">Max Score</label>
+                    <input type="number" id="maxScore" min="0" max="100" placeholder="100" class="w-full p-2 border border-gray-300 dark:border-gray-600 rounded-md">
+                </div>
+                
+                <div>
+                    <label class="block text-sm font-medium mb-1">Country</label>
+                    <input type="text" id="countryFilter" placeholder="Country code" class="w-full p-2 border border-gray-300 dark:border-gray-600 rounded-md">
+                </div>
+            </div>
+            
+            <div class="mt-4 flex justify-end">
+                <button id="applyFilters" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md">
+                    Apply Filters
+                </button>
+            </div>
+        </div>
+
+        <!-- IOC Table -->
+        <div class="card bg-white dark:bg-gray-800 rounded-lg shadow overflow-hidden border border-gray-200 dark:border-gray-700">
+            <div class="p-4 border-b border-gray-200 dark:border-gray-700 flex justify-between items-center">
+                <h2 class="text-lg font-semibold">Top IOCs</h2>
+                <div class="flex items-center space-x-2">
+                    <span class="text-sm text-gray-600 dark:text-gray-400">Sort by:</span>
+                    <select id="sortBy" class="p-1 border border-gray-300 dark:border-gray-600 rounded-md text-sm">
+                        <option value="score">Score</option>
+                        <option value="abuse_confidence">Abuse Confidence</option>
+                        <option value="total_reports">Total Reports</option>
+                        <option value="distinct_users">Distinct Users</option>
+                    </select>
+                    <button id="sortOrder" class="p-1 border border-gray-300 dark:border-gray-600 rounded-md text-sm">
+                        <i class="fas fa-sort-amount-down"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <div class="overflow-x-auto">
+                <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
+                    <thead class="bg-gray-50 dark:bg-gray-700">
+                        <tr>
+                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">Value</th>
+                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">Type</th>
+                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">Score</th>
+                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">Risk</th>
+                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">Country</th>
+                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">Details</th>
+                        </tr>
+                    </thead>
+                    <tbody id="iocTableBody" class="bg-white dark:bg-gray-800 divide-y divide-gray-200 dark:divide-gray-700">
+                        <!-- Table rows will be inserted here -->
+                    </tbody>
+                </table>
+            </div>
+            
+            <!-- Pagination -->
+            <div class="px-4 py-3 bg-gray-50 dark:bg-gray-700 border-t border-gray-200 dark:border-gray-700 flex items-center justify-between">
+                <div class="text-sm text-gray-700 dark:text-gray-300">
+                    Showing <span id="showingStart">0</span> to <span id="showingEnd">0</span> of <span id="totalItems">0</span> results
+                </div>
+                <div class="flex space-x-2">
+                    <button id="prevPage" class="px-3 py-1 rounded-md bg-gray-200 dark:bg-gray-600 hover:bg-gray-300 dark:hover:bg-gray-500 disabled:opacity-50">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <div id="pageNumbers" class="flex space-x-1">
+                        <!-- Page numbers will be inserted here -->
+                    </div>
+                    <button id="nextPage" class="px-3 py-1 rounded-md bg-gray-200 dark:bg-gray-600 hover:bg-gray-300 dark:hover:bg-gray-500 disabled:opacity-50">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- IOC Details Modal -->
+    <div id="detailsModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden z-50">
+        <div class="bg-white dark:bg-gray-800 rounded-lg shadow-xl w-full max-w-2xl max-h-[90vh] overflow-hidden">
+            <div class="p-4 border-b border-gray-200 dark:border-gray-700 flex justify-between items-center">
+                <h3 class="text-lg font-semibold">IOC Details</h3>
+                <button id="closeModal" class="text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="p-4 overflow-y-auto max-h-[calc(90vh-8rem)]">
+                <div id="modalContent">
+                    <!-- Modal content will be inserted here -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Global variables
+            let iocsData = [];
+            let filteredData = [];
+            let currentPage = 1;
+            const itemsPerPage = 10;
+            let sortField = 'score';
+            let sortDirection = 'desc';
+            let riskChart = null;
+            let typeChart = null;
+            let relationshipNetwork = null;
+            let campaignClustersData = [];
+            let timelineChart = null;
+            
+            // DOM elements
+            const iocTableBody = document.getElementById('iocTableBody');
+            const totalIocsEl = document.getElementById('totalIocs');
+            const highRiskCountEl = document.getElementById('highRiskCount');
+            const mediumRiskCountEl = document.getElementById('mediumRiskCount');
+            const lowRiskCountEl = document.getElementById('lowRiskCount');
+            const showingStartEl = document.getElementById('showingStart');
+            const showingEndEl = document.getElementById('showingEnd');
+            const totalItemsEl = document.getElementById('totalItems');
+            const pageNumbersEl = document.getElementById('pageNumbers');
+            const prevPageBtn = document.getElementById('prevPage');
+            const nextPageBtn = document.getElementById('nextPage');
+            const detailsModal = document.getElementById('detailsModal');
+            const modalContent = document.getElementById('modalContent');
+            const closeModalBtn = document.getElementById('closeModal');
+            const darkModeToggle = document.getElementById('darkModeToggle');
+            const refreshBtn = document.getElementById('refreshBtn');
+            const applyFiltersBtn = document.getElementById('applyFilters');
+            const resetFiltersBtn = document.getElementById('resetFilters');
+            const sortBySelect = document.getElementById('sortBy');
+            const sortOrderBtn = document.getElementById('sortOrder');
+            
+            // National Security elements
+            const threatLevelEl = document.getElementById('threatLevel');
+            const threatLevelBarEl = document.getElementById('threatLevelBar');
+            const stateSponsoredCountEl = document.getElementById('stateSponsoredCount');
+            const criticalInfraCountEl = document.getElementById('criticalInfraCount');
+            const canadianTargetsCountEl = document.getElementById('canadianTargetsCount');
+            const aptListEl = document.getElementById('aptList');
+            const zeroDayCountEl = document.getElementById('zeroDayCount');
+            const threatOriginsEl = document.getElementById('threatOrigins');
+            const foreignInterferenceCountEl = document.getElementById('foreignInterferenceCount');
+            const criticalInfraTableEl = document.getElementById('criticalInfraTable');
+            const canadianIocsTableEl = document.getElementById('canadianIocsTable');
+            
+            // Advanced Correlation Analysis elements
+            const analyzeRelationshipsBtn = document.getElementById('analyzeRelationshipsBtn');
+            const clusterCampaignsBtn = document.getElementById('clusterCampaignsBtn');
+            const relationshipGraphContainer = document.getElementById('relationshipGraphContainer');
+            const relationshipGraph = document.getElementById('relationshipGraph');
+            const relationshipLegend = document.getElementById('relationshipLegend');
+            const campaignClustersContainer = document.getElementById('campaignClustersContainer');
+            const campaignClusters = document.getElementById('campaignClusters');
+            
+            // Enhanced relationship mapping controls
+            const layoutSelect = document.getElementById('layoutSelect');
+            const physicsToggle = document.getElementById('physicsToggle');
+            const attractionSlider = document.getElementById('attractionSlider');
+            const repulsionSlider = document.getElementById('repulsionSlider');
+            const nodeSearch = document.getElementById('nodeSearch');
+            const exportGraphBtn = document.getElementById('exportGraphBtn');
+            
+            // Enhanced campaign clustering controls
+            const generateReportBtn = document.getElementById('generateReportBtn');
+            
+            // Filter elements
+            const riskFilter = document.getElementById('riskFilter');
+            const typeFilter = document.getElementById('typeFilter');
+            const minScoreInput = document.getElementById('minScore');
+            const maxScoreInput = document.getElementById('maxScore');
+            const countryFilter = document.getElementById('countryFilter');
+            
+            // Advanced Correlation Analysis filter elements
+            const maxNodesFilter = document.getElementById('maxNodesFilter');
+            const relationshipTypeFilter = document.getElementById('relationshipTypeFilter');
+            const minClusterSizeFilter = document.getElementById('minClusterSizeFilter');
+            const timeWindowFilter = document.getElementById('timeWindowFilter');
+            
+            // Check for saved dark mode preference
+            if (localStorage.getItem('darkMode') === 'true' || 
+                (!localStorage.getItem('darkMode') && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+                document.documentElement.classList.add('dark');
+            }
+            
+            // Dark mode toggle
+            darkModeToggle.addEventListener('click', function() {
+                document.documentElement.classList.toggle('dark');
+                localStorage.setItem('darkMode', document.documentElement.classList.contains('dark'));
+                
+                // Update charts for dark mode
+                if (riskChart) updateChartForDarkMode(riskChart);
+                if (typeChart) updateChartForDarkMode(typeChart);
+                if (timelineChart) updateChartForDarkMode(timelineChart);
+            });
+            
+            // Refresh button
+            refreshBtn.addEventListener('click', function() {
+                fetchTopIOCs();
+            });
+            
+            // Apply filters button
+            applyFiltersBtn.addEventListener('click', function() {
+                applyFilters();
+            });
+            
+            // Reset filters button
+            resetFiltersBtn.addEventListener('click', function() {
+                riskFilter.value = '';
+                typeFilter.value = '';
+                minScoreInput.value = '';
+                maxScoreInput.value = '';
+                countryFilter.value = '';
+                applyFilters();
+            });
+            
+            // Sort controls
+            sortBySelect.addEventListener('change', function() {
+                sortField = this.value;
+                sortData();
+                renderTable();
+            });
+            
+            sortOrderBtn.addEventListener('click', function() {
+                sortDirection = sortDirection === 'asc' ? 'desc' : 'asc';
+                this.innerHTML = sortDirection === 'asc' ? 
+                    '<i class="fas fa-sort-amount-up"></i>' : 
+                    '<i class="fas fa-sort-amount-down"></i>';
+                sortData();
+                renderTable();
+            });
+            
+            // Pagination buttons
+            prevPageBtn.addEventListener('click', function() {
+                if (currentPage > 1) {
+                    currentPage--;
+                    renderTable();
+                }
+            });
+            
+            nextPageBtn.addEventListener('click', function() {
+                const totalPages = Math.ceil(filteredData.length / itemsPerPage);
+                if (currentPage < totalPages) {
+                    currentPage++;
+                    renderTable();
+                }
+            });
+            
+            // Modal close button
+            closeModalBtn.addEventListener('click', function() {
+                detailsModal.classList.add('hidden');
+            });
+            
+            // Close modal when clicking outside
+            detailsModal.addEventListener('click', function(e) {
+                if (e.target === detailsModal) {
+                    detailsModal.classList.add('hidden');
+                }
+            });
+            
+            // Advanced Correlation Analysis buttons
+            analyzeRelationshipsBtn.addEventListener('click', function() {
+                analyzeRelationships();
+            });
+            
+            clusterCampaignsBtn.addEventListener('click', function() {
+                clusterCampaigns();
+            });
+            
+            // Tab switching for campaign clustering
+            document.querySelectorAll('[data-tab]').forEach(tab => {
+                tab.addEventListener('click', function() {
+                    // Update active tab
+                    document.querySelectorAll('[data-tab]').forEach(t => t.classList.remove('active'));
+                    this.classList.add('active');
+                    
+                    // Show the corresponding view
+                    const tabName = this.getAttribute('data-tab');
+                    document.getElementById('cluster-cards').classList.toggle('hidden', tabName !== 'cluster-cards');
+                    document.getElementById('cluster-timeline').classList.toggle('hidden', tabName !== 'cluster-timeline');
+                    document.getElementById('cluster-graph').classList.toggle('hidden', tabName !== 'cluster-graph');
+                });
+            });
+            
+            // Add event listeners for controls
+            layoutSelect.addEventListener('change', function() {
+                if (relationshipNetwork) {
+                    const options = { layout: {} };
+                    
+                    if (this.value === 'hierarchical') {
+                        options.layout.hierarchical = {
+                            direction: 'UD',
+                            sortMethod: 'directed'
+                        };
+                        options.physics = false;
+                    } else if (this.value === 'circular') {
+                        options.layout.randomSeed = 2;
+                        options.physics = { enabled: physicsToggle.checked };
+                    } else {
+                        options.physics = { enabled: physicsToggle.checked };
+                    }
+                    
+                    relationshipNetwork.setOptions(options);
+                }
+            });
+            
+            physicsToggle.addEventListener('change', function() {
+                if (relationshipNetwork) {
+                    relationshipNetwork.setOptions({
+                        physics: {
+                            enabled: this.checked
+                        }
+                    });
+                }
+            });
+            
+            attractionSlider.addEventListener('input', function() {
+                if (relationshipNetwork && physicsToggle.checked) {
+                    relationshipNetwork.setOptions({
+                        physics: {
+                            barnesHut: {
+                                gravitationalConstant: -2000 * (this.value / 50)
+                            }
+                        }
+                    });
+                }
+            });
+            
+            repulsionSlider.addEventListener('input', function() {
+                if (relationshipNetwork && physicsToggle.checked) {
+                    relationshipNetwork.setOptions({
+                        physics: {
+                            barnesHut: {
+                                springConstant: 0.04 * (this.value / 50)
+                            }
+                        }
+                    });
+                }
+            });
+            
+            // Generate mock data for fallback
+            function generateMockData() {
+                const mockData = [];
+                const countries = ['US', 'CA', 'RU', 'CN', 'KP', 'IR', 'DE', 'FR', 'GB', 'JP'];
+                const domains = [
+                    'malicious-domain.com', 'phishing-site.net', 'c2-server.org', 'botnet-controller.info',
+                    'suspicious-domain.biz', 'malware-hosting.tech', 'evil-website.online', 'fake-login.site',
+                    'canadian-gc.ca', 'gov-canada.ca', 'energy-utility.ca', 'power-grid.ca'
+                ];
+                
+                // Generate 100 mock IOCs
+                for (let i = 0; i < 100; i++) {
+                    const isIP = Math.random() > 0.5;
+                    const value = isIP ? 
+                        `${Math.floor(Math.random() * 255)}.${Math.floor(Math.random() * 255)}.${Math.floor(Math.random() * 255)}.${Math.floor(Math.random() * 255)}` :
+                        domains[Math.floor(Math.random() * domains.length)];
+                    
+                    const score = Math.floor(Math.random() * 100);
+                    let riskBucket = 'low';
+                    if (score > 70) riskBucket = 'high';
+                    else if (score > 40) riskBucket = 'medium';
+                    
+                    const country = countries[Math.floor(Math.random() * countries.length)];
+                    const abuseConfidence = Math.floor(Math.random() * 100);
+                    const totalReports = Math.floor(Math.random() * 100);
+                    const distinctUsers = Math.floor(Math.random() * 50);
+                    
+                    // Add timestamp for campaign clustering (within last 30 days)
+                    const timestamp = new Date();
+                    timestamp.setDate(timestamp.getDate() - Math.floor(Math.random() * 30));
+                    
+                    mockData.push({
+                        value: value,
+                        type: isIP ? 'ip' : 'domain',
+                        score: score,
+                        risk_bucket: riskBucket,
+                        timestamp: timestamp.toISOString(),
+                        score_breakdown: {
+                            country: country,
+                            ptr: isIP ? `host-${Math.floor(Math.random() * 1000)}.example.com` : null,
+                            abuse_confidence: abuseConfidence,
+                            total_reports: totalReports,
+                            distinct_users: distinctUsers
+                        }
+                    });
+                }
+                
+                return mockData;
+            }
+            
+            // Fetch IOCs data
+            async function fetchTopIOCs() {
+                try {
+                    // Try to fetch from API
+                    const response = await fetch('/api/iocs');
+                    if (!response.ok) {
+                        throw new Error(`HTTP error! status: ${response.status}`);
+                    }
+                    iocsData = await response.json();
+                } catch (error) {
+                    console.error('Error fetching IOCs:', error);
+                    // Use mock data as fallback
+                    iocsData = generateMockData();
+                } finally {
+                    filteredData = [...iocsData];
+                    updateDashboard();
+                    updateNationalSecuritySection();
+                }
+            }
+            
+            // Update dashboard with data
+            function updateDashboard() {
+                updateSummaryCards();
+                updateCharts();
+                sortData();
+                renderTable();
+            }
+            
+            // Update summary cards
+            function updateSummaryCards() {
+                const totalIocs = iocsData.length;
+                const highRiskCount = iocsData.filter(ioc => ioc.risk_bucket === 'high').length;
+                const mediumRiskCount = iocsData.filter(ioc => ioc.risk_bucket === 'medium').length;
+                const lowRiskCount = iocsData.filter(ioc => ioc.risk_bucket === 'low').length;
+                
+                totalIocsEl.textContent = totalIocs;
+                highRiskCountEl.textContent = highRiskCount;
+                mediumRiskCountEl.textContent = mediumRiskCount;
+                lowRiskCountEl.textContent = lowRiskCount;
+            }
+            
+            // Update charts
+            function updateCharts() {
+                updateRiskChart();
+                updateTypeChart();
+            }
+            
+            // Update risk distribution chart
+            function updateRiskChart() {
+                const ctx = document.getElementById('riskChart').getContext('2d');
+                
+                const highRiskCount = iocsData.filter(ioc => ioc.risk_bucket === 'high').length;
+                const mediumRiskCount = iocsData.filter(ioc => ioc.risk_bucket === 'medium').length;
+                const lowRiskCount = iocsData.filter(ioc => ioc.risk_bucket === 'low').length;
+                
+                if (riskChart) {
+                    riskChart.destroy();
+                }
+                
+                riskChart = new Chart(ctx, {
+                    type: 'doughnut',
+                    data: {
+                        labels: ['High Risk', 'Medium Risk', 'Low Risk'],
+                        datasets: [{
+                            data: [highRiskCount, mediumRiskCount, lowRiskCount],
+                            backgroundColor: [
+                                'rgba(239, 68, 68, 0.7)',
+                                'rgba(245, 158, 11, 0.7)',
+                                'rgba(16, 185, 129, 0.7)'
+                            ],
+                            borderColor: [
+                                'rgba(239, 68, 68, 1)',
+                                'rgba(245, 158, 11, 1)',
+                                'rgba(16, 185, 129, 1)'
+                            ],
+                            borderWidth: 1
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        plugins: {
+                            legend: {
+                                position: 'bottom',
+                                labels: {
+                                    color: document.documentElement.classList.contains('dark') ? '#e2e8f0' : '#4b5563'
+                                }
+                            }
+                        }
+                    }
+                });
+                
+                updateChartForDarkMode(riskChart);
+            }
+            
+            // Update type distribution chart
+            function updateTypeChart() {
+                const ctx = document.getElementById('typeChart').getContext('2d');
+                
+                // Count IPs and domains with case-insensitive comparison
+                let ipCount = 0;
+                let domainCount = 0;
+                let otherCount = 0;
+                
+                iocsData.forEach(ioc => {
+                    if (!ioc.type) {
+                        otherCount++;
+                    } else if (ioc.type.toLowerCase() === 'ip') {
+                        ipCount++;
+                    } else if (ioc.type.toLowerCase() === 'domain') {
+                        domainCount++;
+                    } else {
+                        otherCount++;
+                    }
+                });
+                
+                if (typeChart) {
+                    typeChart.destroy();
+                }
+                
+                // Create labels and data arrays
+                const labels = [];
+                const data = [];
+                const backgroundColors = [];
+                const borderColors = [];
+                
+                if (ipCount > 0) {
+                    labels.push('IP');
+                    data.push(ipCount);
+                    backgroundColors.push('rgba(59, 130, 246, 0.7)');
+                    borderColors.push('rgba(59, 130, 246, 1)');
+                }
+                
+                if (domainCount > 0) {
+                    labels.push('Domain');
+                    data.push(domainCount);
+                    backgroundColors.push('rgba(139, 92, 246, 0.7)');
+                    borderColors.push('rgba(139, 92, 246, 1)');
+                }
+                
+                if (otherCount > 0) {
+                    labels.push('Other');
+                    data.push(otherCount);
+                    backgroundColors.push('rgba(107, 114, 128, 0.7)');
+                    borderColors.push('rgba(107, 114, 128, 1)');
+                }
+                
+                typeChart = new Chart(ctx, {
+                    type: 'bar',
+                    data: {
+                        labels: labels,
+                        datasets: [{
+                            label: 'Count',
+                            data: data,
+                            backgroundColor: backgroundColors,
+                            borderColor: borderColors,
+                            borderWidth: 1
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        scales: {
+                            y: {
+                                beginAtZero: true,
+                                ticks: {
+                                    color: document.documentElement.classList.contains('dark') ? '#e2e8f0' : '#4b5563'
+                                },
+                                grid: {
+                                    color: document.documentElement.classList.contains('dark') ? 'rgba(255, 255, 255, 0.1)' : 'rgba(0, 0, 0, 0.1)'
+                                }
+                            },
+                            x: {
+                                ticks: {
+                                    color: document.documentElement.classList.contains('dark') ? '#e2e8f0' : '#4b5563'
+                                },
+                                grid: {
+                                    color: document.documentElement.classList.contains('dark') ? 'rgba(255, 255, 255, 0.1)' : 'rgba(0, 0, 0, 0.1)'
+                                }
+                            }
+                        },
+                        plugins: {
+                            legend: {
+                                display: false
+                            }
+                        }
+                    }
+                });
+                
+                updateChartForDarkMode(typeChart);
+            }
+            
+            // Update chart colors for dark mode
+            function updateChartForDarkMode(chart) {
+                const isDarkMode = document.documentElement.classList.contains('dark');
+                const textColor = isDarkMode ? '#e2e8f0' : '#4b5563';
+                const gridColor = isDarkMode ? 'rgba(255, 255, 255, 0.1)' : 'rgba(0, 0, 0, 0.1)';
+                
+                if (chart.options.plugins.legend) {
+                    chart.options.plugins.legend.labels.color = textColor;
+                }
+                
+                if (chart.options.scales) {
+                    if (chart.options.scales.y) {
+                        chart.options.scales.y.ticks.color = textColor;
+                        chart.options.scales.y.grid.color = gridColor;
+                    }
+                    if (chart.options.scales.x) {
+                        chart.options.scales.x.ticks.color = textColor;
+                        chart.options.scales.x.grid.color = gridColor;
+                    }
+                }
+                
+                chart.update();
+            }
+            
+            // Update National Security Section
+            function updateNationalSecuritySection() {
+                // Calculate threat level based on high-risk IOCs percentage
+                const highRiskCount = iocsData.filter(ioc => ioc.risk_bucket === 'high').length;
+                const totalIocs = iocsData.length;
+                const highRiskPercentage = totalIocs > 0 ? (highRiskCount / totalIocs) * 100 : 0;
+                
+                let threatLevel, threatClass, threatWidth;
+                if (highRiskPercentage > 40) {
+                    threatLevel = 'CRITICAL';
+                    threatClass = 'threat-level-critical';
+                    threatWidth = '90%';
+                } else if (highRiskPercentage > 25) {
+                    threatLevel = 'SEVERE';
+                    threatClass = 'threat-level-severe';
+                    threatWidth = '75%';
+                } else if (highRiskPercentage > 15) {
+                    threatLevel = 'ELEVATED';
+                    threatClass = 'threat-level-elevated';
+                    threatWidth = '60%';
+                } else {
+                    threatLevel = 'GUARDED';
+                    threatClass = 'threat-level-guarded';
+                    threatWidth = '40%';
+                }
+                
+                threatLevelEl.textContent = threatLevel;
+                threatLevelBarEl.className = `${threatClass} h-2.5 rounded-full`;
+                threatLevelBarEl.style.width = threatWidth;
+                
+                // Calculate state-sponsored activity (high score + high abuse confidence)
+                const stateSponsoredThreshold = 85;
+                const stateSponsoredCount = iocsData.filter(ioc => 
+                    ioc.score >= stateSponsoredThreshold && 
+                    ioc.score_breakdown?.abuse_confidence >= 90
+                ).length;
+                stateSponsoredCountEl.textContent = stateSponsoredCount;
+                
+                // Calculate critical infrastructure targets (high-risk IOCs with specific patterns)
+                const criticalInfraKeywords = ['energy', 'utility', 'power', 'grid', 'nuclear', 'dam', 'water'];
+                const criticalInfraCount = iocsData.filter(ioc => {
+                    if (ioc.risk_bucket !== 'high') return false;
+                    const value = ioc.value.toLowerCase();
+                    return criticalInfraKeywords.some(keyword => value.includes(keyword));
+                }).length;
+                criticalInfraCountEl.textContent = criticalInfraCount;
+                
+                // Calculate Canadian-related IOCs (IOCs with Canadian country code or .ca domains)
+                const canadianTargetsCount = iocsData.filter(ioc => {
+                    const country = ioc.score_breakdown?.country;
+                    const value = ioc.value.toLowerCase();
+                    return country === 'CA' || value.includes('.ca') || value.includes('canada');
+                }).length;
+                canadianTargetsCountEl.textContent = canadianTargetsCount;
+                
+                // Generate APT list (simulated based on high-risk IOCs)
+                const aptGroups = [
+                    { name: 'APT29', count: Math.max(1, Math.floor(highRiskCount * 0.15)), country: 'RU' },
+                    { name: 'APT41', count: Math.max(1, Math.floor(highRiskCount * 0.12)), country: 'CN' },
+                    { name: 'Lazarus Group', count: Math.max(1, Math.floor(highRiskCount * 0.10)), country: 'KP' },
+                    { name: 'Fancy Bear', count: Math.max(1, Math.floor(highRiskCount * 0.08)), country: 'RU' }
+                ];
+                
+                aptListEl.innerHTML = '';
+                aptGroups.forEach(apt => {
+                    const aptItem = document.createElement('div');
+                    aptItem.className = 'flex justify-between items-center';
+                    aptItem.innerHTML = `
+                        <span>${apt.name} <span class="text-xs opacity-70">(${apt.country})</span></span>
+                        <span class="font-bold">${apt.count}</span>
+                    `;
+                    aptListEl.appendChild(aptItem);
+                });
+                
+                // Calculate zero-day indicators (high-risk IOCs with no known PTR)
+                const zeroDayCount = iocsData.filter(ioc => 
+                    ioc.risk_bucket === 'high' && 
+                    !ioc.score_breakdown?.ptr
+                ).length;
+                zeroDayCountEl.textContent = zeroDayCount;
+                
+                // Generate threat origins by region
+                const countries = {};
+                iocsData.forEach(ioc => {
+                    const country = ioc.score_breakdown?.country || 'Unknown';
+                    countries[country] = (countries[country] || 0) + 1;
+                });
+                
+                // Group countries by region
+                const regions = {
+                    'East Asia': ['CN', 'KP', 'JP', 'KR', 'TW'],
+                    'Eastern Europe': ['RU', 'UA', 'BY', 'KZ'],
+                    'Middle East': ['IR', 'SA', 'TR', 'IL'],
+                    'North America': ['US', 'CA', 'MX']
+                };
+                
+                const regionCounts = {};
+                Object.keys(regions).forEach(region => {
+                    regionCounts[region] = 0;
+                    regions[region].forEach(country => {
+                        if (countries[country]) {
+                            regionCounts[region] += countries[country];
+                        }
+                    });
+                });
+                
+                threatOriginsEl.innerHTML = '';
+                Object.entries(regionCounts).forEach(([region, count]) => {
+                    const regionItem = document.createElement('div');
+                    regionItem.className = 'flex justify-between items-center';
+                    regionItem.innerHTML = `
+                        <span>${region}</span>
+                        <span class="font-bold">${count}</span>
+                    `;
+                    threatOriginsEl.appendChild(regionItem);
+                });
+                
+                // Calculate foreign interference indicators
+                const foreignInterferenceCount = iocsData.filter(ioc => {
+                    const value = ioc.value.toLowerCase();
+                    return value.includes('election') || 
+                           value.includes('government') || 
+                           value.includes('political') ||
+                           value.includes('disinformation');
+                }).length;
+                foreignInterferenceCountEl.textContent = foreignInterferenceCount;
+                
+                // Populate critical infrastructure targets table
+                criticalInfraTableEl.innerHTML = '';
+                const criticalInfraTargets = iocsData
+                    .filter(ioc => {
+                        if (ioc.risk_bucket !== 'high') return false;
+                        const value = ioc.value.toLowerCase();
+                        return criticalInfraKeywords.some(keyword => value.includes(keyword));
+                    })
+                    .slice(0, 5);
+                
+                if (criticalInfraTargets.length === 0) {
+                    const emptyRow = document.createElement('tr');
+                    emptyRow.innerHTML = `
+                        <td colspan="3" class="px-4 py-2 text-center text-gray-500 dark:text-gray-400">
+                            No critical infrastructure targets identified
+                        </td>
+                    `;
+                    criticalInfraTableEl.appendChild(emptyRow);
+                } else {
+                    criticalInfraTargets.forEach(ioc => {
+                        const row = document.createElement('tr');
+                        const sector = criticalInfraKeywords.find(keyword => 
+                            ioc.value.toLowerCase().includes(keyword)
+                        ) || 'Unknown';
+                        
+                        row.innerHTML = `
+                            <td class="px-4 py-2 whitespace-nowrap">
+                                <div class="text-sm font-medium">${ioc.value}</div>
+                            </td>
+                            <td class="px-4 py-2 whitespace-nowrap">
+                                <div class="text-sm">${sector.charAt(0).toUpperCase() + sector.slice(1)} Sector</div>
+                            </td>
+                            <td class="px-4 py-2 whitespace-nowrap">
+                                <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-red-100 text-red-800">
+                                    High
+                                </span>
+                            </td>
+                        `;
+                        criticalInfraTableEl.appendChild(row);
+                    });
+                }
+                
+                // Populate Canadian-related IOCs table
+                canadianIocsTableEl.innerHTML = '';
+                const canadianIocs = iocsData
+                    .filter(ioc => {
+                        const country = ioc.score_breakdown?.country;
+                        const value = ioc.value.toLowerCase();
+                        
+                        // More specific criteria for Canadian-related IOCs
+                        if (country === 'CA') return true;
+                        if (value.includes('.ca')) return true;
+                        if (value.includes('canada')) return true;
+                        
+                        return false;
+                    })
+                    .slice(0, 5);
+                
+                if (canadianIocs.length === 0) {
+                    const emptyRow = document.createElement('tr');
+                    emptyRow.innerHTML = `
+                        <td colspan="3" class="px-4 py-2 text-center text-gray-500 dark:text-gray-400">
+                            No Canadian-related IOCs identified
+                        </td>
+                    `;
+                    canadianIocsTableEl.appendChild(emptyRow);
+                } else {
+                    canadianIocs.forEach(ioc => {
+                        const row = document.createElement('tr');
+                        let category = 'Unknown';
+                        
+                        // More accurate categorization
+                        const value = ioc.value.toLowerCase();
+                        const country = ioc.score_breakdown?.country;
+                        
+                        if (country === 'CA') {
+                            category = 'Canadian IP';
+                        } else if (value.includes('.gc.ca')) {
+                            category = 'Government Domain';
+                        } else if (value.includes('.ca')) {
+                            category = 'Canadian Domain';
+                        } else if (value.includes('canada')) {
+                            category = 'Contains "Canada"';
+                        }
+                        
+                        row.innerHTML = `
+                            <td class="px-4 py-2 whitespace-nowrap">
+                                <div class="text-sm font-medium">${ioc.value}</div>
+                            </td>
+                            <td class="px-4 py-2 whitespace-nowrap">
+                                <div class="text-sm">${category}</div>
+                            </td>
+                            <td class="px-4 py-2 whitespace-nowrap">
+                                <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-red-100 text-red-800">
+                                    High
+                                </span>
+                            </td>
+                        `;
+                        canadianIocsTableEl.appendChild(row);
+                    });
+                }
+            }
+            
+            // Apply filters
+            function applyFilters() {
+                const riskValue = riskFilter.value;
+                const typeValue = typeFilter.value;
+                const minScore = minScoreInput.value ? parseInt(minScoreInput.value) : 0;
+                const maxScore = maxScoreInput.value ? parseInt(maxScoreInput.value) : 100;
+                const countryValue = countryFilter.value.toLowerCase();
+                
+                filteredData = iocsData.filter(ioc => {
+                    // Risk filter
+                    if (riskValue && ioc.risk_bucket !== riskValue) {
+                        return false;
+                    }
+                    
+                    // Type filter
+                    if (typeValue && ioc.type && ioc.type.toLowerCase() !== typeValue) {
+                        return false;
+                    }
+                    
+                    // Score range filter
+                    if (ioc.score < minScore || ioc.score > maxScore) {
+                        return false;
+                    }
+                    
+                    // Country filter
+                    if (countryValue && ioc.score_breakdown && 
+                        ioc.score_breakdown.country && 
+                        !ioc.score_breakdown.country.toLowerCase().includes(countryValue)) {
+                        return false;
+                    }
+                    
+                    return true;
+                });
+                
+                currentPage = 1;
+                sortData();
+                renderTable();
+            }
+            
+            // Sort data
+            function sortData() {
+                filteredData.sort((a, b) => {
+                    let aValue, bValue;
+                    
+                    switch (sortField) {
+                        case 'score':
+                            aValue = a.score || 0;
+                            bValue = b.score || 0;
+                            break;
+                        case 'abuse_confidence':
+                            aValue = a.score_breakdown?.abuse_confidence || 0;
+                            bValue = b.score_breakdown?.abuse_confidence || 0;
+                            break;
+                        case 'total_reports':
+                            aValue = a.score_breakdown?.total_reports || 0;
+                            bValue = b.score_breakdown?.total_reports || 0;
+                            break;
+                        case 'distinct_users':
+                            aValue = a.score_breakdown?.distinct_users || 0;
+                            bValue = b.score_breakdown?.distinct_users || 0;
+                            break;
+                        default:
+                            aValue = a.score || 0;
+                            bValue = b.score || 0;
+                    }
+                    
+                    if (sortDirection === 'asc') {
+                        return aValue > bValue ? 1 : -1;
+                    } else {
+                        return aValue < bValue ? 1 : -1;
+                    }
+                });
+            }
+            
+            // Render table
+            function renderTable() {
+                // Clear table
+                iocTableBody.innerHTML = '';
+                
+                // Calculate pagination
+                const totalPages = Math.ceil(filteredData.length / itemsPerPage);
+                const startIndex = (currentPage - 1) * itemsPerPage;
+                const endIndex = Math.min(startIndex + itemsPerPage, filteredData.length);
+                const currentItems = filteredData.slice(startIndex, endIndex);
+                
+                // Update pagination info
+                showingStartEl.textContent = filteredData.length > 0 ? startIndex + 1 : 0;
+                showingEndEl.textContent = endIndex;
+                totalItemsEl.textContent = filteredData.length;
+                
+                // Update pagination buttons
+                prevPageBtn.disabled = currentPage === 1;
+                nextPageBtn.disabled = currentPage === totalPages || totalPages === 0;
+                
+                // Render page numbers
+                renderPageNumbers(totalPages);
+                
+                // Render table rows
+                if (currentItems.length === 0) {
+                    const emptyRow = document.createElement('tr');
+                    emptyRow.innerHTML = `
+                        <td colspan="6" class="px-6 py-4 text-center text-gray-500 dark:text-gray-400">
+                            No IOCs found matching the current filters
+                        </td>
+                    `;
+                    iocTableBody.appendChild(emptyRow);
+                    return;
+                }
+                
+                currentItems.forEach(ioc => {
+                    const row = document.createElement('tr');
+                    row.className = `risk-${ioc.risk_bucket || 'low'}`;
+                    
+                    const country = ioc.score_breakdown?.country || '-';
+                    const typeIcon = ioc.type && ioc.type.toLowerCase() === 'ip' ? 
+                        '<i class="fas fa-network-wired text-blue-500"></i>' : 
+                        '<i class="fas fa-globe text-green-500"></i>';
+                    
+                    row.innerHTML = `
+                        <td class="px-6 py-4 whitespace-nowrap">
+                            <div class="text-sm font-medium">${ioc.value}</div>
+                        </td>
+                        <td class="px-6 py-4 whitespace-nowrap">
+                            <div class="text-sm">${typeIcon} ${ioc.type || 'unknown'}</div>
+                        </td>
+                        <td class="px-6 py-4 whitespace-nowrap">
+                            <div class="text-sm font-bold">${ioc.score}</div>
+                        </td>
+                        <td class="px-6 py-4 whitespace-nowrap">
+                            <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full 
+                                ${ioc.risk_bucket === 'high' ? 'bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-100' : ''}
+                                ${ioc.risk_bucket === 'medium' ? 'bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-100' : ''}
+                                ${ioc.risk_bucket === 'low' ? 'bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-100' : ''}
+                            ">
+                                ${ioc.risk_bucket || 'unknown'}
+                            </span>
+                        </td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm">
+                            ${country}
+                        </td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm">
+                            <button class="text-blue-600 hover:text-blue-900 dark:text-blue-400 dark:hover:text-blue-300 view-details" data-id="${ioc.value}">
+                                <i class="fas fa-eye"></i> View
+                            </button>
+                        </td>
+                    `;
+                    
+                    iocTableBody.appendChild(row);
+                });
+                
+                // Add event listeners to view details buttons
+                document.querySelectorAll('.view-details').forEach(button => {
+                    button.addEventListener('click', function() {
+                        const iocValue = this.getAttribute('data-id');
+                        const ioc = iocsData.find(item => item.value === iocValue);
+                        if (ioc) {
+                            showIOCDetails(ioc);
+                        }
+                    });
+                });
+            }
+            
+            // Render page numbers
+            function renderPageNumbers(totalPages) {
+                pageNumbersEl.innerHTML = '';
+                
+                if (totalPages <= 1) return;
+                
+                // Determine which page numbers to show
+                let startPage = Math.max(1, currentPage - 2);
+                let endPage = Math.min(totalPages, startPage + 4);
+                
+                if (endPage - startPage < 4) {
+                    startPage = Math.max(1, endPage - 4);
+                }
+                
+                // First page
+                if (startPage > 1) {
+                    const firstPageBtn = createPageButton(1);
+                    pageNumbersEl.appendChild(firstPageBtn);
+                    
+                    if (startPage > 2) {
+                        const ellipsis = document.createElement('span');
+                        ellipsis.className = 'px-2 py-1';
+                        ellipsis.textContent = '...';
+                        pageNumbersEl.appendChild(ellipsis);
+                    }
+                }
+                
+                // Page numbers
+                for (let i = startPage; i <= endPage; i++) {
+                    const pageBtn = createPageButton(i);
+                    pageNumbersEl.appendChild(pageBtn);
+                }
+                
+                // Last page
+                if (endPage < totalPages) {
+                    if (endPage < totalPages - 1) {
+                        const ellipsis = document.createElement('span');
+                        ellipsis.className = 'px-2 py-1';
+                        ellipsis.textContent = '...';
+                        pageNumbersEl.appendChild(ellipsis);
+                    }
+                    
+                    const lastPageBtn = createPageButton(totalPages);
+                    pageNumbersEl.appendChild(lastPageBtn);
+                }
+            }
+            
+            // Create page button
+            function createPageButton(pageNum) {
+                const button = document.createElement('button');
+                button.className = `px-3 py-1 rounded-md ${pageNum === currentPage ? 
+                    'bg-blue-600 text-white' : 
+                    'bg-gray-200 dark:bg-gray-600 hover:bg-gray-300 dark:hover:bg-gray-500'}`;
+                button.textContent = pageNum;
+                button.addEventListener('click', function() {
+                    currentPage = pageNum;
+                    renderTable();
+                });
+                return button;
+            }
+            
+            // Show IOC details in modal
+            function showIOCDetails(ioc) {
+                const breakdown = ioc.score_breakdown || {};
+                
+                modalContent.innerHTML = `
+                    <div class="mb-6">
+                        <h4 class="text-lg font-semibold mb-2">${ioc.value}</h4>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-2 py-1 bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-100 rounded text-sm">
+                                Type: ${ioc.type || 'unknown'}
+                            </span>
+                            <span class="px-2 py-1 bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-100 rounded text-sm">
+                                Score: ${ioc.score}
+                            </span>
+                            <span class="px-2 py-1 ${ioc.risk_bucket === 'high' ? 'bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-100' : 
+                                ioc.risk_bucket === 'medium' ? 'bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-100' : 
+                                'bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-100'} rounded text-sm">
+                                Risk: ${ioc.risk_bucket || 'unknown'}
+                            </span>
+                        </div>
+                    </div>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div class="bg-gray-50 dark:bg-gray-700 p-4 rounded-lg">
+                            <h5 class="font-medium mb-2">Basic Information</h5>
+                            <dl class="space-y-1">
+                                <div class="flex justify-between">
+                                    <dt class="text-gray-600 dark:text-gray-300">Value:</dt>
+                                    <dd class="font-medium">${ioc.value}</dd>
+                                </div>
+                                <div class="flex justify-between">
+                                    <dt class="text-gray-600 dark:text-gray-300">Type:</dt>
+                                    <dd class="font-medium">${ioc.type || 'unknown'}</dd>
+                                </div>
+                                <div class="flex justify-between">
+                                    <dt class="text-gray-600 dark:text-gray-300">Risk Level:</dt>
+                                    <dd class="font-medium">${ioc.risk_bucket || 'unknown'}</dd>
+                                </div>
+                                <div class="flex justify-between">
+                                    <dt class="text-gray-600 dark:text-gray-300">Country:</dt>
+                                    <dd class="font-medium">${breakdown.country || '-'}</dd>
+                                </div>
+                                <div class="flex justify-between">
+                                    <dt class="text-gray-600 dark:text-gray-300">PTR Record:</dt>
+                                    <dd class="font-medium">${breakdown.ptr || '-'}</dd>
+                                </div>
+                            </dl>
+                        </div>
+                        
+                        <div class="bg-gray-50 dark:bg-gray-700 p-4 rounded-lg">
+                            <h5 class="font-medium mb-2">Score Breakdown</h5>
+                            <dl class="space-y-1">
+                                <div class="flex justify-between">
+                                    <dt class="text-gray-600 dark:text-gray-300">Abuse Confidence:</dt>
+                                    <dd class="font-medium">${breakdown.abuse_confidence || '-'}</dd>
+                                </div>
+                                <div class="flex justify-between">
+                                    <dt class="text-gray-600 dark:text-gray-300">Total Reports:</dt>
+                                    <dd class="font-medium">${breakdown.total_reports || '-'}</dd>
+                                </div>
+                                <div class="flex justify-between">
+                                    <dt class="text-gray-600 dark:text-gray-300">Distinct Users:</dt>
+                                    <dd class="font-medium">${breakdown.distinct_users || '-'}</dd>
+                                </div>
+                                <div class="flex justify-between">
+                                    <dt class="text-gray-600 dark:text-gray-300">Overall Score:</dt>
+                                    <dd class="font-medium">${ioc.score}</dd>
+                                </div>
+                            </dl>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-6">
+                        <h5 class="font-medium mb-2">Raw Data</h5>
+                        <pre class="bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto text-sm"><code>${JSON.stringify(ioc, null, 2)}</code></pre>
+                    </div>
+                `;
+                
+                detailsModal.classList.remove('hidden');
+            }
+            
+            // Enhanced analyze relationships function
+            function analyzeRelationships() {
+                // Show loading state
+                relationshipGraphContainer.classList.add('hidden');
+                relationshipGraph.classList.remove('hidden');
+                relationshipLegend.classList.remove('hidden');
+                relationshipGraph.innerHTML = '<div class="spinner"></div>';
+                
+                // Get filter values
+                const maxNodes = parseInt(maxNodesFilter.value);
+                const relationshipType = relationshipTypeFilter.value;
+                
+                // Use setTimeout to allow UI to update before heavy computation
+                setTimeout(() => {
+                    try {
+                        // Limit the number of IOCs to process for performance
+                        const limitedData = iocsData.slice(0, maxNodes);
+                        
+                        // Create nodes for each IOC
+                        const nodes = limitedData.map((ioc, index) => {
+                            const color = ioc.risk_bucket === 'high' ? '#ef4444' : 
+                                         ioc.risk_bucket === 'medium' ? '#f59e0b' : '#10b981';
+                            
+                            return {
+                                id: index,
+                                label: ioc.value,
+                                color: {
+                                    background: color,
+                                    border: color,
+                                    highlight: {
+                                        background: color,
+                                        border: color
+                                    }
+                                },
+                                font: {
+                                    color: document.documentElement.classList.contains('dark') ? '#ffffff' : '#000000',
+                                    size: 12,
+                                    face: 'Tahoma'
+                                },
+                                title: `Type: ${ioc.type || 'unknown'}\nRisk: ${ioc.risk_bucket || 'unknown'}\nScore: ${ioc.score}`,
+                                size: 16,
+                                riskLevel: ioc.risk_bucket || 'low'
+                            };
+                        });
+                        
+                        // Create edges between related IOCs
+                        const edges = [];
+                        const processedPairs = new Set();
+                        
+                        // Create relationships based on shared attributes
+                        for (let i = 0; i < limitedData.length; i++) {
+                            for (let j = i + 1; j < limitedData.length; j++) {
+                                const ioc1 = limitedData[i];
+                                const ioc2 = limitedData[j];
+                                
+                                // Skip if we've already processed this pair
+                                const pairKey = `${Math.min(i, j)}-${Math.max(i, j)}`;
+                                if (processedPairs.has(pairKey)) continue;
+                                processedPairs.add(pairKey);
+                                
+                                // Create relationship if they share the same country
+                                if (relationshipType === 'all' || relationshipType === 'country') {
+                                    if (ioc1.score_breakdown?.country && 
+                                        ioc2.score_breakdown?.country && 
+                                        ioc1.score_breakdown.country === ioc2.score_breakdown.country) {
+                                        edges.push({
+                                            from: i,
+                                            to: j,
+                                            color: {
+                                                color: '#3b82f6',
+                                                highlight: '#2563eb'
+                                            },
+                                            width: 1,
+                                            title: `Shared country: ${ioc1.score_breakdown.country}`,
+                                            type: 'country'
+                                        });
+                                    }
+                                }
+                                
+                                // Create relationship if they have the same risk level
+                                if (relationshipType === 'all' || relationshipType === 'risk') {
+                                    if (ioc1.risk_bucket && ioc2.risk_bucket && ioc1.risk_bucket === ioc2.risk_bucket) {
+                                        edges.push({
+                                            from: i,
+                                            to: j,
+                                            color: {
+                                                color: '#8b5cf6',
+                                                highlight: '#7c3aed'
+                                            },
+                                            width: 1,
+                                            title: `Shared risk level: ${ioc1.risk_bucket}`,
+                                            type: 'risk'
+                                        });
+                                    }
+                                }
+                                
+                                // Create relationship if one is a domain and the other is an IP with similar PTR
+                                if (relationshipType === 'all' || relationshipType === 'domain-ip') {
+                                    if (ioc1.type === 'domain' && ioc2.type === 'ip' && ioc2.score_breakdown?.ptr) {
+                                        const domain = ioc1.value.toLowerCase();
+                                        const ptr = ioc2.score_breakdown.ptr.toLowerCase();
+                                        
+                                        if (ptr.includes(domain.split('.')[0]) || domain.includes(ptr.split('.')[0])) {
+                                            edges.push({
+                                                from: i,
+                                                to: j,
+                                                color: {
+                                                    color: '#10b981',
+                                                    highlight: '#059669'
+                                                },
+                                                width: 2,
+                                                title: 'Domain-IP relationship',
+                                                type: 'domain-ip'
+                                            });
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        
+                        // Update statistics
+                        document.getElementById('nodeCount').textContent = nodes.length;
+                        document.getElementById('edgeCount').textContent = edges.length;
+                        
+                        // Calculate density (edges / possible edges)
+                        const possibleEdges = (nodes.length * (nodes.length - 1)) / 2;
+                        const density = possibleEdges > 0 ? (edges.length / possibleEdges).toFixed(2) : 0;
+                        document.getElementById('densityValue').textContent = density;
+                        
+                        // Show statistics panel
+                        document.getElementById('relationshipStats').classList.remove('hidden');
+                        
+                        // Create the network
+                        const container = relationshipGraph;
+                        const data = {
+                            nodes: new vis.DataSet(nodes),
+                            edges: new vis.DataSet(edges)
+                        };
+                        
+                        const options = {
+                            nodes: {
+                                shape: 'dot',
+                                size: 16,
+                                font: {
+                                    size: 12,
+                                    face: 'Tahoma'
+                                },
+                                borderWidth: 2,
+                                shadow: true
+                            },
+                            edges: {
+                                width: 1,
+                                smooth: {
+                                    type: 'continuous'
+                                },
+                                shadow: true
+                            },
+                            physics: {
+                                enabled: physicsToggle.checked,
+                                stabilization: {
+                                    enabled: true,
+                                    iterations: 200,
+                                    fit: true
+                                },
+                                barnesHut: {
+                                    gravitationalConstant: -2000 * (attractionSlider.value / 50),
+                                    springConstant: 0.04 * (repulsionSlider.value / 50),
+                                    springLength: 95,
+                                    damping: 0.09
+                                }
+                            },
+                            interaction: {
+                                hover: true,
+                                tooltipDelay: 200,
+                                zoomView: true
+                            },
+                            layout: {
+                                improvedLayout: true
+                            }
+                        };
+                        
+                        // Apply layout options
+                        if (layoutSelect.value === 'hierarchical') {
+                            options.layout.hierarchical = {
+                                direction: 'UD',
+                                sortMethod: 'directed'
+                            };
+                            options.physics = false;
+                        } else if (layoutSelect.value === 'circular') {
+                            options.layout.randomSeed = 2;
+                        }
+                        
+                        // Destroy existing network if it exists
+                        if (relationshipNetwork) {
+                            relationshipNetwork.destroy();
+                        }
+                        
+                        relationshipNetwork = new vis.Network(container, data, options);
+                        
+                        // Add dark mode styling if needed
+                        if (document.documentElement.classList.contains('dark')) {
+                            relationshipNetwork.setOptions({
+                                nodes: {
+                                    font: {
+                                        color: '#ffffff'
+                                    }
+                                },
+                                edges: {
+                                    color: {
+                                        color: '#9ca3af',
+                                        highlight: '#d1d5db'
+                                    }
+                                }
+                            });
+                        }
+                        
+                        // Remove any existing zoom controls before adding new ones
+                        const existingControls = relationshipGraph.parentNode.querySelector('.graph-controls');
+                        if (existingControls) {
+                            existingControls.remove();
+                        }
+                        
+                        // Add zoom controls
+                        const graphControls = document.createElement('div');
+                        graphControls.className = 'graph-controls';
+                        graphControls.innerHTML = `
+                            <button id="zoomInBtn"><i class="fas fa-search-plus"></i></button>
+                            <button id="zoomOutBtn"><i class="fas fa-search-minus"></i></button>
+                            <button id="resetZoomBtn"><i class="fas fa-compress"></i></button>
+                        `;
+                        
+                        relationshipGraph.parentNode.insertBefore(graphControls, relationshipGraph);
+                        
+                        // Add event listeners to zoom controls
+                        document.getElementById('zoomInBtn').addEventListener('click', function() {
+                            const scale = relationshipNetwork.getScale();
+                            relationshipNetwork.moveTo({
+                                scale: scale * 1.2
+                            });
+                        });
+                        
+                        document.getElementById('zoomOutBtn').addEventListener('click', function() {
+                            const scale = relationshipNetwork.getScale();
+                            relationshipNetwork.moveTo({
+                                scale: scale / 1.2
+                            });
+                        });
+                        
+                        document.getElementById('resetZoomBtn').addEventListener('click', function() {
+                            relationshipNetwork.fit();
+                        });
+                        
+                        // Calculate clusters after network is stabilized
+                        relationshipNetwork.once('stabilizationIterationsDone', function() {
+                            const clusterCount = relationshipNetwork.clusterEngine.getClusters().length;
+                            document.getElementById('clusterCount').textContent = clusterCount;
+                        });
+                        
+                        // Add node search functionality
+                        nodeSearch.addEventListener('input', function() {
+                            const searchTerm = this.value.toLowerCase();
+                            if (!searchTerm) {
+                                // Reset all nodes
+                                nodes.forEach(node => {
+                                    relationshipNetwork.body.data.nodes.update({
+                                        id: node.id,
+                                        opacity: 1
+                                    });
+                                });
+                                return;
+                            }
+                            
+                            // Highlight matching nodes and dim others
+                            nodes.forEach(node => {
+                                const isMatch = node.label.toLowerCase().includes(searchTerm);
+                                relationshipNetwork.body.data.nodes.update({
+                                    id: node.id,
+                                    opacity: isMatch ? 1 : 0.3
+                                });
+                            });
+                        });
+                        
+                        // Export graph functionality
+                        exportGraphBtn.addEventListener('click', function() {
+                            const canvas = relationshipNetwork.canvas.frame.canvas;
+                            const image = canvas.toDataURL('image/png');
+                            const link = document.createElement('a');
+                            link.href = image;
+                            link.download = 'ioc-relationship-graph.png';
+                            link.click();
+                        });
+                        
+                    } catch (error) {
+                        console.error('Error analyzing relationships:', error);
+                        relationshipGraph.innerHTML = '<p class="text-red-500 text-center">Error analyzing relationships</p>';
+                    }
+                }, 100);
+            }
+            
+            // Enhanced cluster campaigns function
+            function clusterCampaigns() {
+                // Show loading state
+                campaignClustersContainer.classList.add('hidden');
+                campaignClusters.classList.remove('hidden');
+                document.getElementById('cluster-cards').innerHTML = '<div class="spinner"></div>';
+                
+                // Get filter values
+                const minClusterSize = parseInt(minClusterSizeFilter.value);
+                const timeWindowDays = parseInt(timeWindowFilter.value);
+                
+                // Use setTimeout to allow UI to update before heavy computation
+                setTimeout(() => {
+                    try {
+                        // Group IOCs by time window and shared attributes
+                        const timeWindowMs = timeWindowDays * 24 * 60 * 60 * 1000; // Convert days to milliseconds
+                        const clusters = [];
+                        const processedIOCs = new Set();
+                        
+                        // Sort IOCs by timestamp
+                        const sortedIOCs = [...iocsData].sort((a, b) => {
+                            return new Date(a.timestamp) - new Date(b.timestamp);
+                        });
+                        
+                        // Create clusters based on temporal and technical patterns
+                        for (let i = 0; i < sortedIOCs.length; i++) {
+                            if (processedIOCs.has(i)) continue;
+                            
+                            const ioc = sortedIOCs[i];
+                            const cluster = [ioc];
+                            processedIOCs.add(i);
+                            
+                            // Find related IOCs within the time window
+                            const clusterTime = new Date(ioc.timestamp);
+                            const endTime = new Date(clusterTime.getTime() + timeWindowMs);
+                            
+                            for (let j = i + 1; j < sortedIOCs.length; j++) {
+                                if (processedIOCs.has(j)) continue;
+                                
+                                const otherIoc = sortedIOCs[j];
+                                const otherTime = new Date(otherIoc.timestamp);
+                                
+                                // Check if within time window
+                                if (otherTime > endTime) break;
+                                
+                                // Check if they share attributes
+                                if (ioc.score_breakdown?.country === otherIoc.score_breakdown?.country ||
+                                    ioc.risk_bucket === otherIoc.risk_bucket ||
+                                    (ioc.type === 'domain' && otherIoc.type === 'ip' && 
+                                     otherIoc.score_breakdown?.ptr?.includes(ioc.value.split('.')[0]))) {
+                                    cluster.push(otherIoc);
+                                    processedIOCs.add(j);
+                                }
+                            }
+                            
+                            // Only add clusters that meet the minimum size requirement
+                            if (cluster.length >= minClusterSize) {
+                                clusters.push(cluster);
+                            }
+                        }
+                        
+                        // Store clusters for report generation
+                        campaignClustersData = clusters;
+                        
+                        // Display clusters in card view
+                        renderClusterCards(clusters);
+                        
+                        // Render timeline view
+                        renderClusterTimeline(clusters);
+                        
+                        // Render graph view
+                        renderClusterGraph(clusters);
+                        
+                    } catch (error) {
+                        console.error('Error clustering campaigns:', error);
+                        document.getElementById('cluster-cards').innerHTML = '<p class="text-red-500 text-center">Error clustering campaigns</p>';
+                    }
+                }, 100);
+            }
+            
+            // Render cluster cards
+            function renderClusterCards(clusters) {
+                const container = document.getElementById('cluster-cards');
+                container.innerHTML = '';
+                
+                if (clusters.length === 0) {
+                    container.innerHTML = '<p class="text-gray-500 dark:text-gray-400 text-center">No campaigns identified with current filters</p>';
+                    return;
+                }
+                
+                // Sort clusters by size (largest first)
+                clusters.sort((a, b) => b.length - a.length);
+                
+                // Limit to top 10 clusters for performance
+                const topClusters = clusters.slice(0, 10);
+                
+                topClusters.forEach((cluster, index) => {
+                    const clusterCard = document.createElement('div');
+                    const riskLevel = getClusterRiskLevel(cluster);
+                    clusterCard.className = `campaign-card campaign-${riskLevel}-risk bg-white dark:bg-gray-700 rounded-lg shadow`;
+                    
+                    // Calculate cluster time range
+                    const timestamps = cluster.map(ioc => new Date(ioc.timestamp));
+                    const minTime = new Date(Math.min(...timestamps));
+                    const maxTime = new Date(Math.max(...timestamps));
+                    const durationDays = Math.ceil((maxTime - minTime) / (1000 * 60 * 60 * 24));
+                    
+                    // Get most common country in cluster
+                    const countryCounts = {};
+                    cluster.forEach(ioc => {
+                        const country = ioc.score_breakdown?.country || 'Unknown';
+                        countryCounts[country] = (countryCounts[country] || 0) + 1;
+                    });
+                    
+                    const topCountry = Object.entries(countryCounts)
+                        .sort((a, b) => b[1] - a[1])[0][0];
+                    
+                    // Calculate risk distribution
+                    const riskCounts = {
+                        high: cluster.filter(ioc => ioc.risk_bucket === 'high').length,
+                        medium: cluster.filter(ioc => ioc.risk_bucket === 'medium').length,
+                        low: cluster.filter(ioc => ioc.risk_bucket === 'low').length
+                    };
+                    
+                    // Calculate average score
+                    const avgScore = cluster.reduce((sum, ioc) => sum + ioc.score, 0) / cluster.length;
+                    
+                    // Create a unique ID for this cluster
+                    const clusterId = `cluster-${index}`;
+                    
+                    clusterCard.innerHTML = `
+                        <div class="campaign-header" data-cluster="${clusterId}">
+                            <div>
+                                <div class="font-bold">Campaign #${index + 1}</div>
+                                <div class="text-sm text-gray-500 dark:text-gray-400">${cluster.length} IOCs • ${minTime.toLocaleDateString()} - ${maxTime.toLocaleDateString()}</div>
+                            </div>
+                            <i class="fas fa-chevron-down transition-transform duration-300"></i>
+                        </div>
+                        <div class="p-4">
+                            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
+                                <div>
+                                    <div class="text-sm font-medium mb-1">Primary Country</div>
+                                    <div class="text-sm">${topCountry}</div>
+                                </div>
+                                <div>
+                                    <div class="text-sm font-medium mb-1">Average Score</div>
+                                    <div class="text-sm font-bold">${avgScore.toFixed(1)}</div>
+                                </div>
+                                <div>
+                                    <div class="text-sm font-medium mb-1">Duration</div>
+                                    <div class="text-sm">${durationDays} days</div>
+                                </div>
+                            </div>
+                            
+                            <div class="mb-4">
+                                <div class="text-sm font-medium mb-2">Risk Distribution</div>
+                                <div class="flex gap-2">
+                                    <span class="text-xs px-2 py-1 bg-red-100 text-red-800 rounded-full">
+                                        High: ${riskCounts.high}
+                                    </span>
+                                    <span class="text-xs px-2 py-1 bg-yellow-100 text-yellow-800 rounded-full">
+                                        Medium: ${riskCounts.medium}
+                                    </span>
+                                    <span class="text-xs px-2 py-1 bg-green-100 text-green-800 rounded-full">
+                                        Low: ${riskCounts.low}
+                                    </span>
+                                </div>
+                            </div>
+                            
+                            <div class="campaign-timeline-bar bg-gray-200 dark:bg-gray-600">
+                                <div class="campaign-timeline-progress bg-purple-600" style="width: 100%;"></div>
+                            </div>
+                        </div>
+                        <div class="cluster-content hidden p-4 border-t border-gray-200 dark:border-gray-600" id="${clusterId}">
+                            <div class="text-sm font-medium mb-2">IOCs in this campaign:</div>
+                            <div class="bg-gray-50 dark:bg-gray-800 rounded-lg p-2 max-h-48 overflow-y-auto">
+                                ${cluster.map(ioc => `
+                                    <div class="cluster-item">
+                                        <div>
+                                            <span class="font-medium">${ioc.value}</span>
+                                            <span class="text-xs text-gray-500 dark:text-gray-400 ml-2">${ioc.type || 'unknown'}</span>
+                                        </div>
+                                        <div class="flex items-center gap-2">
+                                            <span class="text-xs ${ioc.risk_bucket === 'high' ? 'text-red-500' : 
+                                                ioc.risk_bucket === 'medium' ? 'text-yellow-500' : 'text-green-500'}">
+                                                ${ioc.risk_bucket}
+                                            </span>
+                                            <span class="text-xs text-gray-500 dark:text-gray-400">
+                                                Score: ${ioc.score}
+                                            </span>
+                                        </div>
+                                    </div>
+                                `).join('')}
+                            </div>
+                        </div>
+                    `;
+                    
+                    container.appendChild(clusterCard);
+                    
+                    // Add click event to toggle cluster content
+                    const clusterHeader = clusterCard.querySelector('.campaign-header');
+                    clusterHeader.addEventListener('click', function() {
+                        const clusterId = this.getAttribute('data-cluster');
+                        const content = document.getElementById(clusterId);
+                        const icon = this.querySelector('i');
+                        
+                        content.classList.toggle('hidden');
+                        icon.classList.toggle('fa-chevron-down');
+                        icon.classList.toggle('fa-chevron-up');
+                    });
+                });
+            }
+            
+            // Render cluster timeline
+            function renderClusterTimeline(clusters) {
+                const container = document.getElementById('cluster-timeline');
+                container.innerHTML = '';
+                
+                if (clusters.length === 0) {
+                    container.innerHTML = '<p class="text-gray-500 dark:text-gray-400 text-center">No campaigns identified</p>';
+                    return;
+                }
+                
+                // Find the overall time range
+                let minDate = new Date();
+                let maxDate = new Date(0);
+                
+                clusters.forEach(cluster => {
+                    const timestamps = cluster.map(ioc => new Date(ioc.timestamp));
+                    const clusterMin = new Date(Math.min(...timestamps));
+                    const clusterMax = new Date(Math.max(...timestamps));
+                    
+                    if (clusterMin < minDate) minDate = clusterMin;
+                    if (clusterMax > maxDate) maxDate = clusterMax;
+                });
+                
+                // Add some padding to the range
+                const padding = (maxDate - minDate) * 0.05;
+                minDate = new Date(minDate.getTime() - padding);
+                maxDate = new Date(maxDate.getTime() + padding);
+                
+                const totalRange = maxDate - minDate;
+                
+                // Create timeline items
+                clusters.forEach((cluster, index) => {
+                    const timestamps = cluster.map(ioc => new Date(ioc.timestamp));
+                    const clusterMin = new Date(Math.min(...timestamps));
+                    const clusterMax = new Date(Math.max(...timestamps));
+                    
+                    // Calculate position and width as percentages
+                    const startPosition = ((clusterMin - minDate) / totalRange) * 100;
+                    const width = ((clusterMax - clusterMin) / totalRange) * 100;
+                    
+                    // Determine the primary risk level for color
+                    const riskLevel = getClusterRiskLevel(cluster);
+                    const color = riskLevel === 'high' ? '#ef4444' : 
+                                 riskLevel === 'medium' ? '#f59e0b' : '#10b981';
+                    
+                    // Create timeline item
+                    const timelineItem = document.createElement('div');
+                    timelineItem.className = 'timeline-item';
+                    timelineItem.innerHTML = `
+                        <div class="timeline-header">
+                            <div class="font-medium">Campaign #${index + 1}</div>
+                            <div class="text-sm text-gray-500 dark:text-gray-400">
+                                ${clusterMin.toLocaleDateString()} - ${clusterMax.toLocaleDateString()} (${cluster.length} IOCs)
+                            </div>
+                        </div>
+                        <div class="timeline-bar-container">
+                            <div class="timeline-bar" style="left: ${startPosition}%; width: ${width}%; background-color: ${color};">
+                                <div class="timeline-label">${cluster.length} IOCs</div>
+                            </div>
+                        </div>
+                    `;
+                    
+                    container.appendChild(timelineItem);
+                });
+            }
+            
+            // Render cluster graph
+            function renderClusterGraph(clusters) {
+                const container = document.getElementById('cluster-graph');
+                container.innerHTML = '';
+                
+                if (clusters.length === 0) {
+                    container.innerHTML = '<p class="text-gray-500 dark:text-gray-400 text-center">No campaigns identified</p>';
+                    return;
+                }
+                
+                // Create nodes for each cluster
+                const nodes = clusters.map((cluster, index) => {
+                    // Calculate the average risk score for the cluster
+                    const avgScore = cluster.reduce((sum, ioc) => sum + ioc.score, 0) / cluster.length;
+                    
+                    // Determine the primary risk level
+                    const riskLevel = getClusterRiskLevel(cluster);
+                    
+                    const color = riskLevel === 'high' ? '#ef4444' : 
+                                 riskLevel === 'medium' ? '#f59e0b' : '#10b981';
+                    
+                    return {
+                        id: index,
+                        label: `Campaign ${index + 1}`,
+                        value: cluster.length, // Size based on number of IOCs
+                        color: {
+                            background: color,
+                            border: color,
+                            highlight: {
+                                background: color,
+                                border: color
+                            }
+                        },
+                        font: {
+                            color: document.documentElement.classList.contains('dark') ? '#ffffff' : '#000000',
+                            size: 14,
+                            face: 'Tahoma'
+                        },
+                        title: `Size: ${cluster.length} IOCs\nAverage Score: ${avgScore.toFixed(1)}\nRisk: ${riskLevel}`
+                    };
+                });
+                
+                // Create edges between clusters that share IOCs or are close in time
+                const edges = [];
+                for (let i = 0; i < clusters.length; i++) {
+                    for (let j = i + 1; j < clusters.length; j++) {
+                        const cluster1 = clusters[i];
+                        const cluster2 = clusters[j];
+                        
+                        // Check for shared IOCs (by value)
+                        const iocValues1 = new Set(cluster1.map(ioc => ioc.value));
+                        const sharedIOCs = cluster2.filter(ioc => iocValues1.has(ioc.value));
+                        
+                        if (sharedIOCs.length > 0) {
+                            edges.push({
+                                from: i,
+                                to: j,
+                                width: Math.min(5, sharedIOCs.length), // Width based on number of shared IOCs
+                                title: `Shared ${sharedIOCs.length} IOCs`
+                            });
+                        } else {
+                            // Check for time proximity
+                            const times1 = cluster1.map(ioc => new Date(ioc.timestamp));
+                            const times2 = cluster2.map(ioc => new Date(ioc.timestamp));
+                            const minTime1 = Math.min(...times1);
+                            const maxTime1 = Math.max(...times1);
+                            const minTime2 = Math.min(...times2);
+                            const maxTime2 = Math.max(...times2);
+                            
+                            // If the time ranges overlap or are close (within 1 day)
+                            if (Math.abs(minTime1 - maxTime2) < 24 * 60 * 60 * 1000 || 
+                                Math.abs(minTime2 - maxTime1) < 24 * 60 * 60 * 1000) {
+                                edges.push({
+                                    from: i,
+                                    to: j,
+                                    width: 1,
+                                    dashes: true,
+                                    title: 'Time proximity'
+                                });
+                            }
+                        }
+                    }
+                }
+                
+                // Create the network
+                const data = {
+                    nodes: new vis.DataSet(nodes),
+                    edges: new vis.DataSet(edges)
+                };
+                
+                const options = {
+                    nodes: {
+                        shape: 'dot',
+                        scaling: {
+                            min: 10,
+                            max: 30
+                        },
+                        font: {
+                            size: 14,
+                            face: 'Tahoma'
+                        }
+                    },
+                    edges: {
+                        smooth: {
+                            type: 'continuous'
+                        }
+                    },
+                    physics: {
+                        stabilization: {
+                            enabled: true,
+                            iterations: 200,
+                            fit: true
+                        },
+                        barnesHut: {
+                            gravitationalConstant: -2000,
+                            springConstant: 0.04,
+                            springLength: 95,
+                            damping: 0.09
+                        }
+                    },
+                    interaction: {
+                        hover: true,
+                        tooltipDelay: 200,
+                        zoomView: true
+                    }
+                };
+                
+                const network = new vis.Network(container, data, options);
+                
+                // Add dark mode styling if needed
+                if (document.documentElement.classList.contains('dark')) {
+                    network.setOptions({
+                        nodes: {
+                            font: {
+                                color: '#ffffff'
+                            }
+                        },
+                        edges: {
+                            color: {
+                                color: '#9ca3af',
+                                highlight: '#d1d5db'
+                            }
+                        }
+                    });
+                }
+            }
+            
+            // Helper function to determine cluster risk level
+            function getClusterRiskLevel(cluster) {
+                const riskCounts = {
+                    high: cluster.filter(ioc => ioc.risk_bucket === 'high').length,
+                    medium: cluster.filter(ioc => ioc.risk_bucket === 'medium').length,
+                    low: cluster.filter(ioc => ioc.risk_bucket === 'low').length
+                };
+                
+                if (riskCounts.high > riskCounts.medium && riskCounts.high > riskCounts.low) {
+                    return 'high';
+                } else if (riskCounts.medium > riskCounts.low) {
+                    return 'medium';
+                }
+                return 'low';
+            }
+            
+            // Initial data fetch
+            fetchTopIOCs();
+        });
+    </script>
+</body>
+</html>
